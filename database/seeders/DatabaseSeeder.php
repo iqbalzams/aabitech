@@ -21,5 +21,31 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        $this->call([
+            CategoryToolSeeder::class,
+            JsonFormatterSeoSeeder::class,
+            Base64EncoderSeoSeeder::class,
+            HtmlBeautifierSeoSeeder::class,
+            JwtDecoderSeoSeeder::class,
+            RegexTesterSeoSeeder::class,
+            UrlEncoderDecoderSeoSeeder::class,
+            CharacterCounterSeoSeeder::class,
+            DuplicateLineRemoverSeoSeeder::class,
+            LoremIpsumGeneratorSeoSeeder::class,
+            ReadingTimeCalculatorSeoSeeder::class,
+            SlugGeneratorSeoSeeder::class,
+            WordCounterSeoSeeder::class,
+            AspectRatioCalculatorSeoSeeder::class,
+            CssGradientGeneratorSeoSeeder::class,
+            PasswordStrengthCheckerSeoSeeder::class,
+            PercentageCalculatorSeoSeeder::class,
+            AgeCalculatorSeoSeeder::class,
+            RandomNumberGeneratorSeoSeeder::class,
+            UnixTimestampConverterSeoSeeder::class,
+            TimestampConverterSeoSeeder::class,
+
+
+        ]);
     }
 }

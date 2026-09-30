@@ -13,6 +13,8 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
         //
+    })->withMiddleware(function (Middleware $middleware) {
+    $middleware->trustProxies(at: '*'); // Trust all proxies for local ngrok testing
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         $exceptions->shouldRenderJsonWhen(

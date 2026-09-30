@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background Card Gradient -->
+    <linearGradient id="bgGrad" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#141829"/>
+      <stop offset="100%" stop-color="#0B0D17"/>
+    </linearGradient>
+
+    <!-- Card Border Stroke Gradient -->
+    <linearGradient id="borderGrad" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#6366F1" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <!-- Primary Accent Gradient (Cyan to Indigo) -->
+    <linearGradient id="bracketGrad" x1="28" y1="36" x2="100" y2="92" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+
+    <!-- Sparkle / Magic Gradient -->
+    <linearGradient id="sparkleGrad" x1="88" y1="20" x2="108" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F43F5E"/>
+      <stop offset="50%" stop-color="#FB923C"/>
+      <stop offset="100%" stop-color="#FBBF24"/>
+    </linearGradient>
+
+    <!-- Ambient Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow Behind Container -->
+  <rect x="24" y="20" width="80" height="88" rx="24" fill="#6366F1" opacity="0.18" filter="url(#glow)"/>
+
+  <!-- Base App Card -->
+  <rect x="16" y="16" width="96" height="96" rx="22" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="1.5"/>
+
+  <!-- Subtle Inner Grid / Code Guide Line -->
+  <line x1="42" y1="46" x2="42" y2="82" stroke="#334155" stroke-width="1.5" stroke-dasharray="2 3" opacity="0.7"/>
+
+  <!-- Left Curly Bracket: { -->
+  <path d="M 38 42
+           C 38 47, 33 48, 33 53
+           C 33 58, 38 59, 38 64
+           C 38 69, 33 70, 33 75
+           C 33 80, 38 81, 38 86" 
+        stroke="url(#bracketGrad)" 
+        stroke-width="4.5" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        filter="url(#softGlow)"/>
+
+  <!-- Right Curly Bracket: } -->
+  <path d="M 90 42
+           C 90 47, 95 48, 95 53
+           C 95 58, 90 59, 90 64
+           C 90 69, 95 70, 95 75
+           C 95 80, 90 81, 90 86" 
+        stroke="url(#bracketGrad)" 
+        stroke-width="4.5" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        filter="url(#softGlow)"/>
+
+  <!-- Formatted Code Rows (Indented Hierarchy) -->
+  <!-- Level 1: Key-Value line 1 -->
+  <rect x="48" y="48" width="14" height="4" rx="2" fill="#38BDF8"/>
+  <circle cx="66" cy="50" r="1.5" fill="#64748B"/>
+  <rect x="71" y="48" width="15" height="4" rx="2" fill="#34D399"/>
+
+  <!-- Level 1: Key-Value line 2 -->
+  <rect x="48" y="58" width="18" height="4" rx="2" fill="#818CF8"/>
+  <circle cx="70" cy="60" r="1.5" fill="#64748B"/>
+  <rect x="75" y="58" width="11" height="4" rx="2" fill="#F472B6"/>
+
+  <!-- Level 2: Nested block preview -->
+  <rect x="54" y="68" width="12" height="4" rx="2" fill="#CBD5E1" opacity="0.8"/>
+  <circle cx="70" cy="70" r="1.5" fill="#64748B"/>
+  <rect x="75" y="68" width="7" height="4" rx="2" fill="#FBBF24"/>
+
+  <!-- Level 1: Closing row -->
+  <rect x="48" y="78" width="10" height="4" rx="2" fill="#38BDF8" opacity="0.6"/>
+
+  <!-- Formatting Magic Stars (Beautify indicator) -->
+  <!-- Primary Sparkle -->
+  <path d="M 98 20 
+           Q 98 29, 107 29 
+           Q 98 29, 98 38 
+           Q 98 29, 89 29 
+           Q 98 29, 98 20 Z" 
+        fill="url(#sparkleGrad)" 
+        filter="url(#softGlow)"/>
+
+  <!-- Secondary Mini Star -->
+  <path d="M 86 19 
+           Q 86 23, 90 23 
+           Q 86 23, 86 27 
+           Q 86 23, 82 23 
+           Q 86 23, 86 19 Z" 
+        fill="#FBBF24" 
+        opacity="0.9"/>
+</svg>

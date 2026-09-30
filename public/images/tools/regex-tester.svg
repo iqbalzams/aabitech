@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background Card Gradient -->
+    <linearGradient id="regBg" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#141829"/>
+      <stop offset="100%" stop-color="#0B0D17"/>
+    </linearGradient>
+
+    <!-- Card Border Stroke Gradient (Electric Violet to Emerald) -->
+    <linearGradient id="regBorder" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#06B6D4" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <!-- Regex Pattern / Slash Delimiters Gradient -->
+    <linearGradient id="slashGrad" x1="26" y1="42" x2="102" y2="42" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+
+    <!-- Matched Highlight Gradient -->
+    <linearGradient id="matchGrad" x1="42" y1="78" x2="74" y2="78" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+
+    <!-- Scanner / Inspection Lens Gradient -->
+    <linearGradient id="lensGrad" x1="72" y1="58" x2="106" y2="92" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+
+    <!-- Ambient Glow Filter -->
+    <filter id="regGlow" x="-20%" y="-20%" width="140%" height="140%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="regSoftGlow" x="-30%" y="-30%" width="160%" height="160%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow Behind Container -->
+  <rect x="24" y="20" width="80" height="88" rx="24" fill="#8B5CF6" opacity="0.16" filter="url(#regGlow)"/>
+
+  <!-- Base App Card -->
+  <rect x="16" y="16" width="96" height="96" rx="22" fill="url(#regBg)" stroke="url(#regBorder)" stroke-width="1.5"/>
+
+  <!-- Top Regex Expression Console Pill: /.*[a-z]+/g -->
+  <g filter="url(#regSoftGlow)">
+    <rect x="24" y="27" width="80" height="24" rx="7" fill="#0B0D17" stroke="#334155" stroke-width="1.3"/>
+
+    <!-- Left Delimiter Slash: '/' -->
+    <line x1="31" y1="44" x2="35" y2="34" stroke="#F43F5E" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Regex Tokens: '^' '[' 'a' '-' 'z' ']' '*' '$' Handcrafted Vectors -->
+    <!-- Caret '^' -->
+    <path d="M 39 39.5 L 41.5 36.5 L 44 39.5" stroke="#FBBF24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Character Class '[' ']' -->
+    <path d="M 48 35 H 46 V 43 H 48" stroke="#38BDF8" stroke-width="1.4" stroke-linecap="round"/>
+    <path d="M 52 38.5 L 53 37.5 L 54 38.5 M 51.5 42 H 54.5" stroke="#CBD5E1" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M 57 35 H 59 V 43 H 57" stroke="#38BDF8" stroke-width="1.4" stroke-linecap="round"/>
+
+    <!-- Star '*' Quantifier -->
+    <g stroke="#C084FC" stroke-width="1.3" stroke-linecap="round">
+      <line x1="64" y1="36.5" x2="64" y2="41.5"/>
+      <line x1="61.5" y1="39" x2="66.5" y2="39"/>
+      <line x1="62.5" y1="37.5" x2="65.5" y2="40.5"/>
+      <line x1="65.5" y1="37.5" x2="62.5" y2="40.5"/>
+    </g>
+
+    <!-- Dollar '$' End Anchor -->
+    <path d="M 72.5 35.5 C 71.5 35.5, 70 36, 70 37.2 C 70 38.5, 72.5 38.8, 72.5 40.2 C 72.5 41.5, 71 42, 70 41.5 M 71.2 34.5 V 43" stroke="#FBBF24" stroke-width="1.2" stroke-linecap="round"/>
+
+    <!-- Right Delimiter Slash: '/' -->
+    <line x1="77" y1="44" x2="81" y2="34" stroke="#F43F5E" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Flags: 'gm' Tag Badge -->
+    <rect x="85" y="32" width="14" height="14" rx="3.5" fill="#1E293B"/>
+    <!-- 'g' -->
+    <path d="M 91 38 C 91 36.5, 88.5 36.5, 88.5 38 C 88.5 39.5, 91 39.5, 91 41 C 91 42.5, 88.5 42.5, 88 42" stroke="#34D399" stroke-width="1.1" stroke-linecap="round"/>
+  </g>
+
+  <!-- Testing String Target Canvas (Middle Area) -->
+  <g opacity="0.85">
+    <!-- Unmatched Text Prefix -->
+    <rect x="28" y="62" width="16" height="4" rx="2" fill="#475569"/>
+    <!-- Matched Highlight Segment A (Glowing Mint/Green Tag) -->
+    <rect x="47" y="60" width="26" height="8" rx="3" fill="#10B981" fill-opacity="0.25" stroke="#10B981" stroke-width="1.2"/>
+    <rect x="50" y="62" width="20" height="4" rx="2" fill="#34D399"/>
+    <!-- Unmatched Text Suffix -->
+    <rect x="76" y="62" width="12" height="4" rx="2" fill="#475569"/>
+
+    <!-- Second Target String Line -->
+    <rect x="28" y="74" width="12" height="4" rx="2" fill="#475569"/>
+    <!-- Matched Highlight Segment B -->
+    <rect x="43" y="72" width="20" height="8" rx="3" fill="#10B981" fill-opacity="0.25" stroke="#10B981" stroke-width="1.2"/>
+    <rect x="46" y="74" width="14" height="4" rx="2" fill="#34D399"/>
+  </g>
+
+  <!-- Scanning / Match Inspector Lens (Floating Bottom-Right) -->
+  <g filter="url(#regSoftGlow)">
+    <!-- Lens Rim & Glass Surface -->
+    <circle cx="86" cy="74" r="16" fill="#0B0D17" stroke="url(#lensGrad)" stroke-width="2.4"/>
+    <circle cx="86" cy="74" r="13" fill="#1E1B4B" fill-opacity="0.3"/>
+
+    <!-- Lens Handle -->
+    <line x1="97.5" y1="85.5" x2="108" y2="96" stroke="url(#lensGrad)" stroke-width="3.5" stroke-linecap="round"/>
+
+    <!-- Match Verified Checkmark inside Inspect Lens -->
+    <path d="M 79 74.5 L 84 79.5 L 93 69" 
+          stroke="#10B981" 
+          stroke-width="2.4" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"
+          filter="url(#regSoftGlow)"/>
+  </g>
+
+  <!-- Match Count HUD Pill (Bottom-Left: "2 MATCHES") -->
+  <g filter="url(#regSoftGlow)">
+    <rect x="26" y="86" width="46" height="15" rx="5" fill="#0B0D17" stroke="#10B981" stroke-width="1.2"/>
+    <!-- Green Pulse Match Indicator -->
+    <circle cx="33" cy="93.5" r="2.2" fill="#10B981"/>
+    <!-- Label Vectors "MATCH" -->
+    <line x1="39" y1="93.5" x2="49" y2="93.5" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="53" y1="93.5" x2="66" y2="93.5" stroke="#34D399" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Fortified Pattern Sparkle (Top-Right) -->
+  <path d="M 102 21 
+           Q 102 25, 106 25 
+           Q 102 25, 102 29 
+           Q 102 25, 98 25 
+           Q 102 25, 102 21 Z" 
+        fill="#C084FC" 
+        filter="url(#regSoftGlow)"/>
+</svg>

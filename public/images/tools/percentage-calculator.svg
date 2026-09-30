@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background Card Gradient -->
+    <linearGradient id="pctCalcBg" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#141829"/>
+      <stop offset="100%" stop-color="#0B0D17"/>
+    </linearGradient>
+
+    <!-- Card Border Stroke Gradient (Emerald to Cyan & Violet) -->
+    <linearGradient id="pctCalcBorder" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#06B6D4" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0.45"/>
+    </linearGradient>
+
+    <!-- Percent Diagonal Slash Gradient -->
+    <linearGradient id="slashGrad" x1="42" y1="78" x2="86" y2="34" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="50%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+
+    <!-- Percent Bubbles Gradient -->
+    <linearGradient id="bubbleGrad1" x1="42" y1="36" x2="58" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+
+    <linearGradient id="bubbleGrad2" x1="70" y1="64" x2="86" y2="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+
+    <!-- Radial Ratio Progress Arc Gradient -->
+    <linearGradient id="arcGrad" x1="28" y1="28" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="40%" stop-color="#10B981"/>
+      <stop offset="80%" stop-color="#FBBF24"/>
+    </linearGradient>
+
+    <!-- Ambient Glow Filter -->
+    <filter id="pctGlow" x="-20%" y="-20%" width="140%" height="140%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="pctSoftGlow" x="-30%" y="-30%" width="160%" height="160%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow Behind Container -->
+  <rect x="24" y="20" width="80" height="88" rx="24" fill="#10B981" opacity="0.16" filter="url(#pctGlow)"/>
+
+  <!-- Base App Card -->
+  <rect x="16" y="16" width="96" height="96" rx="22" fill="url(#pctCalcBg)" stroke="url(#pctCalcBorder)" stroke-width="1.5"/>
+
+  <!-- Radial Ratio / Progress Gauge Track (Donut segment) -->
+  <circle cx="64" cy="58" r="30" stroke="#1E293B" stroke-width="4" stroke-dasharray="2 4" fill="none" opacity="0.7"/>
+
+  <!-- Glowing Progress Value Arc (representing % proportion) -->
+  <path d="M 64 28 
+           A 30 30 0 1 1 35 68" 
+        stroke="url(#arcGrad)" 
+        stroke-width="3.5" 
+        stroke-linecap="round" 
+        fill="none" 
+        filter="url(#pctSoftGlow)"/>
+
+  <!-- Primary Sign: Dynamic Percent Symbol (%) -->
+  <!-- Diagonal Slash -->
+  <line x1="45" y1="75" x2="83" y2="41" 
+        stroke="url(#slashGrad)" 
+        stroke-width="5" 
+        stroke-linecap="round" 
+        filter="url(#pctSoftGlow)"/>
+
+  <!-- Upper-Left Node / Circle (Part A) -->
+  <circle cx="50" cy="45" r="7.5" fill="#0B0D17" stroke="url(#bubbleGrad1)" stroke-width="3.5" filter="url(#pctSoftGlow)"/>
+  <circle cx="50" cy="45" r="2.5" fill="#38BDF8"/>
+
+  <!-- Lower-Right Node / Circle (Part B) -->
+  <circle cx="78" cy="71" r="7.5" fill="#0B0D17" stroke="url(#bubbleGrad2)" stroke-width="3.5" filter="url(#pctSoftGlow)"/>
+  <circle cx="78" cy="71" r="2.5" fill="#34D399"/>
+
+  <!-- Math Operator Mini Grid (Top-Left: Multiply / Divide / Plus Context) -->
+  <g opacity="0.75" filter="url(#pctSoftGlow)">
+    <rect x="26" y="26" width="18" height="12" rx="3.5" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <!-- Plus / Minus Mini Glyph -->
+    <line x1="31" y1="32" x2="39" y2="32" stroke="#38BDF8" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="35" y1="29.5" x2="35" y2="34.5" stroke="#38BDF8" stroke-width="1.3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Formula / Result HUD Readout (Bottom-Right: "= %") -->
+  <g filter="url(#pctSoftGlow)">
+    <rect x="52" y="78" width="52" height="22" rx="6.5" fill="#0B0D17" stroke="#10B981" stroke-width="1.5"/>
+
+    <!-- Equals Sign '=' -->
+    <line x1="60" y1="87" x2="66" y2="87" stroke="#94A3B8" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="60" y1="91" x2="66" y2="91" stroke="#94A3B8" stroke-width="1.6" stroke-linecap="round"/>
+
+    <!-- Numeric Display Vector "75" Handcrafted -->
+    <!-- Digit 7 -->
+    <path d="M 72 84 H 79 L 75 94" 
+          stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Digit 5 -->
+    <path d="M 87 84 H 82.5 V 88 C 82.5 88, 83.5 87.3, 85 87.3 C 86.3 87.3, 87.2 88.2, 87.2 89.6 C 87.2 91.2, 86 92.2, 84.5 92.2 C 83.5 92.2, 82.8 91.7, 82.5 91.2" 
+          stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Mini Percent Suffix '%' -->
+    <circle cx="91.5" cy="86" r="1" fill="#34D399"/>
+    <line x1="91" y1="92" x2="95.5" y2="86" stroke="#34D399" stroke-width="1.2" stroke-linecap="round"/>
+    <circle cx="95" cy="92" r="1" fill="#34D399"/>
+  </g>
+
+  <!-- Accent Sparkle (Top-Right) -->
+  <path d="M 100 24 
+           Q 100 28, 104 28 
+           Q 100 28, 100 32 
+           Q 100 28, 96 28 
+           Q 100 28, 100 24 Z" 
+        fill="#34D399" 
+        filter="url(#pctSoftGlow)"/>
+</svg>

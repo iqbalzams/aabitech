@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background Card Gradient -->
+    <linearGradient id="jwtBg" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#141829"/>
+      <stop offset="100%" stop-color="#0B0D17"/>
+    </linearGradient>
+
+    <!-- Card Border Stroke Gradient -->
+    <linearGradient id="jwtBorder" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#A855F7" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <!-- Shield Border Gradient -->
+    <linearGradient id="shieldGrad" x1="38" y1="30" x2="90" y2="96" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F43F5E"/>
+      <stop offset="50%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+
+    <!-- Accent Glow Filter -->
+    <filter id="jwtGlow" x="-20%" y="-20%" width="140%" height="140%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="jwtSoftGlow" x="-30%" y="-30%" width="160%" height="160%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow Behind Container -->
+  <rect x="24" y="20" width="80" height="88" rx="24" fill="#A855F7" opacity="0.16" filter="url(#jwtGlow)"/>
+
+  <!-- Base App Card -->
+  <rect x="16" y="16" width="96" height="96" rx="22" fill="url(#jwtBg)" stroke="url(#jwtBorder)" stroke-width="1.5"/>
+
+  <!-- Security Shield Profile -->
+  <path d="M 64 30
+           C 78 30, 92 34, 92 45
+           C 92 68, 77 86, 64 94
+           C 51 86, 36 68, 36 45
+           C 36 34, 50 30, 64 30 Z"
+        fill="#1E1B4B"
+        fill-opacity="0.45"
+        stroke="url(#shieldGrad)"
+        stroke-width="2"
+        stroke-linejoin="round"/>
+
+  <!-- Section 1: HEADER (Standard JWT Red / Coral) -->
+  <g id="jwt-header">
+    <rect x="44" y="42" width="40" height="11" rx="4" fill="#EF4444" fill-opacity="0.14" stroke="#F87171" stroke-width="1.2"/>
+    <!-- Header key/val bars -->
+    <rect x="49" y="46.5" width="10" height="2.5" rx="1" fill="#F87171"/>
+    <rect x="62" y="46.5" width="16" height="2.5" rx="1" fill="#FCA5A5" opacity="0.8"/>
+  </g>
+
+  <!-- Separator Dot 1 (Red to Magenta) -->
+  <circle cx="64" cy="56.5" r="1.6" fill="#F43F5E" filter="url(#jwtSoftGlow)"/>
+
+  <!-- Section 2: PAYLOAD (Standard JWT Violet / Purple) -->
+  <g id="jwt-payload">
+    <rect x="44" y="60.5" width="40" height="15" rx="4" fill="#A855F7" fill-opacity="0.14" stroke="#C084FC" stroke-width="1.2"/>
+    <!-- Payload key/val bars (claims) -->
+    <rect x="49" y="65" width="12" height="2.5" rx="1" fill="#C084FC"/>
+    <rect x="64" y="65" width="14" height="2.5" rx="1" fill="#E9D5FF" opacity="0.8"/>
+    <rect x="49" y="70" width="8" height="2.2" rx="1" fill="#A855F7"/>
+    <rect x="60" y="70" width="18" height="2.2" rx="1" fill="#DDD6FE" opacity="0.7"/>
+  </g>
+
+  <!-- Separator Dot 2 (Cyan / Blue) -->
+  <circle cx="64" cy="79" r="1.6" fill="#06B6D4" filter="url(#jwtSoftGlow)"/>
+
+  <!-- Section 3: SIGNATURE (Standard JWT Cyan / Verified Key) -->
+  <g id="jwt-signature">
+    <path d="M 44 83 H 84 C 84 83, 76 89, 64 92 C 52 89, 44 83, 44 83 Z"
+          fill="#06B6D4"
+          fill-opacity="0.18"
+          stroke="#38BDF8"
+          stroke-width="1.2"
+          stroke-linejoin="round"/>
+    
+    <!-- Mini Checkmark / Verification Key -->
+    <path d="M 59 87 L 62.5 90 L 69 84.5"
+          stroke="#38BDF8"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          filter="url(#jwtSoftGlow)"/>
+  </g>
+
+  <!-- Unlocking / Inspect Lens Accent (Top-Right) -->
+  <g filter="url(#jwtSoftGlow)">
+    <circle cx="96" cy="32" r="7.5" fill="#141829" stroke="#38BDF8" stroke-width="1.8"/>
+    <line x1="101.5" y1="37.5" x2="108" y2="44" stroke="#38BDF8" stroke-width="2" stroke-linecap="round"/>
+    <!-- Tiny sparkle inside lens -->
+    <circle cx="94" cy="30" r="1.5" fill="#A855F7"/>
+  </g>
+</svg>

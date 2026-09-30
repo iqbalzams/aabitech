@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background Card Gradient -->
+    <linearGradient id="htmlBg" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#141829"/>
+      <stop offset="100%" stop-color="#0B0D17"/>
+    </linearGradient>
+
+    <!-- Card Border Stroke Gradient (HTML5 Orange to Coral Pink) -->
+    <linearGradient id="htmlBorder" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F97316" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#EC4899" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <!-- HTML Brackets Gradient -->
+    <linearGradient id="tagGrad" x1="26" y1="36" x2="102" y2="92" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FB923C"/>
+      <stop offset="50%" stop-color="#F43F5E"/>
+      <stop offset="100%" stop-color="#E11D48"/>
+    </linearGradient>
+
+    <!-- Magic Wand Body Gradient -->
+    <linearGradient id="wandGrad" x1="68" y1="62" x2="98" y2="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#64748B"/>
+      <stop offset="70%" stop-color="#CBD5E1"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+
+    <!-- Magic Star Flare Gradient -->
+    <linearGradient id="starGrad" x1="92" y1="18" x2="112" y2="38" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="50%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+
+    <!-- Ambient Glow Filter -->
+    <filter id="htmlGlow" x="-20%" y="-20%" width="140%" height="140%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="htmlSoftGlow" x="-30%" y="-30%" width="160%" height="160%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow Behind Container -->
+  <rect x="24" y="20" width="80" height="88" rx="24" fill="#F97316" opacity="0.16" filter="url(#htmlGlow)"/>
+
+  <!-- Base App Card -->
+  <rect x="16" y="16" width="96" height="96" rx="22" fill="url(#htmlBg)" stroke="url(#htmlBorder)" stroke-width="1.5"/>
+
+  <!-- Indentation Hierarchy Guide Lines (Left side) -->
+  <line x1="42" y1="46" x2="42" y2="82" stroke="#334155" stroke-width="1.2" stroke-dasharray="2 2" opacity="0.7"/>
+  <line x1="50" y1="56" x2="50" y2="76" stroke="#334155" stroke-width="1.2" stroke-dasharray="2 2" opacity="0.7"/>
+
+  <!-- Left Angle Bracket '<' -->
+  <path d="M 40 44 L 28 58 L 40 72" 
+        stroke="url(#tagGrad)" 
+        stroke-width="4.5" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        filter="url(#htmlSoftGlow)"/>
+
+  <!-- Slash '/' -->
+  <line x1="56" y1="42" x2="44" y2="74" 
+        stroke="#FB923C" 
+        stroke-width="3.5" 
+        stroke-linecap="round" 
+        stroke-opacity="0.6"/>
+
+  <!-- Right Angle Bracket '>' -->
+  <path d="M 88 44 L 100 58 L 88 72" 
+        stroke="url(#tagGrad)" 
+        stroke-width="4.5" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        filter="url(#htmlSoftGlow)"/>
+
+  <!-- Formatted HTML Tree (Nested Elements & Attributes) -->
+  <!-- Level 0 (Opening Tag Row) -->
+  <rect x="48" y="44" width="14" height="4" rx="2" fill="#FB923C"/>
+  <rect x="65" y="44" width="18" height="4" rx="2" fill="#FBBF24" opacity="0.9"/>
+
+  <!-- Level 1 (Indented Inner Element) -->
+  <rect x="54" y="54" width="10" height="4" rx="2" fill="#38BDF8"/>
+  <rect x="67" y="54" width="15" height="4" rx="2" fill="#94A3B8" opacity="0.6"/>
+
+  <!-- Level 2 (Nested Leaf / Text Content) -->
+  <rect x="60" y="64" width="22" height="4" rx="2" fill="#34D399"/>
+
+  <!-- Level 0 (Closing Tag Row) -->
+  <rect x="48" y="74" width="14" height="4" rx="2" fill="#FB923C" opacity="0.7"/>
+
+  <!-- Magic Beautifier Wand (Angled Across Corner) -->
+  <g filter="url(#htmlSoftGlow)">
+    <!-- Wand Shaft -->
+    <line x1="68" y1="62" x2="94" y2="34" stroke="url(#wandGrad)" stroke-width="3" stroke-linecap="round"/>
+    <!-- Wand Tip Gold Cap -->
+    <line x1="91" y1="37" x2="95" y2="33" stroke="#FBBF24" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Big Magic Sparkle (Tip of the wand) -->
+  <path d="M 101 19 
+           Q 101 28, 110 28 
+           Q 101 28, 101 37 
+           Q 101 28, 92 28 
+           Q 101 28, 101 19 Z" 
+        fill="url(#starGrad)" 
+        filter="url(#htmlSoftGlow)"/>
+
+  <!-- Secondary Mini Glint -->
+  <path d="M 88 18 
+           Q 88 22, 92 22 
+           Q 88 22, 88 26 
+           Q 88 22, 84 22 
+           Q 88 22, 88 18 Z" 
+        fill="#FDE047" 
+        opacity="0.85"/>
+
+  <!-- Micro Glow Dot -->
+  <circle cx="108" cy="40" r="1.5" fill="#F43F5E"/>
+</svg>

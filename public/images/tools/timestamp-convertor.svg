@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background Card Gradient -->
+    <linearGradient id="tsBg" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#141829"/>
+      <stop offset="100%" stop-color="#0B0D17"/>
+    </linearGradient>
+
+    <!-- Card Border Stroke Gradient (Indigo to Sky Blue & Emerald) -->
+    <linearGradient id="tsBorder" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <!-- Chrono Clock Dial Arc Gradient -->
+    <linearGradient id="tsDialGrad" x1="32" y1="28" x2="96" y2="88" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+
+    <!-- Bi-directional Conversion Arrows Gradient -->
+    <linearGradient id="convertGrad" x1="42" y1="64" x2="86" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+
+    <!-- Human Date Tag Gradient -->
+    <linearGradient id="dateTagGrad" x1="56" y1="84" x2="104" y2="84" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+
+    <!-- Ambient Glow Filter -->
+    <filter id="tsGlow" x="-20%" y="-20%" width="140%" height="140%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="tsSoftGlow" x="-30%" y="-30%" width="160%" height="160%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow Behind Container -->
+  <rect x="24" y="20" width="80" height="88" rx="24" fill="#38BDF8" opacity="0.16" filter="url(#tsGlow)"/>
+
+  <!-- Base App Card -->
+  <rect x="16" y="16" width="96" height="96" rx="22" fill="url(#tsBg)" stroke="url(#tsBorder)" stroke-width="1.5"/>
+
+  <!-- Top Terminal / Raw Unix Epoch Block (Raw Timestamp: 1727...) -->
+  <g filter="url(#tsSoftGlow)">
+    <rect x="25" y="26" width="78" height="20" rx="6" fill="#0B0D17" stroke="#334155" stroke-width="1.2"/>
+    
+    <!-- Code Prompt Prompt Symbol: >_ -->
+    <path d="M 30.5 33.5 L 33 36 L 30.5 38.5" stroke="#38BDF8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="35" y1="38.5" x2="38" y2="38.5" stroke="#34D399" stroke-width="1.2" stroke-linecap="round"/>
+
+    <!-- Handcrafted Unix Epoch Vector Digits: "1 7 2 8 0 0" -->
+    <!-- Digit 1 -->
+    <path d="M 42 33 L 43.5 32 V 40" stroke="#E2E8F0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Digit 7 -->
+    <path d="M 47 32 H 51 L 48.5 40" stroke="#E2E8F0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Digit 2 -->
+    <path d="M 54.5 33.5 C 54.5 32, 56.5 32, 57.5 33 C 58.2 34, 57.5 35.5, 55 37 L 54.5 40 H 58.5" stroke="#E2E8F0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Digit 8 -->
+    <ellipse cx="62.5" cy="34" rx="1.8" ry="1.7" stroke="#E2E8F0" stroke-width="1.1"/>
+    <ellipse cx="62.5" cy="37.8" rx="2" ry="1.9" stroke="#E2E8F0" stroke-width="1.1"/>
+    <!-- Trailing Digits Dots -->
+    <circle cx="68" cy="38" r="1" fill="#64748B"/>
+    <circle cx="72" cy="38" r="1" fill="#64748B"/>
+    <circle cx="76" cy="38" r="1" fill="#64748B"/>
+
+    <!-- Epoch Unit Tag: [ms / s] -->
+    <rect x="83" y="29.5" width="16" height="13" rx="3.5" fill="#1E293B"/>
+    <!-- 's' -->
+    <path d="M 92.5 34.5 C 92 34 90.5 34 90.5 35 C 90.5 36.5 92.5 36 92.5 37.5 C 92.5 38.5 91.5 38.5 90.5 38" stroke="#38BDF8" stroke-width="1.1" stroke-linecap="round"/>
+  </g>
+
+  <!-- Central Time Cycle / Clock & Epoch Transformation -->
+  <g filter="url(#tsSoftGlow)">
+    <!-- Central Dial Orbit -->
+    <circle cx="44" cy="65" r="16" fill="#0B0D17" stroke="#1E293B" stroke-width="2.5"/>
+    <circle cx="44" cy="65" r="16" stroke="url(#tsDialGrad)" stroke-width="2.2" stroke-dasharray="20 40" stroke-linecap="round"/>
+
+    <!-- Clock Center Pivot & Needles (Exact Time Capture) -->
+    <circle cx="44" cy="65" r="2" fill="#38BDF8"/>
+    <!-- Hour Hand -->
+    <line x1="44" y1="65" x2="44" y2="56" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- Minute Hand (Active Second/Minute tick) -->
+    <line x1="44" y1="65" x2="52" y2="60" stroke="#38BDF8" stroke-width="1.4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Bidirectional Conversion Vector (Unix ⇄ ISO Human Date) -->
+  <g filter="url(#tsSoftGlow)">
+    <!-- Right Arrow: Timestamp -> Human Readable -->
+    <path d="M 64 58 L 78 58 M 75 55 L 78.5 58 L 75 61" 
+          stroke="#38BDF8" 
+          stroke-width="1.8" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+
+    <!-- Left Arrow: Human Readable -> Timestamp -->
+    <path d="M 78 70 L 64 70 M 67 67 L 63.5 70 L 67 73" 
+          stroke="#34D399" 
+          stroke-width="1.8" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+  </g>
+
+  <!-- Bottom Result: Human-Readable ISO Date Card ("YYYY-MM-DD") -->
+  <g filter="url(#tsSoftGlow)">
+    <rect x="25" y="81" width="78" height="21" rx="6" fill="#0B0D17" stroke="url(#dateTagGrad)" stroke-width="1.4"/>
+    
+    <!-- Mini Calendar Icon -->
+    <rect x="31" y="86.5" width="10" height="9.5" rx="2" stroke="#34D399" stroke-width="1.1"/>
+    <line x1="31" y1="89.5" x2="41" y2="89.5" stroke="#34D399" stroke-width="1"/>
+    <!-- Mini binder pins -->
+    <line x1="33.5" y1="85" x2="33.5" y2="86.5" stroke="#E2E8F0" stroke-width="1.1" stroke-linecap="round"/>
+    <line x1="38.5" y1="85" x2="38.5" y2="86.5" stroke="#E2E8F0" stroke-width="1.1" stroke-linecap="round"/>
+
+    <!-- Formatted ISO Date String Vectors ("2026-09-29") -->
+    <!-- '2' -->
+    <path d="M 45 89 C 45 88, 46.5 88, 47.5 88.8 C 48 89.5, 47.5 90.5, 45.5 91.5 L 45 93 H 48" stroke="#34D399" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- '0' -->
+    <ellipse cx="51.5" cy="90.5" rx="1.5" ry="2.5" stroke="#34D399" stroke-width="1.1"/>
+    <!-- '2' -->
+    <path d="M 55.5 89 C 55.5 88, 57 88, 58 88.8 C 58.5 89.5, 58 90.5, 56 91.5 L 55.5 93 H 58.5" stroke="#34D399" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- '-' -->
+    <line x1="61.5" y1="90.5" x2="63.5" y2="90.5" stroke="#64748B" stroke-width="1.1" stroke-linecap="round"/>
+    <!-- 'U' 'T' 'C' Tag Marker -->
+    <rect x="67" y="85.5" width="31" height="12" rx="3" fill="#1E293B" stroke="#334155" stroke-width="0.8"/>
+    <!-- Vector "UTC" -->
+    <!-- U -->
+    <path d="M 72 88.5 V 91 C 72 92, 74 92, 74 91 V 88.5" stroke="#38BDF8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- T -->
+    <path d="M 76.5 88.5 H 80.5 M 78.5 88.5 V 92.5" stroke="#38BDF8" stroke-width="1" stroke-linecap="round"/>
+    <!-- C -->
+    <path d="M 85 89 C 84.5 88.5, 83 88.5, 83 90.5 C 83 92.5, 84.5 92.5, 85 92" stroke="#38BDF8" stroke-width="1" stroke-linecap="round"/>
+    <circle cx="89.5" cy="90.5" r="1.2" fill="#10B981"/>
+  </g>
+
+  <!-- Sparkle Accent (Top-Right) -->
+  <path d="M 101 20 
+           Q 101 24, 105 24 
+           Q 101 24, 101 28 
+           Q 101 24, 97 24 
+           Q 101 24, 101 20 Z" 
+        fill="#38BDF8" 
+        opacity="0.85"
+        filter="url(#tsSoftGlow)"/>
+</svg>

@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background Card Gradient -->
+    <linearGradient id="wordBg" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#141829"/>
+      <stop offset="100%" stop-color="#0B0D17"/>
+    </linearGradient>
+
+    <!-- Card Border Stroke Gradient (Indigo to Sky Blue) -->
+    <linearGradient id="wordBorder" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#06B6D4" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <!-- Document Page Gradient -->
+    <linearGradient id="docGrad" x1="26" y1="28" x2="72" y2="92" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+
+    <!-- Word Block Highlights Gradient -->
+    <linearGradient id="wordGradPrimary" x1="36" y1="52" x2="68" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+
+    <linearGradient id="wordGradSecondary" x1="36" y1="62" x2="60" y2="62" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+
+    <!-- Counter Pill Gradient -->
+    <linearGradient id="pillGrad" x1="62" y1="64" x2="104" y2="96" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+
+    <!-- Speedometer / Reading Time Gauge Gradient -->
+    <linearGradient id="gaugeGrad" x1="88" y1="24" x2="106" y2="42" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+
+    <!-- Ambient Glow Filter -->
+    <filter id="wordGlow" x="-20%" y="-20%" width="140%" height="140%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="wordSoftGlow" x="-30%" y="-30%" width="160%" height="160%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow Behind Container -->
+  <rect x="24" y="20" width="80" height="88" rx="24" fill="#6366F1" opacity="0.16" filter="url(#wordGlow)"/>
+
+  <!-- Base App Card -->
+  <rect x="16" y="16" width="96" height="96" rx="22" fill="url(#wordBg)" stroke="url(#wordBorder)" stroke-width="1.5"/>
+
+  <!-- Document Sheet (Representing article / written copy) -->
+  <path d="M 28 32 C 28 29.8, 29.8 28, 32 28 H 60 L 74 42 V 88 C 74 90.2, 72.2 92, 70 92 H 32 C 29.8 92, 28 90.2, 28 88 Z" 
+        fill="url(#docGrad)" 
+        stroke="#334155" 
+        stroke-width="1.4"/>
+  <!-- Folded Corner of the Document -->
+  <path d="M 60 28 V 40 C 60 41.1, 60.9 42, 62 42 H 74" 
+        stroke="#475569" 
+        stroke-width="1.4" 
+        fill="#0F172A"/>
+
+  <!-- Parsed Word Chips (Individual Words Grouped in Lines) -->
+  <!-- Line 1 -->
+  <rect x="34" y="48" width="16" height="5" rx="2.5" fill="url(#wordGradPrimary)"/>
+  <rect x="53" y="48" width="13" height="5" rx="2.5" fill="#475569" opacity="0.8"/>
+
+  <!-- Line 2 -->
+  <rect x="34" y="58" width="11" height="5" rx="2.5" fill="#475569" opacity="0.8"/>
+  <rect x="48" y="58" width="18" height="5" rx="2.5" fill="url(#wordGradSecondary)"/>
+
+  <!-- Line 3 -->
+  <rect x="34" y="68" width="15" height="5" rx="2.5" fill="url(#wordGradPrimary)"/>
+  <rect x="52" y="68" width="9" height="5" rx="2.5" fill="#475569" opacity="0.8"/>
+
+  <!-- Line 4 (Short sentence end) -->
+  <rect x="34" y="78" width="12" height="5" rx="2.5" fill="#38BDF8" opacity="0.6"/>
+
+  <!-- Mini Reading Time Clock Indicator (Top-Right) -->
+  <g filter="url(#wordSoftGlow)">
+    <circle cx="96" cy="34" r="8.5" fill="#0B0D17" stroke="url(#gaugeGrad)" stroke-width="1.5"/>
+    <!-- Clock Hands (Reading time metric) -->
+    <path d="M 96 29.5 V 34 L 99 36" stroke="#38BDF8" stroke-width="1.4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Word Count Meter HUD Badge (Floating Bottom-Right) -->
+  <g filter="url(#wordSoftGlow)">
+    <rect x="62" y="64" width="46" height="28" rx="8" fill="#0B0D17" stroke="url(#pillGrad)" stroke-width="1.8"/>
+
+    <!-- Micro Word Token Icon inside HUD -->
+    <rect x="68" y="72" width="7" height="3" rx="1.5" fill="#38BDF8"/>
+    <rect x="68" y="77" width="5" height="3" rx="1.5" fill="#818CF8"/>
+    <rect x="68" y="82" width="6" height="3" rx="1.5" fill="#38BDF8" opacity="0.7"/>
+
+    <!-- Separator Line inside Pill -->
+    <line x1="78" y1="71" x2="78" y2="85" stroke="#334155" stroke-width="1.2"/>
+
+    <!-- Numeric Display Vector "450" (Clean handcrafted numerals) -->
+    <!-- Digit 4 -->
+    <path d="M 85 73 L 81 79 H 86 V 83" 
+          stroke="#E2E8F0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Digit 5 -->
+    <path d="M 93 73 H 89 V 76.5 C 89 76.5, 90 75.8, 91.5 75.8 C 93 75.8, 93.8 77, 93.8 78.5 C 93.8 80.2, 92.5 81.2, 90.8 81.2 C 89.8 81.2, 89.2 80.8, 89 80.2" 
+          stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Digit 0 -->
+    <ellipse cx="98.5" cy="77.5" rx="2.5" ry="4.2" 
+             stroke="#6366F1" stroke-width="1.5"/>
+  </g>
+
+  <!-- Word Tally Hash Accent (Bottom-Left) -->
+  <g opacity="0.65">
+    <line x1="30" y1="87" x2="30" y2="83" stroke="#64748B" stroke-width="1.4" stroke-linecap="round"/>
+    <line x1="33" y1="87" x2="33" y2="83" stroke="#64748B" stroke-width="1.4" stroke-linecap="round"/>
+    <line x1="36" y1="87" x2="36" y2="83" stroke="#64748B" stroke-width="1.4" stroke-linecap="round"/>
+    <line x1="39" y1="87" x2="39" y2="83" stroke="#64748B" stroke-width="1.4" stroke-linecap="round"/>
+    <line x1="29" y1="84" x2="40" y2="86" stroke="#38BDF8" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+</svg>

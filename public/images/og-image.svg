@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background Canvas Mesh Gradients -->
+    <radialGradient id="meshCenter" cx="600" cy="240" r="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1E1B4B" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#0F172A" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#080914" stop-opacity="1"/>
+    </radialGradient>
+
+    <radialGradient id="cyanGlow" cx="240" cy="180" r="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="purpleGlow" cx="960" cy="420" r="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0B0D17" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <!-- Logo / Brand Gradients -->
+    <linearGradient id="logoCyanCobalt" x1="520" y1="90" x2="680" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="55%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+
+    <linearGradient id="logoIndigoPurple" x1="550" y1="120" x2="650" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="50%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+
+    <linearGradient id="coreCrossbar" x1="550" y1="185" x2="650" y2="185" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+
+    <!-- Tagline & Text Gradient -->
+    <linearGradient id="headingGrad" x1="300" y1="310" x2="900" y2="370" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="45%" stop-color="#F1F5F9"/>
+      <stop offset="100%" stop-color="#94A3B8"/>
+    </linearGradient>
+
+    <linearGradient id="accentTextGrad" x1="300" y1="380" x2="900" y2="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+
+    <!-- Filter Glows -->
+    <filter id="ogBloom" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Precision Dot Matrix Pattern -->
+    <pattern id="dotGrid" x="0" y="0" width="36" height="36" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#334155" opacity="0.45"/>
+    </pattern>
+  </defs>
+
+  <!-- ================= CANVAS BASE ================= -->
+  <rect width="1200" height="630" fill="#080914"/>
+  <rect width="1200" height="630" fill="url(#meshCenter)"/>
+  <rect width="1200" height="630" fill="url(#cyanGlow)"/>
+  <rect width="1200" height="630" fill="url(#purpleGlow)"/>
+
+  <!-- Subtle Perspective Grid Overlay -->
+  <rect width="1200" height="630" fill="url(#dotGrid)"/>
+
+  <!-- High-Tech Outer Boundary Framing -->
+  <rect x="24" y="24" width="1152" height="582" rx="28" stroke="#334155" stroke-width="1.5" stroke-opacity="0.6"/>
+  <rect x="24" y="24" width="1152" height="582" rx="28" stroke="url(#accentTextGrad)" stroke-width="1.5" stroke-opacity="0.3"/>
+
+  <!-- Frame Corner Circuit Markers -->
+  <path d="M 24 64 L 64 24" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+  <circle cx="68" cy="24" r="3" fill="#38BDF8"/>
+  <path d="M 1176 590 L 1136 606" stroke="#818CF8" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+  <circle cx="1132" cy="606" r="3" fill="#818CF8"/>
+
+  <!-- ================= LOGO EMBLEM (CENTER TOP) ================= -->
+  <g transform="translate(600, 155)" filter="url(#ogBloom)">
+    <!-- Backing Glow Halo -->
+    <circle cx="0" cy="0" r="70" fill="#6366F1" opacity="0.4"/>
+  </g>
+
+  <g transform="translate(600, 155)">
+    <!-- Glass Shield Base for Emblem -->
+    <rect x="-65" y="-65" width="130" height="130" rx="32" fill="#141829" fill-opacity="0.85" stroke="#38BDF8" stroke-width="2" stroke-opacity="0.4"/>
+
+    <!-- Outer Delta Frame (Primary 'A') -->
+    <path d="M -38 42 L -3.5 -38 C -1.5 -42 1.5 -42 3.5 -38 L 38 42" 
+          stroke="url(#logoCyanCobalt)" 
+          stroke-width="8.5" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+
+    <!-- Inner Nested Delta (Secondary 'A') -->
+    <path d="M -21 42 L 0 -10 L 21 42" 
+          stroke="url(#logoIndigoPurple)" 
+          stroke-width="7" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+
+    <!-- Glowing Cyber Crossbar -->
+    <line x1="-26" y1="21" x2="26" y2="21" 
+          stroke="url(#coreCrossbar)" 
+          stroke-width="5" 
+          stroke-linecap="round"
+          filter="url(#softGlow)"/>
+
+    <!-- Apex Quantum Node -->
+    <circle cx="0" cy="-39" r="4.5" fill="#38BDF8" filter="url(#softGlow)"/>
+  </g>
+
+  <!-- ================= TYPOGRAPHIC TITLE ================= -->
+  <!-- Brand Name Text Header: AABITECH -->
+  <g id="og-brand-header">
+    <text x="600" y="275" 
+          text-anchor="middle" 
+          fill="#FFFFFF" 
+          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+          font-size="44" 
+          font-weight="900" 
+          letter-spacing="6">
+      AABI<tspan fill="#38BDF8">TECH</tspan>
+    </text>
+
+    <!-- Live System Pulse Node Next to Header -->
+    <circle cx="765" cy="262" r="4" fill="#22D3EE" filter="url(#softGlow)"/>
+    <circle cx="765" cy="262" r="8" stroke="#22D3EE" stroke-width="1.2" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- Main Headline / Value Proposition -->
+  <text x="600" y="340" 
+        text-anchor="middle" 
+        fill="url(#headingGrad)" 
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+        font-size="38" 
+        font-weight="800" 
+        letter-spacing="-0.5">
+    Free Online Developer &amp; Daily Web Utilities
+  </text>
+
+  <!-- Secondary Dynamic Subtitle -->
+  <text x="600" y="385" 
+        text-anchor="middle" 
+        fill="url(#accentTextGrad)" 
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+        font-size="21" 
+        font-weight="600" 
+        letter-spacing="1.5">
+    FAST • CLIENT-SIDE SECURE • 100% FREE
+  </text>
+
+  <!-- ================= SHOWCASE TOOL PILLS (BOTTOM ROW) ================= -->
+  <!-- Pill 1: JSON Formatter -->
+  <g transform="translate(140, 435)">
+    <rect width="190" height="52" rx="14" fill="url(#cardBg)" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.4"/>
+    <circle cx="30" cy="26" r="4" fill="#38BDF8"/>
+    <text x="46" y="32" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="16" font-weight="600">JSON Formatter</text>
+  </g>
+
+  <!-- Pill 2: JWT Decoder -->
+  <g transform="translate(350, 435)">
+    <rect width="165" height="52" rx="14" fill="url(#cardBg)" stroke="#A855F7" stroke-width="1.2" stroke-opacity="0.4"/>
+    <circle cx="28" cy="26" r="4" fill="#F43F5E"/>
+    <text x="44" y="32" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="16" font-weight="600">JWT Decoder</text>
+  </g>
+
+  <!-- Pill 3: Regex Tester -->
+  <g transform="translate(535, 435)">
+    <rect width="165" height="52" rx="14" fill="url(#cardBg)" stroke="#6366F1" stroke-width="1.2" stroke-opacity="0.4"/>
+    <circle cx="28" cy="26" r="4" fill="#34D399"/>
+    <text x="44" y="32" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="16" font-weight="600">Regex Tester</text>
+  </g>
+
+  <!-- Pill 4: Base64 / URL -->
+  <g transform="translate(720, 435)">
+    <rect width="185" height="52" rx="14" fill="url(#cardBg)" stroke="#06B6D4" stroke-width="1.2" stroke-opacity="0.4"/>
+    <circle cx="28" cy="26" r="4" fill="#38BDF8"/>
+    <text x="44" y="32" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="16" font-weight="600">Base64 &amp; URL</text>
+  </g>
+
+  <!-- Pill 5: CSS Gradients -->
+  <g transform="translate(925, 435)">
+    <rect width="135" height="52" rx="14" fill="url(#cardBg)" stroke="#EC4899" stroke-width="1.2" stroke-opacity="0.4"/>
+    <circle cx="26" cy="26" r="4" fill="#F472B6"/>
+    <text x="40" y="32" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="16" font-weight="600">+15 More</text>
+  </g>
+
+  <!-- ================= FOOTER / DOMAIN BRANDING ================= -->
+  <!-- Clean Bottom Web URL Bar -->
+  <g transform="translate(600, 545)">
+    <rect x="-140" y="-18" width="280" height="36" rx="18" fill="#0F172A" stroke="#334155" stroke-width="1.2"/>
+    <circle cx="-112" cy="0" r="3.5" fill="#10B981" filter="url(#softGlow)"/>
+    <text x="-96" y="6" fill="#94A3B8" font-family="system-ui, monospace" font-size="16" font-weight="600" letter-spacing="1">
+      https://aabitech.com
+    </text>
+  </g>
+</svg>
