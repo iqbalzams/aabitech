@@ -280,7 +280,7 @@ new #[Layout('layouts.app')] class extends Component
                 @if ($this->tool->icon)
                     <img
                         src="{{ asset($this->tool->icon) }}"
-                        loading="lazy"
+                        decoding="async"
                         width="100"
                         height="100"
                         alt="{{ $this->tool->name }}"

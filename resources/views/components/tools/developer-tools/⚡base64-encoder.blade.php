@@ -204,18 +204,38 @@ new class extends Component
             </div>
         </div>
 
-        <div class="rounded-xl border border-slate-200 bg-white p-3.5 lg:col-span-2">
-            <div class="flex items-center justify-between">
-                <h3 class="text-xs font-bold text-slate-800">Developer snippets</h3>
-                <select x-model="snippetLanguage" class="h-7 rounded-md border-slate-200 text-[11px]">
-                    <option>JavaScript</option><option>PHP</option><option>Python</option><option>Java</option><option>Go</option><option>C#</option><option>cURL</option>
-                </select>
-            </div>
-            <div class="mt-2 flex items-center gap-2">
-                <pre class="min-w-0 flex-1 overflow-auto rounded-lg bg-slate-950 p-3 text-[11px] leading-5 text-slate-200" x-text="developerSnippet"></pre>
-                <button type="button" @click="copyText(developerSnippet,'Snippet copied')" class="shrink-0 rounded-md border border-slate-200 px-2.5 py-2 text-[11px] font-semibold text-slate-600 hover:bg-slate-50">Copy</button>
-            </div>
-        </div>
+        <div class="min-w-0 rounded-xl border border-slate-200 bg-white p-3.5 lg:col-span-2">
+    <div class="flex items-center justify-between gap-2">
+        <h3 class="text-xs font-bold text-slate-800">Developer snippets</h3>
+
+        <select
+            x-model="snippetLanguage"
+            class="h-7 shrink-0 rounded-md border-slate-200 text-[11px]"
+        >
+            <option>JavaScript</option>
+            <option>PHP</option>
+            <option>Python</option>
+            <option>Java</option>
+            <option>Go</option>
+            <option>C#</option>
+            <option>cURL</option>
+        </select>
+    </div>
+
+    <div class="mt-2 flex min-w-0 items-start gap-2">
+        <pre
+            class="min-w-0 max-w-full flex-1 overflow-x-auto overflow-y-auto whitespace-pre rounded-lg bg-slate-950 p-3 text-[11px] leading-5 text-slate-200"
+            x-text="developerSnippet"
+        >const encoded = btoa(unescape(encodeURIComponent("Hello, AabiTech!")));</pre>
+
+        <button
+            type="button"
+            @click="copyText(developerSnippet,'Snippet copied')"
+            class="shrink-0 rounded-md border border-slate-200 px-2.5 py-2 text-[11px] font-semibold text-slate-600 hover:bg-slate-50"
+        >
+            Copy
+        </button>
+    </div>
     </div>
 
     <div x-show="batchMode !== 'off'" class="rounded-xl border border-slate-200 bg-white p-3.5">
