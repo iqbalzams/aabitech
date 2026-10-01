@@ -47,7 +47,7 @@ class SeoService
         return [
             'title' => config(
                 'aabitech.seo.default_title',
-                'AabiTech – Free Online Developer, Writing & Daily Productivity Tools'
+                'AabiTech – Free Online Developer & Daily Productivity Tools'
             ),
 
             'description' => config(
@@ -61,7 +61,7 @@ class SeoService
 
             'schema' => $this->siteGraph(
                 $url,
-                'AabiTech – Free Online Developer, Writing & Daily Productivity Tools',
+                'AabiTech – Free Online Developer & Daily Productivity Tools',
                 config(
                     'aabitech.seo.default_description',
                     'Free online tools for developers, students, writers, creators and everyday tasks.'
@@ -77,10 +77,9 @@ class SeoService
     {
         $url = route('tools');
 
-        $title = 'Free Online Tools | AabiTech';
+        $title = 'Free Online Tools for Everyday Tasks | AabiTech';
 
-        $description =
-            'Free online developer tools, text tools, calculators, design utilities, security tools and date and time converters from AabiTech.';
+        $description ='Explore free online tools for developers, students, writers, creators, and everyday tasks. Fast, simple, and privacy-friendly tools from AabiTech.';
 
         return [
             'title' => $title,
@@ -313,7 +312,7 @@ class SeoService
 
         $title = config(
             'aabitech.seo.default_title',
-            'AabiTech – Free Online Developer, Writing & Daily Productivity Tools'
+            'AabiTech – Free Online Developer & Daily Productivity Tools'
         );
 
         $description = config(

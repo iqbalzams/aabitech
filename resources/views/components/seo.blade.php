@@ -42,7 +42,7 @@
         $seo['title']
             ?? config(
                 'aabitech.seo.default_title',
-                'AabiTech – Free Online Developer, Writing & Daily Productivity Tools'
+                'AabiTech – Free Online Developer & Daily Productivity Tools'
             )
     );
 

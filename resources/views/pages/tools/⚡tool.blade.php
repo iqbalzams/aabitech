@@ -267,84 +267,46 @@ new #[Layout('layouts.app')] class extends Component
         </div>
     </section>
 
+{{-- ============================================================
+    TOOL INTRODUCTION
+============================================================= --}}
 
-    {{-- ============================================================
-        TOOL INTRODUCTION
-    ============================================================= --}}
+<section class="bg-white">
+    <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex items-start gap-4 sm:gap-6">
 
-    <section class="bg-white">
+            {{-- Tool Icon --}}
+            <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-indigo-50 sm:h-20 sm:w-20">
+                @if ($this->tool->icon)
+                    <img
+                        src="{{ asset($this->tool->icon) }}"
+                        loading="lazy"
+                        width="100"
+                        height="100"
+                        alt="{{ $this->tool->name }}"
+                        class="h-10 w-10 object-contain sm:h-12 sm:w-12"
+                    >
+                @else
+                    <span class="text-xl sm:text-2xl" aria-hidden="true">⚡</span>
+                @endif
+            </div>
 
-        <div class="mx-auto w-full max-w-7xl  text-center">
-
-            <div class="">
-
-                {{-- <div class="flex flex-wrap items-center gap-2">
-
-                    @if ($this->tool->category)
-
-                        <a
-                            href="{{ route('tools.category', ['slug' => $this->tool->category->slug]) }}"
-                            wire:navigate
-                            class="inline-flex h-8 items-center gap-1.5 rounded-lg border border-slate-200 bg-slate-50 px-3 text-xs font-semibold text-slate-600 transition-colors hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700"
-                        >
-                            <span>
-                                {{ $this->tool->category->icon ?: '⚡' }}
-                            </span>
-
-                            {{ $this->tool->category->name }}
-                        </a>
-
-                    @endif
-
-                    @if ($this->implementationComponent)
-
-                        <span class="inline-flex h-8 items-center gap-1.5 rounded-lg bg-emerald-50 px-3 text-xs font-semibold text-emerald-700">
-
-                            <span
-                                class="h-1.5 w-1.5 rounded-full bg-emerald-500"
-                                aria-hidden="true"
-                            ></span>
-
-                            Available now
-
-                        </span>
-
-                    @else
-
-                        <span class="inline-flex h-8 items-center gap-1.5 rounded-lg bg-amber-50 px-3 text-xs font-semibold text-amber-700">
-
-                            <span
-                                class="h-1.5 w-1.5 rounded-full bg-amber-500"
-                                aria-hidden="true"
-                            ></span>
-
-                            Coming soon
-
-                        </span>
-
-                    @endif
-
-                </div> --}}
-
-
-                <h1 class="mt-5 text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
+            {{-- Tool Introduction --}}
+            <div class="min-w-0 flex-1">
+                <h1 class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">
                     {{ $this->tool->name }}
                 </h1>
 
-
                 @if ($this->tool->short_description)
-
-                    <p class="mt-5 text-lg leading-8 text-slate-600 sm:text-xl">
+                    <p class="mt-3 max-w-3xl text-base leading-7 text-slate-600 sm:mt-4 sm:text-lg sm:leading-8">
                         {{ $this->tool->short_description }}
                     </p>
-
                 @endif
-
             </div>
 
         </div>
-
-    </section>
+    </div>
+</section>
 
 
     {{-- ============================================================
@@ -368,26 +330,11 @@ new #[Layout('layouts.app')] class extends Component
 
                             <div class="flex min-w-0 items-center gap-3">
 
-                                <div class="flex w-auto shrink-0 items-center justify-center rounded-xl bg-indigo-50 text-lg">
-                                    @if ($this->tool->icon)
-                                        <img
-                                            src="{{ asset($this->tool->icon) }}"
-                                            loading="lazy"
-                                            width="100"
-                                            height="100"
-                                            alt="{{ $this->tool->name }}"
-                                            class="object-contain"
-                                        >
-                                    @else
-                                        <span class="text-xl">⚡</span>
-                                    @endif                                
-                            </div>
-
                                 <div class="min-w-0">
 
-                                    <p class="truncate text-sm font-semibold text-slate-900">
+                                    <h2 class="truncate text-sm font-semibold text-slate-900">
                                         {{ $this->tool->name }}
-                                    </p>
+                                    </h2>
 
                                     <p class="mt-0.5 text-xs text-slate-500">
                                         Online tool
@@ -396,21 +343,6 @@ new #[Layout('layouts.app')] class extends Component
                                 </div>
 
                             </div>
-
-                            @if ($this->implementationComponent)
-
-                                <span class="hidden shrink-0 items-center gap-1.5 text-xs font-medium text-emerald-700 sm:inline-flex">
-
-                                    <span
-                                        class="h-1.5 w-1.5 rounded-full bg-emerald-500"
-                                        aria-hidden="true"
-                                    ></span>
-
-                                    Ready to use
-
-                                </span>
-
-                            @endif
 
                         </div>
 

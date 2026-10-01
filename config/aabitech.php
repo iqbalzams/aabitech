@@ -9,7 +9,7 @@ return [
     ),
 
     'seo' => [
-        'default_title' => 'AabiTech – Free Online Developer, Writing & Daily Productivity Tools',
+        'default_title' => 'AabiTech – Free Online Developer & Daily Productivity Tools',
 
         'default_description' =>
             'Free online tools for developers, students, writers, creators and everyday tasks. Fast, simple and easy-to-use tools from AabiTech.',

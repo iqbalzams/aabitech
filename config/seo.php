@@ -12,7 +12,7 @@ return [
 
     'site_url' => env('APP_URL', 'https://aabitech.com'),
 
-    'default_title' => 'AabiTech – Free Online Developer, Writing & Daily Productivity Tools',
+    'default_title' => 'AabiTech – Free Online Developer & Daily Productivity Tools',
 
     'title_suffix' => ' | AabiTech',
 

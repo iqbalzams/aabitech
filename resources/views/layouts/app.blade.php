@@ -235,7 +235,7 @@
                                                     src="{{ asset($tool->icon) }}"
                                                     width="36"
                                                     height="36"
-                                                    alt=""
+                                                    alt="{{$tool->name}}"
                                                     class="h-9 w-auto object-contain"
                                                 >
                                             @else
@@ -554,7 +554,17 @@
                                 aria-hidden="true"
                                 class="flex h-6 w-6 shrink-0 items-center justify-center text-sm"
                             >
-                                {{ $tool->icon ?: '⚡' }}
+                                @if ($tool->icon)
+                                    <img
+                                        src="{{ asset($tool->icon) }}"
+                                        width="36"
+                                        height="36"
+                                        alt="{{$tool->name}}"
+                                        class="h-9 w-auto object-contain"
+                                    >
+                                @else
+                                    <span class="text-xl">⚡</span>
+                                @endif
                             </span>
 
                             <span class="flex-1 truncate">
@@ -580,7 +590,12 @@
                                 aria-hidden="true"
                                 class="flex h-6 w-6 shrink-0 items-center justify-center text-sm"
                             >
+                            @if ($category->icon)
+
                                 {{ $category->icon }}
+                            @else
+                                <span class="text-xl">⚡</span>
+                            @endif
                             </span>
 
                             <span class="flex-1 truncate">
