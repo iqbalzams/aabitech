@@ -420,7 +420,7 @@ new #[Layout('layouts.app')] class extends Component
             TRUST / TOOL CHARACTERISTICS
         ============================================================= --}}
 
-        <section class="border-y border-slate-200 bg-white">
+        {{-- <section class="border-y border-slate-200 bg-white">
 
             <div class="mx-auto w-full max-w-7xl px-4 py-7 sm:px-6 lg:px-8">
 
@@ -507,7 +507,7 @@ new #[Layout('layouts.app')] class extends Component
 
             </div>
 
-        </section>
+        </section> --}}
 
 
         {{-- ============================================================
