@@ -117,7 +117,7 @@ new class extends Component
                         <div class="space-y-3">
                             <div class="grid gap-2 sm:grid-cols-3">
                                 <div class="rounded-lg border border-rose-200 bg-rose-50 p-3">
-                                    <div class="text-[10px] font-semibold uppercase tracking-wide text-rose-600">Header</div>
+                                    <div class="text-[10px] font-semibold uppercase tracking-wide text-rose-700">Header</div>
                                     <div class="mt-1 font-mono text-[11px] text-slate-800" x-text="headerSummary"></div>
                                 </div>
                                 <div class="rounded-lg border border-amber-200 bg-amber-50 p-3">
