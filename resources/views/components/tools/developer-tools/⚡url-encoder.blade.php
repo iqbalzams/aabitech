@@ -423,6 +423,7 @@ new class extends Component
                         Encoded or decoded URL output
                     </label>
                     <textarea
+                        id="url-encoded-output"
                         x-model="output"
                         readonly
                         rows="15"
