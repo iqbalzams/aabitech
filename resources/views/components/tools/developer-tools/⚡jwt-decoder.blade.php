@@ -45,7 +45,7 @@ new class extends Component
                         <label for="jwt-token" class="text-xs font-semibold text-slate-800">JWT Token</label>
                         <p class="mt-0.5 text-[11px] text-slate-500">Paste a compact JWT or a <code>Bearer</code> value.</p>
                     </div>
-                    <span class="text-[11px] text-slate-400" x-text="tokenStats"></span>
+                    <span class="text-[11px] text-slate-500" x-text="tokenStats"></span>
                 </div>
                 <div class="p-4">
                     <textarea
@@ -325,11 +325,11 @@ new class extends Component
             </div>
         </div>
         <div class="grid gap-3 p-4 sm:grid-cols-2 xl:grid-cols-5">
-            <div class="rounded-lg border border-slate-200 p-3"><div class="text-[10px] uppercase tracking-wide text-slate-400">Segments</div><div class="mt-1 text-lg font-semibold text-slate-800" x-text="segmentCount"></div></div>
-            <div class="rounded-lg border border-slate-200 p-3"><div class="text-[10px] uppercase tracking-wide text-slate-400">Claims</div><div class="mt-1 text-lg font-semibold text-slate-800" x-text="claims.length"></div></div>
-            <div class="rounded-lg border border-slate-200 p-3"><div class="text-[10px] uppercase tracking-wide text-slate-400">Expires</div><div class="mt-1 text-xs font-semibold text-slate-800" x-text="formatClaimDate('exp') || '—'"></div></div>
-            <div class="rounded-lg border border-slate-200 p-3"><div class="text-[10px] uppercase tracking-wide text-slate-400">Remaining</div><div class="mt-1 text-xs font-semibold text-slate-800" x-text="relativeExpiration"></div></div>
-            <div class="rounded-lg border border-slate-200 p-3"><div class="text-[10px] uppercase tracking-wide text-slate-400">Verification</div><div class="mt-1 text-xs font-semibold text-slate-800" x-text="verificationState"></div></div>
+            <div class="rounded-lg border border-slate-200 p-3"><div class="text-[10px] uppercase tracking-wide text-slate-500">Segments</div><div class="mt-1 text-lg font-semibold text-slate-800" x-text="segmentCount"></div></div>
+            <div class="rounded-lg border border-slate-200 p-3"><div class="text-[10px] uppercase tracking-wide text-slate-500">Claims</div><div class="mt-1 text-lg font-semibold text-slate-800" x-text="claims.length"></div></div>
+            <div class="rounded-lg border border-slate-200 p-3"><div class="text-[10px] uppercase tracking-wide text-slate-500">Expires</div><div class="mt-1 text-xs font-semibold text-slate-800" x-text="formatClaimDate('exp') || '—'"></div></div>
+            <div class="rounded-lg border border-slate-200 p-3"><div class="text-[10px] uppercase tracking-wide text-slate-500">Remaining</div><div class="mt-1 text-xs font-semibold text-slate-800" x-text="relativeExpiration"></div></div>
+            <div class="rounded-lg border border-slate-200 p-3"><div class="text-[10px] uppercase tracking-wide text-slate-500">Verification</div><div class="mt-1 text-xs font-semibold text-slate-800" x-text="verificationState"></div></div>
         </div>
     </div>
 
