@@ -86,11 +86,12 @@ new class extends Component
 
                 {{-- Encoding mode --}}
                 <div class="flex min-w-0 items-center gap-2">
-                    <label class="shrink-0 text-[11px] font-medium text-slate-500">
-                        Encoding
+                    <label for="encoding-mode" class="shrink-0 text-[11px] font-medium text-slate-500">
+                        URL Encoding Mode
                     </label>
 
                     <select
+                        id="encoding-mode"
                         x-model="encodingMode"
                         @change="processIfAuto()"
                         class="h-8 min-w-[165px] rounded-md border border-slate-200 bg-white px-2 text-xs text-slate-700 outline-none transition focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100"
@@ -202,7 +203,7 @@ new class extends Component
             {{-- Context mode --}}
             <div class="border-t border-slate-100 px-3 py-2">
                 <div class="flex flex-wrap items-center gap-2">
-                    <span class="text-[10px] font-medium uppercase tracking-wide text-slate-400">
+                    <span class="text-[10px] font-medium uppercase tracking-wide text-slate-500">
                         Context
                     </span>
 
@@ -217,7 +218,7 @@ new class extends Component
                         ></button>
                     </template>
 
-                    <span class="ml-1 text-[10px] text-slate-400">
+                    <span class="ml-1 text-[10px] text-slate-500">
                         Context-aware encoding preserves URL structure where appropriate.
                     </span>
                 </div>
@@ -234,7 +235,7 @@ new class extends Component
         >
             <p class="text-[11px] text-slate-500">
                 Drag & drop a <strong>.txt</strong> file here for batch processing
-                <span class="text-slate-400">· maximum <span x-text="formatBytes(maxInputBytes)"></span></span>
+                <span class="text-slate-500">· maximum <span x-text="formatBytes(maxInputBytes)"></span></span>
             </p>
         </div>
 
@@ -278,7 +279,7 @@ new class extends Component
                             Input
                         </h2>
 
-                        <p class="text-[10px] text-slate-400">
+                        <p class="text-[10px] text-slate-500">
                             <span x-text="batchMode ? 'One value per line' : 'URL or text'"></span>
                         </p>
                     </div>
@@ -356,7 +357,7 @@ new class extends Component
                 </div>
 
                 <div class="flex flex-wrap items-center justify-between gap-2 border-t border-slate-100 px-3 py-2">
-                    <div class="flex flex-wrap gap-x-3 gap-y-1 text-[10px] text-slate-400">
+                    <div class="flex flex-wrap gap-x-3 gap-y-1 text-[10px] text-slate-500">
                         <span>
                             <strong class="font-medium text-slate-600" x-text="formatNumber(inputStats.characters)"></strong>
                             chars
@@ -389,7 +390,7 @@ new class extends Component
                             Output
                         </h2>
 
-                        <p class="text-[10px] text-slate-400">
+                        <p class="text-[10px] text-slate-500">
                             <span x-text="operation === 'inspect' ? 'URL structure' : operation === 'parse' ? 'Query parameters' : 'Processed result'"></span>
                         </p>
                     </div>
@@ -402,7 +403,7 @@ new class extends Component
                             class="inline-flex h-7 items-center gap-1 rounded-md border border-slate-200 px-2 text-[11px] font-medium text-slate-600 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-40"
                         >
                             <span x-show="!copyState">Copy</span>
-                            <span x-show="copyState" class="text-emerald-600">✓ Copied to clipboard</span>
+                            <span x-show="copyState" class="text-emerald-700">✓ Copied to clipboard</span>
                         </button>
 
                         <button
@@ -418,6 +419,9 @@ new class extends Component
 
                 {{-- Normal output --}}
                 <div x-show="operation !== 'inspect' && operation !== 'parse'">
+                    <label for="url-encoded-output" class="sr-only">
+                        Encoded or decoded URL output
+                    </label>
                     <textarea
                         x-model="output"
                         readonly
@@ -434,7 +438,7 @@ new class extends Component
                 >
                     <div
                         x-show="!inspection.valid"
-                        class="rounded-lg border border-slate-200 bg-white p-4 text-center text-xs text-slate-400"
+                        class="rounded-lg border border-slate-200 bg-white p-4 text-center text-xs text-slate-500"
                     >
                         Enter a valid absolute URL to inspect its structure.
                     </div>
@@ -446,7 +450,7 @@ new class extends Component
                         <template x-for="item in inspectionRows" :key="item.label">
                             <div class="rounded-lg border border-slate-200 bg-white p-2.5">
                                 <div
-                                    class="mb-1 text-[9px] font-semibold uppercase tracking-wide text-slate-400"
+                                    class="mb-1 text-[9px] font-semibold uppercase tracking-wide text-slate-500"
                                     x-text="item.label"
                                 ></div>
 
@@ -465,7 +469,7 @@ new class extends Component
                     class="min-h-[330px] bg-slate-50/40 p-3"
                 >
                     <div class="mb-2 flex flex-wrap items-center justify-between gap-2">
-                        <div class="text-[10px] text-slate-400">
+                        <div class="text-[10px] text-slate-500">
                             <span x-text="queryParameters.length"></span>
                             parameter<span x-show="queryParameters.length !== 1">s</span>
                         </div>
@@ -481,7 +485,7 @@ new class extends Component
 
                     <div
                         x-show="!queryParameters.length"
-                        class="rounded-lg border border-slate-200 bg-white p-6 text-center text-xs text-slate-400"
+                        class="rounded-lg border border-slate-200 bg-white p-6 text-center text-xs text-slate-500"
                     >
                         Enter a URL or query string to parse parameters.
                     </div>
@@ -541,7 +545,7 @@ new class extends Component
                                             <button
                                                 type="button"
                                                 @click="removeQueryParameter(index)"
-                                                class="text-xs text-slate-400 hover:text-red-600"
+                                                class="text-xs text-slate-500 hover:text-red-600"
                                                 aria-label="Remove parameter"
                                             >
                                                 ×
@@ -571,7 +575,7 @@ new class extends Component
                     x-show="operation !== 'inspect' && operation !== 'parse'"
                     class="border-t border-slate-100 px-3 py-2"
                 >
-                    <div class="flex flex-wrap gap-x-3 gap-y-1 text-[10px] text-slate-400">
+                    <div class="flex flex-wrap gap-x-3 gap-y-1 text-[10px] text-slate-500">
                         <span>
                             <strong class="font-medium text-slate-600" x-text="formatNumber(outputStats.characters)"></strong>
                             chars
@@ -588,7 +592,7 @@ new class extends Component
 
                         <span
                             x-show="outputStats.byteDifference !== 0"
-                            :class="outputStats.byteDifference > 0 ? 'text-indigo-600' : 'text-emerald-600'"
+                            :class="outputStats.byteDifference > 0 ? 'text-indigo-600' : 'text-emerald-700'"
                         >
                             <span x-text="outputStats.byteDifference > 0 ? '+' : ''"></span>
                             <span x-text="formatBytes(Math.abs(outputStats.byteDifference))"></span>
@@ -626,7 +630,7 @@ new class extends Component
                 Clear
             </button>
 
-            <span class="hidden text-[10px] text-slate-400 sm:inline">
+            <span class="hidden text-[10px] text-slate-500 sm:inline">
                 Ctrl/Cmd + Enter
             </span>
         </div>
@@ -646,7 +650,7 @@ new class extends Component
                     class="bg-white p-3 text-left transition hover:bg-slate-50"
                 >
                     <div class="text-xs font-semibold text-slate-700">Normalize URL</div>
-                    <div class="mt-1 text-[10px] leading-4 text-slate-400">
+                    <div class="mt-1 text-[10px] leading-4 text-slate-500">
                         Normalize protocol, host, path and query structure.
                     </div>
                 </button>
@@ -657,7 +661,7 @@ new class extends Component
                     class="bg-white p-3 text-left transition hover:bg-slate-50"
                 >
                     <div class="text-xs font-semibold text-slate-700">Sort Query</div>
-                    <div class="mt-1 text-[10px] leading-4 text-slate-400">
+                    <div class="mt-1 text-[10px] leading-4 text-slate-500">
                         Sort query parameters alphabetically while preserving values.
                     </div>
                 </button>
@@ -668,7 +672,7 @@ new class extends Component
                     class="bg-white p-3 text-left transition hover:bg-slate-50"
                 >
                     <div class="text-xs font-semibold text-slate-700">Extract Query</div>
-                    <div class="mt-1 text-[10px] leading-4 text-slate-400">
+                    <div class="mt-1 text-[10px] leading-4 text-slate-500">
                         Extract the complete query string from a URL.
                     </div>
                 </button>
@@ -679,7 +683,7 @@ new class extends Component
                     class="bg-white p-3 text-left transition hover:bg-slate-50"
                 >
                     <div class="text-xs font-semibold text-slate-700">Remove Query</div>
-                    <div class="mt-1 text-[10px] leading-4 text-slate-400">
+                    <div class="mt-1 text-[10px] leading-4 text-slate-500">
                         Remove query parameters while keeping the rest of the URL.
                     </div>
                 </button>
@@ -690,7 +694,7 @@ new class extends Component
                     class="bg-white p-3 text-left transition hover:bg-slate-50"
                 >
                     <div class="text-xs font-semibold text-slate-700">Remove Fragment</div>
-                    <div class="mt-1 text-[10px] leading-4 text-slate-400">
+                    <div class="mt-1 text-[10px] leading-4 text-slate-500">
                         Remove the URL hash fragment.
                     </div>
                 </button>
@@ -701,7 +705,7 @@ new class extends Component
                     class="bg-white p-3 text-left transition hover:bg-slate-50"
                 >
                     <div class="text-xs font-semibold text-slate-700">Decode Query</div>
-                    <div class="mt-1 text-[10px] leading-4 text-slate-400">
+                    <div class="mt-1 text-[10px] leading-4 text-slate-500">
                         Decode query keys and values without changing URL structure.
                     </div>
                 </button>
@@ -712,7 +716,7 @@ new class extends Component
                     class="bg-white p-3 text-left transition hover:bg-slate-50"
                 >
                     <div class="text-xs font-semibold text-slate-700">Copy Query</div>
-                    <div class="mt-1 text-[10px] leading-4 text-slate-400">
+                    <div class="mt-1 text-[10px] leading-4 text-slate-500">
                         Copy only the query portion of the current URL.
                     </div>
                 </button>
@@ -723,7 +727,7 @@ new class extends Component
                     class="bg-white p-3 text-left transition hover:bg-slate-50"
                 >
                     <div class="text-xs font-semibold text-slate-700">Encode Parameters</div>
-                    <div class="mt-1 text-[10px] leading-4 text-slate-400">
+                    <div class="mt-1 text-[10px] leading-4 text-slate-500">
                         Encode query parameters while preserving URL structure.
                     </div>
                 </button>
@@ -740,7 +744,7 @@ new class extends Component
                         Smart Detection
                     </h2>
 
-                    <span class="text-[9px] text-slate-400">
+                    <span class="text-[9px] text-slate-500">
                         Automatic
                     </span>
                 </div>
@@ -765,7 +769,7 @@ new class extends Component
                     <div class="flex items-center justify-between text-[11px]">
                         <span class="text-slate-500">Malformed encoding</span>
                         <span
-                            :class="detection.malformed ? 'text-red-600' : 'text-emerald-600'"
+                            :class="detection.malformed ? 'text-red-600' : 'text-emerald-700'"
                             x-text="detection.malformed ? 'Found' : 'None'"
                         ></span>
                     </div>
@@ -790,22 +794,22 @@ new class extends Component
 
                 <div class="grid grid-cols-2 gap-2">
                     <div class="rounded-lg bg-slate-50 p-2">
-                        <div class="text-[9px] uppercase tracking-wide text-slate-400">Input bytes</div>
+                        <div class="text-[9px] uppercase tracking-wide text-slate-500">Input bytes</div>
                         <div class="mt-1 text-sm font-semibold text-slate-700" x-text="formatBytes(inputStats.bytes)"></div>
                     </div>
 
                     <div class="rounded-lg bg-slate-50 p-2">
-                        <div class="text-[9px] uppercase tracking-wide text-slate-400">Output bytes</div>
+                        <div class="text-[9px] uppercase tracking-wide text-slate-500">Output bytes</div>
                         <div class="mt-1 text-sm font-semibold text-slate-700" x-text="formatBytes(outputStats.bytes)"></div>
                     </div>
 
                     <div class="rounded-lg bg-slate-50 p-2">
-                        <div class="text-[9px] uppercase tracking-wide text-slate-400">Encoded tokens</div>
+                        <div class="text-[9px] uppercase tracking-wide text-slate-500">Encoded tokens</div>
                         <div class="mt-1 text-sm font-semibold text-slate-700" x-text="formatNumber(outputStats.encodedTokens)"></div>
                     </div>
 
                     <div class="rounded-lg bg-slate-50 p-2">
-                        <div class="text-[9px] uppercase tracking-wide text-slate-400">Parameters</div>
+                        <div class="text-[9px] uppercase tracking-wide text-slate-500">Parameters</div>
                         <div class="mt-1 text-sm font-semibold text-slate-700" x-text="queryParameters.length"></div>
                     </div>
                 </div>
@@ -846,7 +850,7 @@ new class extends Component
 
                 <div
                     x-show="!roundTrip.message"
-                    class="text-[11px] leading-5 text-slate-400"
+                    class="text-[11px] leading-5 text-slate-500"
                 >
                     Encode/decode the current value and compare the result with the original.
                 </div>
@@ -864,13 +868,13 @@ new class extends Component
                         Encoded Character Mapping
                     </h2>
 
-                    <p class="mt-0.5 text-[10px] text-slate-400">
+                    <p class="mt-0.5 text-[10px] text-slate-500">
                         Visual %XX representation of encoded bytes.
                     </p>
                 </div>
 
                 <span
-                    class="text-[10px] text-slate-400"
+                    class="text-[10px] text-slate-500"
                     x-text="tokenMap.length + ' token' + (tokenMap.length === 1 ? '' : 's')"
                 ></span>
             </div>
@@ -906,7 +910,7 @@ new class extends Component
                         Multi-Level Encoding Inspector
                     </h2>
 
-                    <p class="mt-0.5 text-[10px] text-slate-400">
+                    <p class="mt-0.5 text-[10px] text-slate-500">
                         Decode each layer separately to identify nested or double-encoded URLs.
                     </p>
                 </div>
@@ -947,7 +951,7 @@ new class extends Component
 
             <div
                 x-show="!decodeLevels.length"
-                class="px-3 py-4 text-[11px] text-slate-400"
+                class="px-3 py-4 text-[11px] text-slate-500"
             >
                 Run the layer analyzer to inspect recursive URL encoding.
             </div>
@@ -961,12 +965,15 @@ new class extends Component
                         Developer Code Snippets
                     </h2>
 
-                    <p class="mt-0.5 text-[10px] text-slate-400">
+                    <p cltext-slate-500ass="mt-0.5 text-[10px] text-slate-500">
                         Equivalent encoding or decoding operations for common languages.
                     </p>
                 </div>
-
+                <label for="snippet-language" class="sr-only">
+                    Snippet programming language
+                </label>
                 <select
+                    id="snippet-language"
                     x-model="snippetLanguage"
                     class="h-7 rounded-md border border-slate-200 bg-white px-2 text-[10px] text-slate-600 outline-none focus:border-indigo-400"
                 >
@@ -1004,12 +1011,12 @@ new class extends Component
                         Batch Results
                     </h2>
 
-                    <p class="mt-0.5 text-[10px] text-slate-400">
+                    <p class="mt-0.5 text-[10px] text-slate-500">
                         Per-line processing status.
                     </p>
                 </div>
 
-                <div class="text-[10px] text-slate-400">
+                <div class="text-[10px] text-slate-500">
                     <span x-text="batchSuccessCount"></span>
                     successful ·
                     <span x-text="batchErrorCount"></span>
@@ -1031,7 +1038,7 @@ new class extends Component
                     <tbody>
                         <template x-for="(row, index) in batchResults" :key="row.id">
                             <tr class="border-b border-slate-100 last:border-0">
-                                <td class="px-3 py-2 text-[10px] text-slate-400" x-text="index + 1"></td>
+                                <td class="px-3 py-2 text-[10px] text-slate-500" x-text="index + 1"></td>
 
                                 <td class="max-w-[240px] px-3 py-2">
                                     <div
