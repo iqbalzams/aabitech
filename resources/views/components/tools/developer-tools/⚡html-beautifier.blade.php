@@ -117,8 +117,8 @@ new class extends Component
             </div>
 
             <div x-show="analysisTab === 'highlight'" class="p-4">
-                <div class="mb-2 text-xs text-zinc-500">Safe client-side syntax highlighting of the current output.</div>
-                <pre class="max-h-[430px] overflow-auto rounded-xl border border-zinc-200 bg-zinc-950 p-4 font-mono text-xs leading-6 text-zinc-100 dark:border-zinc-800" x-html="highlightedOutput || '<span class=\'text-zinc-500\'>No output yet.</span>'"></pre>
+                <div class="mb-2 text-xs text-zinc-400">Safe client-side syntax highlighting of the current output.</div>
+                <pre class="max-h-[430px] overflow-auto rounded-xl border border-zinc-200 bg-zinc-950 p-4 font-mono text-xs leading-6 text-zinc-100 dark:border-zinc-800" x-html="highlightedOutput || '<span class=\'text-zinc-400\'>No output yet.</span>'"></pre>
             </div>
 
             <div x-show="analysisTab === 'tree'" class="p-4">
