@@ -433,7 +433,7 @@
                         aria-hidden="true"
                     ></div>
 
-                    <span class="hidden text-[10px] font-medium uppercase tracking-[0.14em] text-slate-500 xl:inline">
+                    <span class="hidden text-[10px] font-medium uppercase tracking-[0.14em] text-slate-300 xl:inline">
                         Free online tools
                     </span>
                 </div>
@@ -691,7 +691,7 @@
                         >
                     </a>
 
-                    <p class="mt-4 max-w-md text-sm leading-6 text-slate-400">
+                    <p class="mt-4 max-w-md text-sm leading-6 text-slate-200">
                         Free, fast and privacy-friendly online tools for developers,
                         students, writers, creators and everyday tasks.
                     </p>
@@ -811,7 +811,7 @@
             {{-- Footer bottom --}}
 
             <div class="mt-10 border-t border-slate-800/80 pt-6">
-                <div class="flex flex-col gap-3 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+                <div class="flex flex-col gap-3 text-xs text-slate-200 sm:flex-row sm:items-center sm:justify-between">
                     <p>
                         &copy; {{ date('Y') }} AabiTech. All rights reserved.
                     </p>
