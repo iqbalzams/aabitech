@@ -430,11 +430,12 @@ new class extends Component
             <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {{-- KEEP --}}
                 <div>
-                    <label class="block text-xs font-semibold text-slate-600 dark:text-slate-500">
+                    <label for="select-keepmode" class="block text-xs font-semibold text-slate-600 dark:text-slate-500">
                         Occurrence to keep
                     </label>
 
                     <select
+                        id="select-keepmode"
                         x-model="keepMode"
                         @change="analyze(); saveSettings()"
                         class="mt-2 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 dark:border-slate-700 dark:bg-slate-950 dark:text-white"
@@ -446,11 +447,12 @@ new class extends Component
 
                 {{-- SORT --}}
                 <div>
-                    <label class="block text-xs font-semibold text-slate-600 dark:text-slate-500">
+                    <label for="select-sortmode" class="block text-xs font-semibold text-slate-600 dark:text-slate-500">
                         Sort result
                     </label>
 
                     <select
+                        id="select-sortmode"
                         x-model="sortMode"
                         @change="analyze(); saveSettings()"
                         class="mt-2 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 dark:border-slate-700 dark:bg-slate-950 dark:text-white"
@@ -467,11 +469,12 @@ new class extends Component
 
                 {{-- BLANKS --}}
                 <div>
-                    <label class="block text-xs font-semibold text-slate-600 dark:text-slate-500">
+                    <label for="select-blankmode" class="block text-xs font-semibold text-slate-600 dark:text-slate-500">
                         Blank lines
                     </label>
 
                     <select
+                        id="select-blankmode"
                         x-model="blankMode"
                         @change="analyze(); saveSettings()"
                         class="mt-2 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 dark:border-slate-700 dark:bg-slate-950 dark:text-white"

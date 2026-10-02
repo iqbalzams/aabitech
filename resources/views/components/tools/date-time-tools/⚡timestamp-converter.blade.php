@@ -134,7 +134,7 @@ new class extends Component
                             <div class="mt-3">
                                 <label class="field-label">Custom format</label>
                                 <input x-model="customFormat" @input="refreshOutput()" type="text" class="calc-input mt-1.5" placeholder="YYYY-MM-DD HH:mm:ss.SSS">
-                                <p class="mt-1 text-[10px] text-slate-400">Tokens: YYYY MM DD HH hh mm ss SSS Z z.</p>
+                                <p class="mt-1 text-[10px] text-slate-500">Tokens: YYYY MM DD HH hh mm ss SSS Z z.</p>
                             </div>
                         </template>
                         <div class="mt-3 flex flex-wrap gap-1">
@@ -220,7 +220,7 @@ new class extends Component
                 </div>
 
                 <div class="rounded-xl border border-slate-200 bg-slate-50/50 p-4">
-                    <div class="mb-2 flex items-center justify-between"><div><h2 class="text-xs font-semibold text-slate-700">Advanced options</h2><p class="text-[10px] text-slate-400">Epoch, relative time, comparison, and countdown/count-up.</p></div><button type="button" @click="showAdvanced=!showAdvanced" class="compact-tab" x-text="showAdvanced ? 'Hide' : 'Show'"></button></div>
+                    <div class="mb-2 flex items-center justify-between"><div><h2 class="text-xs font-semibold text-slate-700">Advanced options</h2><p class="text-[10px] text-slate-500">Epoch, relative time, comparison, and countdown/count-up.</p></div><button type="button" @click="showAdvanced=!showAdvanced" class="compact-tab" x-text="showAdvanced ? 'Hide' : 'Show'"></button></div>
                     <div x-show="showAdvanced" class="grid gap-3 sm:grid-cols-2">
                         <div><label class="field-label">Epoch</label><select x-model="epochMode" @change="refreshOutput(); updateClock(); saveSettings()" class="calc-input mt-1.5"><option value="unix">Unix — 1970-01-01</option><option value="custom">Custom epoch</option></select></div>
                         <div x-show="epochMode === 'custom'"><label class="field-label">Custom epoch ISO</label><input x-model="customEpoch" @input="refreshOutput(); updateClock()" type="text" class="calc-input mt-1.5" placeholder="2000-01-01T00:00:00Z"></div>
@@ -289,14 +289,14 @@ new class extends Component
                     </template>
 
                     <template x-if="!hasResult">
-                        <div class="flex min-h-[300px] items-center justify-center rounded-xl border border-dashed border-slate-200 bg-slate-50/60 px-5 text-center"><div><div class="text-sm font-medium text-slate-500">No conversion yet</div><div class="mt-1 text-xs text-slate-400">Enter a value or choose an example.</div></div></div>
+                        <div class="flex min-h-[300px] items-center justify-center rounded-xl border border-dashed border-slate-200 bg-slate-50/60 px-5 text-center"><div><div class="text-sm font-medium text-slate-500">No conversion yet</div><div class="mt-1 text-xs text-slate-500">Enter a value or choose an example.</div></div></div>
                     </template>
                     <div x-show="error" class="mt-3 rounded-lg border border-red-100 bg-red-50 px-3 py-2 text-xs font-medium text-red-700" x-text="error"></div>
                 </div>
 
                 <template x-if="mode !== 'bulk' && mode !== 'range' && mode !== 'json' && hasResult">
                     <div class="rounded-xl border border-slate-200 bg-white p-4">
-                        <div class="mb-3 flex items-center justify-between"><div><h2 class="text-xs font-semibold text-slate-700">Developer output</h2><p class="text-[10px] text-slate-400">Copy-ready conversion code.</p></div><button type="button" @click="copyText(codeSnippet, $event)" class="result-action">Copy code</button></div>
+                        <div class="mb-3 flex items-center justify-between"><div><h2 class="text-xs font-semibold text-slate-700">Developer output</h2><p class="text-[10px] text-slate-500">Copy-ready conversion code.</p></div><button type="button" @click="copyText(codeSnippet, $event)" class="result-action">Copy code</button></div>
                         <select x-model="codeLanguage" @change="refreshOutput()" class="calc-input mb-2"><option value="javascript">JavaScript</option><option value="php">PHP</option><option value="python">Python</option><option value="java">Java</option><option value="go">Go</option><option value="csharp">C#</option><option value="sql">SQL</option></select>
                         <pre class="max-h-40 overflow-auto rounded-lg bg-slate-900 p-3 font-mono text-[11px] leading-5 text-slate-100" x-text="codeSnippet"></pre>
                     </div>
@@ -304,15 +304,15 @@ new class extends Component
 
                 <template x-if="zoneCompareEnabled && hasResult && mode !== 'bulk' && mode !== 'range' && mode !== 'json'">
                     <div class="rounded-xl border border-slate-200 bg-white p-4">
-                        <div class="mb-3"><h2 class="text-xs font-semibold text-slate-700">Timezone comparison</h2><p class="text-[10px] text-slate-400">The same instant formatted in selected zones.</p></div>
+                        <div class="mb-3"><h2 class="text-xs font-semibold text-slate-700">Timezone comparison</h2><p class="text-[10px] text-slate-500">The same instant formatted in selected zones.</p></div>
                         <div class="space-y-1.5"><template x-for="item in zoneComparison" :key="item.zone"><div class="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-slate-100 bg-slate-50 px-3 py-2"><span class="text-[10px] font-semibold text-slate-600" x-text="item.zone"></span><span class="text-[11px] text-slate-800" x-text="item.value"></span></div></template></div>
                     </div>
                 </template>
 
                 <div class="rounded-xl border border-slate-200 bg-white p-4">
-                    <div class="mb-3 flex items-center justify-between"><div><h2 class="text-xs font-semibold text-slate-700">Conversion history</h2><p class="text-[10px] text-slate-400">Stored locally in this browser.</p></div><button type="button" @click="clearHistory()" class="result-action" :disabled="!history.length">Clear history</button></div>
-                    <div x-show="history.length" class="space-y-1.5"><template x-for="(item,index) in history" :key="item.id"><button type="button" @click="restoreHistory(item)" class="flex w-full items-center justify-between gap-3 rounded-lg border border-slate-100 bg-slate-50 px-3 py-2 text-left hover:border-indigo-100"><span class="min-w-0"><span class="block truncate text-[10px] font-semibold text-slate-700" x-text="item.label"></span><span class="block truncate font-mono text-[10px] text-slate-500" x-text="item.value"></span></span><span class="shrink-0 text-[9px] text-slate-400" x-text="item.mode"></span></button></template></div>
-                    <div x-show="!history.length" class="text-[11px] text-slate-400">No local conversion history yet.</div>
+                    <div class="mb-3 flex items-center justify-between"><div><h2 class="text-xs font-semibold text-slate-700">Conversion history</h2><p class="text-[10px] text-slate-500">Stored locally in this browser.</p></div><button type="button" @click="clearHistory()" class="result-action" :disabled="!history.length">Clear history</button></div>
+                    <div x-show="history.length" class="space-y-1.5"><template x-for="(item,index) in history" :key="item.id"><button type="button" @click="restoreHistory(item)" class="flex w-full items-center justify-between gap-3 rounded-lg border border-slate-100 bg-slate-50 px-3 py-2 text-left hover:border-indigo-100"><span class="min-w-0"><span class="block truncate text-[10px] font-semibold text-slate-700" x-text="item.label"></span><span class="block truncate font-mono text-[10px] text-slate-500" x-text="item.value"></span></span><span class="shrink-0 text-[9px] text-slate-500" x-text="item.mode"></span></button></template></div>
+                    <div x-show="!history.length" class="text-[11px] text-slate-500">No local conversion history yet.</div>
                 </div>
 
                 <div class="rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-[10px] leading-5 text-slate-500">

@@ -176,10 +176,10 @@ new class extends Component
                     </div>
 
                     <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-                        <div class="rounded-xl border border-slate-200 bg-white p-4"><p class="text-[11px] font-bold uppercase text-slate-400">Born</p><p class="mt-2 font-black text-slate-900" x-text="result.birthDateLabel || '—'"></p><p class="mt-1 text-xs text-slate-500" x-text="result.birthWeekday || '—'"></p></div>
-                        <div class="rounded-xl border border-slate-200 bg-white p-4"><p class="text-[11px] font-bold uppercase text-slate-400">Decimal age</p><p class="mt-2 font-black text-slate-900" x-text="result.decimalAge || '—'"></p><p class="mt-1 text-xs text-slate-500">Approximate year value</p></div>
-                        <div class="rounded-xl border border-slate-200 bg-white p-4"><p class="text-[11px] font-bold uppercase text-slate-400">Birth weekday</p><p class="mt-2 font-black text-slate-900" x-text="result.birthWeekday || '—'"></p><p class="mt-1 text-xs text-slate-500" x-text="result.targetWeekday || '—'"></p></div>
-                        <div class="rounded-xl border border-slate-200 bg-white p-4"><p class="text-[11px] font-bold uppercase text-slate-400">Elapsed time</p><p class="mt-2 font-black text-slate-900" x-text="result.preciseAge || '—'"></p><p class="mt-1 text-xs text-slate-500">Based on optional birth time</p></div>
+                        <div class="rounded-xl border border-slate-200 bg-white p-4"><p class="text-[11px] font-bold uppercase text-slate-500">Born</p><p class="mt-2 font-black text-slate-900" x-text="result.birthDateLabel || '—'"></p><p class="mt-1 text-xs text-slate-500" x-text="result.birthWeekday || '—'"></p></div>
+                        <div class="rounded-xl border border-slate-200 bg-white p-4"><p class="text-[11px] font-bold uppercase text-slate-500">Decimal age</p><p class="mt-2 font-black text-slate-900" x-text="result.decimalAge || '—'"></p><p class="mt-1 text-xs text-slate-500">Approximate year value</p></div>
+                        <div class="rounded-xl border border-slate-200 bg-white p-4"><p class="text-[11px] font-bold uppercase text-slate-500">Birth weekday</p><p class="mt-2 font-black text-slate-900" x-text="result.birthWeekday || '—'"></p><p class="mt-1 text-xs text-slate-500" x-text="result.targetWeekday || '—'"></p></div>
+                        <div class="rounded-xl border border-slate-200 bg-white p-4"><p class="text-[11px] font-bold uppercase text-slate-500">Elapsed time</p><p class="mt-2 font-black text-slate-900" x-text="result.preciseAge || '—'"></p><p class="mt-1 text-xs text-slate-500">Based on optional birth time</p></div>
                     </div>
 
                     <div class="grid gap-4 lg:grid-cols-2">
@@ -192,7 +192,7 @@ new class extends Component
                             <div class="mt-4 rounded-xl bg-slate-50 p-3 text-xs text-slate-600" x-text="result.halfBirthdayLabel ? 'Half birthday: ' + result.halfBirthdayLabel : ''"></div>
                         </div>
                         <div class="rounded-2xl border border-slate-200 bg-white p-5">
-                            <p class="text-xs font-bold uppercase text-slate-400">Last birthday</p>
+                            <p class="text-xs font-bold uppercase text-slate-500">Last birthday</p>
                             <p class="mt-2 text-xl font-black" x-text="result.lastBirthdayLabel || '—'"></p>
                             <p class="mt-1 text-sm text-slate-500" x-text="result.lastBirthdayAge !== null ? 'Age: ' + result.lastBirthdayAge : '—'"></p>
                         </div>

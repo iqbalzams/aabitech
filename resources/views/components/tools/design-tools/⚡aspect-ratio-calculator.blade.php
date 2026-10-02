@@ -68,7 +68,7 @@ new class extends Component
             </span>
         </div>
 
-        <div class="flex items-center gap-2 text-xs text-slate-400">
+        <div class="flex items-center gap-2 text-xs text-slate-500">
             <span
                 class="h-1.5 w-1.5 rounded-full bg-emerald-500"
                 aria-hidden="true"
@@ -169,7 +169,7 @@ new class extends Component
 
                     {{-- Calculation direction --}}
                     <div class="mb-5">
-                        <label class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-400">
+                        <label class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-500">
                             Calculate
                         </label>
 
@@ -231,7 +231,7 @@ new class extends Component
                                     placeholder="1920"
                                 >
 
-                                <span class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-xs text-slate-400">
+                                <span class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-xs text-slate-500">
                                     <span x-text="unit"></span>
                                 </span>
                             </div>
@@ -257,7 +257,7 @@ new class extends Component
                                     placeholder="1080"
                                 >
 
-                                <span class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-xs text-slate-400">
+                                <span class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-xs text-slate-500">
                                     <span x-text="unit"></span>
                                 </span>
                             </div>
@@ -292,7 +292,7 @@ new class extends Component
                                 aria-label="Ratio width"
                             >
 
-                            <span class="font-bold text-slate-400">:</span>
+                            <span class="font-bold text-slate-500">:</span>
 
                             <input
                                 type="number"
@@ -315,7 +315,7 @@ new class extends Component
 
                     {{-- Unit --}}
                     <div class="mt-5">
-                        <label class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-400">
+                        <label class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-500">
                             Unit
                         </label>
 
@@ -417,7 +417,7 @@ new class extends Component
                                             x-text="preset.name"
                                         ></span>
                                         <span
-                                            class="block text-[11px] text-slate-400"
+                                            class="block text-[11px] text-slate-500"
                                             x-text="preset.width + ' × ' + preset.height + ' · ' + preset.category"
                                         ></span>
                                     </span>
@@ -518,7 +518,7 @@ new class extends Component
                     </div>
 
                     <div class="rounded-2xl border border-slate-200 bg-white p-5">
-                        <div class="text-[10px] font-semibold uppercase tracking-wider text-slate-400">
+                        <div class="text-[10px] font-semibold uppercase tracking-wider text-slate-500">
                             Dimensions
                         </div>
 
@@ -527,14 +527,14 @@ new class extends Component
                             <span class="mx-1 text-slate-300">×</span>
                             <span x-text="formattedHeight"></span>
                             <span
-                                class="ml-1 text-sm font-medium text-slate-400"
+                                class="ml-1 text-sm font-medium text-slate-500"
                                 x-text="unit"
                             ></span>
                         </div>
 
                         <div class="mt-2 grid grid-cols-2 gap-2 text-xs">
                             <div class="rounded-lg bg-slate-50 p-3">
-                                <div class="text-slate-400">Ratio</div>
+                                <div class="text-slate-500">Ratio</div>
                                 <div
                                     class="mt-1 font-semibold text-slate-800"
                                     x-text="simplifiedRatio"
@@ -542,7 +542,7 @@ new class extends Component
                             </div>
 
                             <div class="rounded-lg bg-slate-50 p-3">
-                                <div class="text-slate-400">Decimal</div>
+                                <div class="text-slate-500">Decimal</div>
                                 <div
                                     class="mt-1 font-semibold text-slate-800"
                                     x-text="decimalRatio"
@@ -550,7 +550,7 @@ new class extends Component
                             </div>
 
                             <div class="rounded-lg bg-slate-50 p-3">
-                                <div class="text-slate-400">Orientation</div>
+                                <div class="text-slate-500">Orientation</div>
                                 <div
                                     class="mt-1 font-semibold text-slate-800"
                                     x-text="orientation"
@@ -558,7 +558,7 @@ new class extends Component
                             </div>
 
                             <div class="rounded-lg bg-slate-50 p-3">
-                                <div class="text-slate-400">Megapixels</div>
+                                <div class="text-slate-500">Megapixels</div>
                                 <div
                                     class="mt-1 font-semibold text-slate-800"
                                     x-text="megapixels"
@@ -604,7 +604,7 @@ new class extends Component
                     {{-- Derived values --}}
                     <div class="mt-4 grid grid-cols-2 gap-2">
                         <div class="rounded-xl border border-slate-200 bg-white p-3">
-                            <div class="text-[10px] uppercase tracking-wide text-slate-400">
+                            <div class="text-[10px] uppercase tracking-wide text-slate-500">
                                 CSS aspect-ratio
                             </div>
                             <code
@@ -614,7 +614,7 @@ new class extends Component
                         </div>
 
                         <div class="rounded-xl border border-slate-200 bg-white p-3">
-                            <div class="text-[10px] uppercase tracking-wide text-slate-400">
+                            <div class="text-[10px] uppercase tracking-wide text-slate-500">
                                 Padding-bottom
                             </div>
                             <div
@@ -631,7 +631,7 @@ new class extends Component
                                 <h3 class="text-xs font-semibold text-slate-800">
                                     Retina / export scaling
                                 </h3>
-                                <p class="mt-1 text-[11px] text-slate-400">
+                                <p class="mt-1 text-[11px] text-slate-500">
                                     Generate dimensions from the current result.
                                 </p>
                             </div>
@@ -651,7 +651,7 @@ new class extends Component
 
                         <div class="grid grid-cols-2 gap-2">
                             <div class="rounded-lg bg-slate-50 p-3">
-                                <div class="text-[10px] text-slate-400">Scaled width</div>
+                                <div class="text-[10px] text-slate-500">Scaled width</div>
                                 <div
                                     class="mt-1 text-sm font-semibold text-slate-800"
                                     x-text="scaledWidth"
@@ -659,7 +659,7 @@ new class extends Component
                             </div>
 
                             <div class="rounded-lg bg-slate-50 p-3">
-                                <div class="text-[10px] text-slate-400">Scaled height</div>
+                                <div class="text-[10px] text-slate-500">Scaled height</div>
                                 <div
                                     class="mt-1 text-sm font-semibold text-slate-800"
                                     x-text="scaledHeight"
@@ -738,7 +738,7 @@ new class extends Component
                     </label>
 
                     <div class="mt-5">
-                        <label class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-400">
+                        <label class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-500">
                             Resize target
                         </label>
 
@@ -784,7 +784,7 @@ new class extends Component
 
                     <div class="mt-5">
                         <div class="mb-2 flex items-center justify-between">
-                            <span class="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                            <span class="text-xs font-semibold uppercase tracking-wide text-slate-500">
                                 Scale percentage
                             </span>
                             <span
@@ -816,7 +816,7 @@ new class extends Component
                     </div>
 
                     <div class="mt-5">
-                        <label class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-400">
+                        <label class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-500">
                             Standard resolution
                         </label>
 
@@ -846,7 +846,7 @@ new class extends Component
                     </div>
 
                     <div class="rounded-2xl border border-slate-200 bg-white p-5">
-                        <div class="text-[10px] font-semibold uppercase tracking-wider text-slate-400">
+                        <div class="text-[10px] font-semibold uppercase tracking-wider text-slate-500">
                             Output dimensions
                         </div>
 
@@ -891,7 +891,7 @@ new class extends Component
                                 class="rounded-xl border border-slate-200 bg-white p-3 text-left hover:border-indigo-300"
                             >
                                 <div
-                                    class="text-[10px] text-slate-400"
+                                    class="text-[10px] text-slate-500"
                                     x-text="item.label"
                                 ></div>
                                 <div
@@ -909,7 +909,7 @@ new class extends Component
 
                         <div class="mt-3 grid grid-cols-2 gap-3">
                             <div>
-                                <label class="mb-1 block text-[11px] text-slate-400">
+                                <label class="mb-1 block text-[11px] text-slate-500">
                                     Container width
                                 </label>
                                 <input
@@ -922,7 +922,7 @@ new class extends Component
                             </div>
 
                             <div>
-                                <label class="mb-1 block text-[11px] text-slate-400">
+                                <label class="mb-1 block text-[11px] text-slate-500">
                                     Required height
                                 </label>
                                 <div
@@ -933,7 +933,7 @@ new class extends Component
                         </div>
 
                         <div class="mt-3 rounded-lg bg-slate-50 p-3">
-                            <div class="text-[10px] text-slate-400">
+                            <div class="text-[10px] text-slate-500">
                                 CSS padding-bottom
                             </div>
                             <code
@@ -1046,7 +1046,7 @@ new class extends Component
                                 class="rounded-xl border border-slate-300 px-3 py-3 text-center font-semibold outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
                             >
 
-                            <span class="font-bold text-slate-400">:</span>
+                            <span class="font-bold text-slate-500">:</span>
 
                             <input
                                 type="number"
@@ -1060,7 +1060,7 @@ new class extends Component
                     </div>
 
                     <div class="mt-5">
-                        <label class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-400">
+                        <label class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-500">
                             Crop strategy
                         </label>
 
@@ -1090,7 +1090,7 @@ new class extends Component
                     </div>
 
                     <div class="mt-5">
-                        <label class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-400">
+                        <label class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-500">
                             Common target ratios
                         </label>
 
@@ -1138,7 +1138,7 @@ new class extends Component
 
                     <div class="mt-4 grid grid-cols-2 gap-2">
                         <div class="rounded-xl border border-slate-200 bg-white p-4">
-                            <div class="text-[10px] uppercase tracking-wide text-slate-400">
+                            <div class="text-[10px] uppercase tracking-wide text-slate-500">
                                 Crop width
                             </div>
                             <div
@@ -1148,7 +1148,7 @@ new class extends Component
                         </div>
 
                         <div class="rounded-xl border border-slate-200 bg-white p-4">
-                            <div class="text-[10px] uppercase tracking-wide text-slate-400">
+                            <div class="text-[10px] uppercase tracking-wide text-slate-500">
                                 Crop height
                             </div>
                             <div
@@ -1158,7 +1158,7 @@ new class extends Component
                         </div>
 
                         <div class="rounded-xl border border-slate-200 bg-white p-4">
-                            <div class="text-[10px] uppercase tracking-wide text-slate-400">
+                            <div class="text-[10px] uppercase tracking-wide text-slate-500">
                                 Offset X
                             </div>
                             <div
@@ -1168,7 +1168,7 @@ new class extends Component
                         </div>
 
                         <div class="rounded-xl border border-slate-200 bg-white p-4">
-                            <div class="text-[10px] uppercase tracking-wide text-slate-400">
+                            <div class="text-[10px] uppercase tracking-wide text-slate-500">
                                 Offset Y
                             </div>
                             <div
@@ -1192,7 +1192,7 @@ new class extends Component
 
                         <div class="mt-3 grid grid-cols-2 gap-2">
                             <div class="rounded-lg bg-slate-50 p-3">
-                                <div class="text-[10px] text-slate-400">Crop output</div>
+                                <div class="text-[10px] text-slate-500">Crop output</div>
                                 <div
                                     class="mt-1 text-xs font-semibold text-slate-800"
                                     x-text="cropWidth + ' × ' + cropHeight"
@@ -1200,7 +1200,7 @@ new class extends Component
                             </div>
 
                             <div class="rounded-lg bg-slate-50 p-3">
-                                <div class="text-[10px] text-slate-400">Letterbox size</div>
+                                <div class="text-[10px] text-slate-500">Letterbox size</div>
                                 <div
                                     class="mt-1 text-xs font-semibold text-slate-800"
                                     x-text="fitWidth + ' × ' + fitHeight"
@@ -1237,7 +1237,7 @@ new class extends Component
 
                 <div class="grid gap-5 lg:grid-cols-[1fr_auto_1fr]">
                     <div class="rounded-2xl border border-slate-200 bg-white p-5">
-                        <div class="mb-3 text-xs font-semibold uppercase tracking-wide text-slate-400">
+                        <div class="mb-3 text-xs font-semibold uppercase tracking-wide text-slate-500">
                             Ratio A
                         </div>
 
@@ -1251,7 +1251,7 @@ new class extends Component
                                 class="rounded-xl border border-slate-300 px-3 py-3 text-center font-semibold outline-none focus:border-indigo-500"
                             >
 
-                            <span class="font-bold text-slate-400">:</span>
+                            <span class="font-bold text-slate-500">:</span>
 
                             <input
                                 type="number"
@@ -1269,7 +1269,7 @@ new class extends Component
                                 x-text="compareARatio"
                             ></div>
                             <div
-                                class="mt-1 text-xs text-slate-400"
+                                class="mt-1 text-xs text-slate-500"
                                 x-text="compareADecimal"
                             ></div>
                         </div>
@@ -1280,7 +1280,7 @@ new class extends Component
                     </div>
 
                     <div class="rounded-2xl border border-slate-200 bg-white p-5">
-                        <div class="mb-3 text-xs font-semibold uppercase tracking-wide text-slate-400">
+                        <div class="mb-3 text-xs font-semibold uppercase tracking-wide text-slate-500">
                             Ratio B
                         </div>
 
@@ -1294,7 +1294,7 @@ new class extends Component
                                 class="rounded-xl border border-slate-300 px-3 py-3 text-center font-semibold outline-none focus:border-indigo-500"
                             >
 
-                            <span class="font-bold text-slate-400">:</span>
+                            <span class="font-bold text-slate-500">:</span>
 
                             <input
                                 type="number"
@@ -1312,7 +1312,7 @@ new class extends Component
                                 x-text="compareBRatio"
                             ></div>
                             <div
-                                class="mt-1 text-xs text-slate-400"
+                                class="mt-1 text-xs text-slate-500"
                                 x-text="compareBDecimal"
                             ></div>
                         </div>
@@ -1321,7 +1321,7 @@ new class extends Component
 
                 <div class="mt-5 grid gap-3 sm:grid-cols-3">
                     <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 text-center">
-                        <div class="text-[10px] uppercase tracking-wide text-slate-400">
+                        <div class="text-[10px] uppercase tracking-wide text-slate-500">
                             Ratio A orientation
                         </div>
                         <div
@@ -1331,7 +1331,7 @@ new class extends Component
                     </div>
 
                     <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 text-center">
-                        <div class="text-[10px] uppercase tracking-wide text-slate-400">
+                        <div class="text-[10px] uppercase tracking-wide text-slate-500">
                             Decimal difference
                         </div>
                         <div
@@ -1341,7 +1341,7 @@ new class extends Component
                     </div>
 
                     <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 text-center">
-                        <div class="text-[10px] uppercase tracking-wide text-slate-400">
+                        <div class="text-[10px] uppercase tracking-wide text-slate-500">
                             Closest standard
                         </div>
                         <div
@@ -1446,7 +1446,7 @@ new class extends Component
             </div>
 
             <div class="mt-4 overflow-hidden rounded-xl border border-slate-200">
-                <div class="grid grid-cols-3 bg-slate-50 px-4 py-2 text-[10px] font-semibold uppercase tracking-wide text-slate-400">
+                <div class="grid grid-cols-3 bg-slate-50 px-4 py-2 text-[10px] font-semibold uppercase tracking-wide text-slate-500">
                     <div>Scale</div>
                     <div>Width</div>
                     <div>Height</div>

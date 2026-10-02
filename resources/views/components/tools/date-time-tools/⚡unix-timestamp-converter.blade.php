@@ -290,7 +290,7 @@ new class extends Component
                                     placeholder="YYYY-MM-DD HH:mm:ss"
                                 >
 
-                                <p class="mt-1 text-[10px] text-slate-400">
+                                <p class="mt-1 text-[10px] text-slate-500">
                                     Tokens: YYYY MM DD HH hh mm ss SSS.
                                 </p>
                             </div>
@@ -788,7 +788,7 @@ new class extends Component
                                     No conversion yet
                                 </div>
 
-                                <div class="mt-1 text-xs text-slate-400">
+                                <div class="mt-1 text-xs text-slate-500">
                                     Enter a value or choose an example.
                                 </div>
                             </div>
@@ -964,7 +964,7 @@ new class extends Component
                         <button
                             type="button"
                             @click="clearHistory()"
-                            class="text-[11px] font-medium text-slate-400 hover:text-red-500"
+                            class="text-[11px] font-medium text-slate-500 hover:text-red-500"
                         >
                             Clear history
                         </button>
@@ -987,7 +987,7 @@ new class extends Component
                                     ></span>
 
                                     <span
-                                        class="shrink-0 text-slate-400"
+                                        class="shrink-0 text-slate-500"
                                         x-text="item.mode"
                                     ></span>
                                 </button>
@@ -996,7 +996,7 @@ new class extends Component
                     </template>
 
                     <template x-if="!history.length">
-                        <p class="text-[11px] text-slate-400">
+                        <p class="text-[11px] text-slate-500">
                             Your recent local conversions will appear here.
                         </p>
                     </template>

@@ -849,7 +849,7 @@ new class extends Component
                                         class="flex items-center gap-3 rounded-md border border-slate-200 bg-white px-3 py-2"
                                     >
                                         <span
-                                            class="w-7 shrink-0 text-[10px] font-medium text-slate-400"
+                                            class="w-7 shrink-0 text-[10px] font-medium text-slate-500"
                                             x-text="index + 1"
                                         ></span>
 
@@ -870,7 +870,7 @@ new class extends Component
                                     No results generated yet
                                 </div>
 
-                                <div class="mt-1 text-xs text-slate-400">
+                                <div class="mt-1 text-xs text-slate-500">
                                     Configure the generator and click Generate.
                                 </div>
                             </div>
@@ -923,7 +923,7 @@ new class extends Component
                                 Distribution
                             </span>
 
-                            <span class="text-[10px] text-slate-400">
+                            <span class="text-[10px] text-slate-500">
                                 <span x-text="distributionBuckets.length"></span>
                                 buckets
                             </span>
@@ -954,7 +954,7 @@ new class extends Component
                     <button
                         type="button"
                         @click="clearHistory()"
-                        class="text-[11px] font-medium text-slate-400 transition hover:text-red-500"
+                        class="text-[11px] font-medium text-slate-500 transition hover:text-red-500"
                     >
                         Clear history
                     </button>

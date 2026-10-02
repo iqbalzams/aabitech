@@ -153,7 +153,7 @@ new class extends Component
                                 <span
                                     x-show="layers.length > 1"
                                     @click.stop="removeLayer(index)"
-                                    class="text-slate-400 hover:text-red-600"
+                                    class="text-slate-500 hover:text-red-600"
                                     aria-label="Remove layer"
                                 >
                                     ×
@@ -268,7 +268,7 @@ new class extends Component
                                     >
 
                                     <div>
-                                        <label class="mb-1 block text-[10px] font-semibold uppercase tracking-wide text-slate-400">
+                                        <label class="mb-1 block text-[10px] font-semibold uppercase tracking-wide text-slate-500">
                                             Color
                                         </label>
 
@@ -281,7 +281,7 @@ new class extends Component
                                     </div>
 
                                     <div>
-                                        <label class="mb-1 block text-[10px] font-semibold uppercase tracking-wide text-slate-400">
+                                        <label class="mb-1 block text-[10px] font-semibold uppercase tracking-wide text-slate-500">
                                             Position
                                         </label>
 
@@ -296,7 +296,7 @@ new class extends Component
                                                 class="w-full rounded-lg border border-slate-300 bg-white px-2 py-2 pr-6 text-xs font-semibold outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
                                             >
 
-                                            <span class="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-slate-400">
+                                            <span class="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-slate-500">
                                                 %
                                             </span>
                                         </div>
@@ -306,7 +306,7 @@ new class extends Component
                                         type="button"
                                         @click="removeStop(index)"
                                         :disabled="currentLayer.stops.length <= 2"
-                                        class="h-10 rounded-lg border border-slate-200 bg-white text-lg text-slate-400 hover:border-red-200 hover:bg-red-50 hover:text-red-600 disabled:opacity-30"
+                                        class="h-10 rounded-lg border border-slate-200 bg-white text-lg text-slate-500 hover:border-red-200 hover:bg-red-50 hover:text-red-600 disabled:opacity-30"
                                     >
                                         ×
                                     </button>
@@ -325,7 +325,7 @@ new class extends Component
                                 </div>
 
                                 <div class="mt-2 flex items-center gap-2">
-                                    <label class="text-[10px] font-semibold uppercase tracking-wide text-slate-400">
+                                    <label class="text-[10px] font-semibold uppercase tracking-wide text-slate-500">
                                         Opacity
                                     </label>
 
@@ -387,7 +387,7 @@ new class extends Component
                                 @change="commit()"
                                 class="w-full rounded-lg border border-slate-300 px-2 py-2 pr-6 text-center text-xs font-semibold"
                             >
-                            <span class="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-xs text-slate-400">
+                            <span class="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-xs text-slate-500">
                                 °
                             </span>
                         </div>
@@ -737,7 +737,7 @@ new class extends Component
 
                     <div class="mt-3 grid grid-cols-3 gap-2">
                         <div class="rounded-lg bg-slate-50 p-2.5">
-                            <div class="text-[10px] text-slate-400">Minimum</div>
+                            <div class="text-[10px] text-slate-500">Minimum</div>
                             <div
                                 class="mt-1 text-sm font-bold text-slate-900"
                                 x-text="contrastResult.min.toFixed(2) + ':1'"
@@ -745,7 +745,7 @@ new class extends Component
                         </div>
 
                         <div class="rounded-lg bg-slate-50 p-2.5">
-                            <div class="text-[10px] text-slate-400">Average</div>
+                            <div class="text-[10px] text-slate-500">Average</div>
                             <div
                                 class="mt-1 text-sm font-bold text-slate-900"
                                 x-text="contrastResult.average.toFixed(2) + ':1'"
@@ -753,7 +753,7 @@ new class extends Component
                         </div>
 
                         <div class="rounded-lg bg-slate-50 p-2.5">
-                            <div class="text-[10px] text-slate-400">AA</div>
+                            <div class="text-[10px] text-slate-500">AA</div>
                             <div
                                 class="mt-1 text-sm font-bold"
                                 :class="contrastResult.aa ? 'text-emerald-600' : 'text-red-600'"
@@ -849,22 +849,22 @@ new class extends Component
                 {{-- Stats --}}
                 <div class="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
                     <div class="rounded-xl border border-slate-200 bg-white p-3">
-                        <div class="text-[10px] text-slate-400">Layers</div>
+                        <div class="text-[10px] text-slate-500">Layers</div>
                         <div class="mt-1 text-sm font-bold text-slate-900" x-text="layers.length"></div>
                     </div>
 
                     <div class="rounded-xl border border-slate-200 bg-white p-3">
-                        <div class="text-[10px] text-slate-400">Stops</div>
+                        <div class="text-[10px] text-slate-500">Stops</div>
                         <div class="mt-1 text-sm font-bold text-slate-900" x-text="totalStops"></div>
                     </div>
 
                     <div class="rounded-xl border border-slate-200 bg-white p-3">
-                        <div class="text-[10px] text-slate-400">CSS Size</div>
+                        <div class="text-[10px] text-slate-500">CSS Size</div>
                         <div class="mt-1 text-sm font-bold text-slate-900" x-text="cssCode.length + ' chars'"></div>
                     </div>
 
                     <div class="rounded-xl border border-slate-200 bg-white p-3">
-                        <div class="text-[10px] text-slate-400">Processing</div>
+                        <div class="text-[10px] text-slate-500">Processing</div>
                         <div class="mt-1 text-sm font-bold text-emerald-600">
                             Local
                         </div>
@@ -894,7 +894,7 @@ new class extends Component
             <button
                 type="button"
                 @click="showImport = false"
-                class="text-lg text-slate-400 hover:text-slate-700"
+                class="text-lg text-slate-500 hover:text-slate-700"
             >
                 ×
             </button>

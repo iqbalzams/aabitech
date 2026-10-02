@@ -20,7 +20,7 @@ new class extends Component
         <div class="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
             <div class="min-w-0 flex-1">
                 <label for="percentage-smart-input" class="mb-1.5 block text-xs font-bold text-slate-600">
-                    Describe the calculation <span class="font-normal text-slate-400">(optional)</span>
+                    Describe the calculation <span class="font-normal text-slate-500">(optional)</span>
                 </label>
 
                 <div class="flex gap-2">
@@ -79,7 +79,7 @@ new class extends Component
                     class="min-h-[48px] rounded-xl border border-slate-200 bg-white px-2 py-2 text-left transition hover:border-indigo-300 hover:bg-indigo-50"
                 >
                     <span
-                        class="block text-[10px] font-extrabold uppercase tracking-wide text-slate-400"
+                        class="block text-[10px] font-extrabold uppercase tracking-wide text-slate-500"
                         x-text="item.short"
                     ></span>
 
@@ -146,14 +146,14 @@ new class extends Component
                                 <span
                                     x-show="field.suffix"
                                     x-text="field.suffix"
-                                    class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-sm font-bold text-slate-400"
+                                    class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-sm font-bold text-slate-500"
                                 ></span>
                             </div>
 
                             <p
                                 x-show="field.help"
                                 x-text="field.help"
-                                class="mt-1 text-[11px] text-slate-400"
+                                class="mt-1 text-[11px] text-slate-500"
                             ></p>
                         </div>
                     </template>
@@ -317,7 +317,7 @@ new class extends Component
                             </template>
                         </select>
 
-                        <span class="text-[10px] text-slate-400">
+                        <span class="text-[10px] text-slate-500">
                             Rates are editable examples; verify the applicable local rate.
                         </span>
                     </div>
@@ -346,7 +346,7 @@ new class extends Component
                         <template x-for="(change, index) in sequentialChanges" :key="index">
                             <div class="rounded-xl border border-slate-200 bg-slate-50 p-2">
                                 <label
-                                    class="mb-1 block text-[10px] font-bold uppercase text-slate-400"
+                                    class="mb-1 block text-[10px] font-bold uppercase text-slate-500"
                                     x-text="'Change ' + (index + 1)"
                                 ></label>
 
@@ -460,7 +460,7 @@ new class extends Component
                         <div>
                             <label class="mb-1.5 block text-xs font-bold text-slate-600">
                                 Target percentage
-                                <span class="font-normal text-slate-400">optional</span>
+                                <span class="font-normal text-slate-500">optional</span>
                             </label>
 
                             <input
@@ -647,7 +647,7 @@ new class extends Component
                     </button>
                 </div>
 
-                <p class="mt-3 text-[11px] text-slate-400">
+                <p class="mt-3 text-[11px] text-slate-500">
                     Live results update as you type. Enter calculates; Ctrl/Cmd+Enter calculates and saves to history.
                 </p>
             </section>
@@ -679,7 +679,7 @@ new class extends Component
 
                 <div class="mt-4 rounded-2xl border border-indigo-100 bg-white p-5 shadow-sm">
                     <div x-show="hasValidResult">
-                        <div class="text-xs font-semibold text-slate-400">
+                        <div class="text-xs font-semibold text-slate-500">
                             Answer
                         </div>
 
@@ -713,7 +713,7 @@ new class extends Component
                         x-show="!hasValidResult && !error"
                         class="py-10 text-center"
                     >
-                        <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-100 text-xl font-black text-slate-400">
+                        <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-100 text-xl font-black text-slate-500">
                             %
                         </div>
 
@@ -721,7 +721,7 @@ new class extends Component
                             Enter your values
                         </p>
 
-                        <p class="mt-1 text-xs text-slate-400">
+                        <p class="mt-1 text-xs text-slate-500">
                             The answer, formula and steps will appear here.
                         </p>
                     </div>
@@ -732,7 +732,7 @@ new class extends Component
                     x-show="beforeAfter"
                     class="mt-3 rounded-xl border border-slate-200 bg-white p-4"
                 >
-                    <div class="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-slate-400">
+                    <div class="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
                         Before / after
                     </div>
 
@@ -749,7 +749,7 @@ new class extends Component
                     </div>
 
                     <div
-                        class="mt-1 text-[10px] text-slate-400"
+                        class="mt-1 text-[10px] text-slate-500"
                         x-text="'Absolute percentage change: ' + pct(Math.abs(result ?? 0))"
                     ></div>
                 </div>
@@ -759,7 +759,7 @@ new class extends Component
                     x-show="hasValidResult"
                     class="mt-3 rounded-xl border border-slate-200 bg-white p-4"
                 >
-                    <div class="mb-1 text-[11px] font-extrabold uppercase tracking-wider text-slate-400">
+                    <div class="mb-1 text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
                         Formula
                     </div>
 
@@ -774,7 +774,7 @@ new class extends Component
                     x-show="steps.length"
                     class="mt-3 rounded-xl border border-slate-200 bg-white p-4"
                 >
-                    <div class="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-slate-400">
+                    <div class="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
                         Step-by-step
                     </div>
 
@@ -803,7 +803,7 @@ new class extends Component
                     <template x-for="fact in quickFacts" :key="fact.label">
                         <div class="rounded-xl border border-slate-200 bg-white p-3">
                             <div
-                                class="text-[10px] font-bold uppercase tracking-wide text-slate-400"
+                                class="text-[10px] font-bold uppercase tracking-wide text-slate-500"
                                 x-text="fact.label"
                             ></div>
 
@@ -820,7 +820,7 @@ new class extends Component
                     x-show="mode === 'compare' && comparisonResults.length"
                     class="mt-3 rounded-xl border border-slate-200 bg-white p-4"
                 >
-                    <div class="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-slate-400">
+                    <div class="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
                         Scenario comparison
                     </div>
 
@@ -846,7 +846,7 @@ new class extends Component
                     x-show="mode === 'sequential' && sequentialResults.length"
                     class="mt-3 rounded-xl border border-slate-200 bg-white p-4"
                 >
-                    <div class="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-slate-400">
+                    <div class="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
                         Sequential simulation
                     </div>
 
@@ -867,7 +867,7 @@ new class extends Component
                     </div>
                 </div>
 
-                <div class="mt-auto pt-4 text-[11px] text-slate-400">
+                <div class="mt-auto pt-4 text-[11px] text-slate-500">
                     All calculations run locally in your browser.
                 </div>
             </section>
@@ -879,7 +879,7 @@ new class extends Component
         <details class="rounded-2xl border border-slate-200 bg-white shadow-sm">
             <summary class="flex cursor-pointer items-center justify-between px-4 py-3 text-sm font-bold text-slate-700">
                 Calculation settings
-                <span class="text-xs font-semibold text-slate-400">
+                <span class="text-xs font-semibold text-slate-500">
                     Formatting & presets
                 </span>
             </summary>
@@ -906,7 +906,7 @@ new class extends Component
                             Percentage points
                         </span>
 
-                        <span class="mt-1 block text-[11px] leading-5 text-slate-400">
+                        <span class="mt-1 block text-[11px] leading-5 text-slate-500">
                             Use percentage change for relative change; percentage points for rate-to-rate differences.
                         </span>
                     </label>
@@ -966,7 +966,7 @@ new class extends Component
                             ></div>
 
                             <div
-                                class="mt-0.5 truncate text-[11px] text-slate-400"
+                                class="mt-0.5 truncate text-[11px] text-slate-500"
                                 x-text="item.summary"
                             ></div>
                         </div>

@@ -94,7 +94,7 @@ new class extends Component
                             type="button"
                             @click="togglePasswordVisibility()"
                             :aria-label="showPassword ? 'Hide password' : 'Show password'"
-                            class="absolute right-2 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-lg text-slate-400 transition hover:bg-slate-100 hover:text-slate-700"
+                            class="absolute right-2 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-lg text-slate-500 transition hover:bg-slate-100 hover:text-slate-700"
                         >
                             <span
                                 class="text-sm"
@@ -105,7 +105,7 @@ new class extends Component
 
                     <div class="mt-2 flex items-center justify-between gap-3">
                         <span
-                            class="text-xs text-slate-400"
+                            class="text-xs text-slate-500"
                             x-text="passwordLengthLabel"
                         ></span>
 
@@ -200,7 +200,7 @@ new class extends Component
                         </h3>
 
                         <span
-                            class="text-xs font-medium text-slate-400"
+                            class="text-xs font-medium text-slate-500"
                             x-text="passedChecklist + '/' + checklist.length"
                         ></span>
                     </div>
@@ -386,16 +386,16 @@ new class extends Component
                 {{-- Core metrics --}}
                 <div class="mt-5 grid grid-cols-2 gap-3">
                     <div class="rounded-xl border border-slate-200 bg-white p-4">
-                        <div class="text-xs text-slate-400">Length</div>
+                        <div class="text-xs text-slate-500">Length</div>
                         <div
                             class="mt-1 text-xl font-bold text-slate-900"
                             x-text="passwordLength"
                         ></div>
-                        <div class="text-xs text-slate-400">characters</div>
+                        <div class="text-xs text-slate-500">characters</div>
                     </div>
 
                     <div class="rounded-xl border border-slate-200 bg-white p-4">
-                        <div class="text-xs text-slate-400">Raw entropy</div>
+                        <div class="text-xs text-slate-500">Raw entropy</div>
                         <div
                             class="mt-1 text-xl font-bold text-slate-900"
                             x-text="entropy + ' bits'"
@@ -403,7 +403,7 @@ new class extends Component
                     </div>
 
                     <div class="rounded-xl border border-slate-200 bg-white p-4">
-                        <div class="text-xs text-slate-400">Practical entropy</div>
+                        <div class="text-xs text-slate-500">Practical entropy</div>
                         <div
                             class="mt-1 text-xl font-bold text-slate-900"
                             x-text="practicalEntropy + ' bits'"
@@ -411,7 +411,7 @@ new class extends Component
                     </div>
 
                     <div class="rounded-xl border border-slate-200 bg-white p-4">
-                        <div class="text-xs text-slate-400">Guesses required</div>
+                        <div class="text-xs text-slate-500">Guesses required</div>
                         <div
                             class="mt-1 text-xl font-bold text-slate-900"
                             x-text="formatGuessCount(estimatedGuesses)"
@@ -427,7 +427,7 @@ new class extends Component
                         </h3>
 
                         <span
-                            class="text-xs text-slate-400"
+                            class="text-xs text-slate-500"
                             x-text="uniqueCharacters + ' unique'"
                         ></span>
                     </div>
@@ -463,7 +463,7 @@ new class extends Component
                         </h3>
 
                         <span
-                            class="text-xs text-slate-400"
+                            class="text-xs text-slate-500"
                             x-text="weaknesses.length + ' detected'"
                         ></span>
                     </div>
@@ -513,7 +513,7 @@ new class extends Component
                         class="mt-4 min-h-12 overflow-x-auto rounded-lg border border-slate-200 bg-slate-50 p-3 font-mono text-sm"
                     >
                         <template x-if="!password">
-                            <span class="text-slate-400">
+                            <span class="text-slate-500">
                                 Enter a password to visualize detected patterns.
                             </span>
                         </template>
@@ -579,7 +579,7 @@ new class extends Component
 
                     <div class="mt-4 grid gap-3 sm:grid-cols-3">
                         <div class="rounded-xl border border-slate-200 bg-slate-50 p-3">
-                            <div class="text-xs text-slate-400">
+                            <div class="text-xs text-slate-500">
                                 Online throttled
                             </div>
 
@@ -589,13 +589,13 @@ new class extends Component
                             ></div>
 
                             <div
-                                class="mt-1 text-[11px] text-slate-400"
+                                class="mt-1 text-[11px] text-slate-500"
                                 x-text="formatRate(attack.onlineRate)"
                             ></div>
                         </div>
 
                         <div class="rounded-xl border border-slate-200 bg-slate-50 p-3">
-                            <div class="text-xs text-slate-400">
+                            <div class="text-xs text-slate-500">
                                 Offline fast hash
                             </div>
 
@@ -605,13 +605,13 @@ new class extends Component
                             ></div>
 
                             <div
-                                class="mt-1 text-[11px] text-slate-400"
+                                class="mt-1 text-[11px] text-slate-500"
                                 x-text="formatRate(attack.offlineRate)"
                             ></div>
                         </div>
 
                         <div class="rounded-xl border border-slate-200 bg-slate-50 p-3">
-                            <div class="text-xs text-slate-400">
+                            <div class="text-xs text-slate-500">
                                 Custom scenario
                             </div>
 
@@ -621,7 +621,7 @@ new class extends Component
                             ></div>
 
                             <div
-                                class="mt-1 text-[11px] text-slate-400"
+                                class="mt-1 text-[11px] text-slate-500"
                                 x-text="formatRate(attack.customRate)"
                             ></div>
                         </div>
@@ -642,7 +642,7 @@ new class extends Component
 
                     <div class="mt-4 grid grid-cols-2 gap-3">
                         <div class="rounded-lg bg-slate-50 p-3">
-                            <div class="text-xs text-slate-400">Words</div>
+                            <div class="text-xs text-slate-500">Words</div>
                             <div
                                 class="mt-1 font-semibold text-slate-900"
                                 x-text="passphrase.wordCount"
@@ -650,7 +650,7 @@ new class extends Component
                         </div>
 
                         <div class="rounded-lg bg-slate-50 p-3">
-                            <div class="text-xs text-slate-400">Unique words</div>
+                            <div class="text-xs text-slate-500">Unique words</div>
                             <div
                                 class="mt-1 font-semibold text-slate-900"
                                 x-text="passphrase.uniqueWords"
@@ -658,7 +658,7 @@ new class extends Component
                         </div>
 
                         <div class="rounded-lg bg-slate-50 p-3">
-                            <div class="text-xs text-slate-400">Separator</div>
+                            <div class="text-xs text-slate-500">Separator</div>
                             <div
                                 class="mt-1 font-semibold text-slate-900"
                                 x-text="passphrase.separatorQuality"
@@ -666,7 +666,7 @@ new class extends Component
                         </div>
 
                         <div class="rounded-lg bg-slate-50 p-3">
-                            <div class="text-xs text-slate-400">Assessment</div>
+                            <div class="text-xs text-slate-500">Assessment</div>
                             <div
                                 class="mt-1 font-semibold text-slate-900"
                                 x-text="passphrase.assessment"
@@ -797,7 +797,7 @@ new class extends Component
 
         <div class="mt-5 grid gap-3 md:grid-cols-3">
             <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                <div class="text-xs text-slate-400">Baseline</div>
+                <div class="text-xs text-slate-500">Baseline</div>
 
                 <div
                     class="mt-1 font-semibold text-slate-900"
@@ -806,7 +806,7 @@ new class extends Component
             </div>
 
             <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                <div class="text-xs text-slate-400">Current</div>
+                <div class="text-xs text-slate-500">Current</div>
 
                 <div
                     class="mt-1 font-semibold text-slate-900"
@@ -815,7 +815,7 @@ new class extends Component
             </div>
 
             <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                <div class="text-xs text-slate-400">Change</div>
+                <div class="text-xs text-slate-500">Change</div>
 
                 <div
                     class="mt-1 font-semibold text-slate-900"
@@ -837,7 +837,7 @@ new class extends Component
     {{-- ============================================================
         SHORTCUTS / TOOL STATUS
     ============================================================= --}}
-    <div class="mt-4 flex flex-wrap items-center justify-between gap-3 text-[11px] text-slate-400">
+    <div class="mt-4 flex flex-wrap items-center justify-between gap-3 text-[11px] text-slate-500">
         <div>
             <span class="font-medium text-slate-500">Shortcuts:</span>
             Ctrl/Cmd + Enter = focus password · Esc = clear
