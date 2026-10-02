@@ -205,22 +205,27 @@ new class extends Component
         </div>
 
         <div class="min-w-0 rounded-xl border border-slate-200 bg-white p-3.5 lg:col-span-2">
-    <div class="flex items-center justify-between gap-2">
-        <h3 class="text-xs font-bold text-slate-800">Developer snippets</h3>
+            <div class="flex items-center justify-between gap-2">
+                <h3 class="text-xs font-bold text-slate-800">Developer snippets</h3>
 
-        <select
-            x-model="snippetLanguage"
-            class="h-7 shrink-0 rounded-md border-slate-200 text-[11px]"
-        >
-            <option>JavaScript</option>
-            <option>PHP</option>
-            <option>Python</option>
-            <option>Java</option>
-            <option>Go</option>
-            <option>C#</option>
-            <option>cURL</option>
-        </select>
-    </div>
+                <label for="snippet-language" class="sr-only">
+                    Snippet language
+                </label>
+
+                <select
+                    id="snippet-language"
+                    x-model="snippetLanguage"
+                    class="h-7 shrink-0 rounded-md border-slate-200 text-[11px]"
+                >
+                    <option>JavaScript</option>
+                    <option>PHP</option>
+                    <option>Python</option>
+                    <option>Java</option>
+                    <option>Go</option>
+                    <option>C#</option>
+                    <option>cURL</option>
+                </select>
+            </div>
 
     <div class="mt-2 flex min-w-0 items-start gap-2">
         <pre

@@ -80,7 +80,7 @@
                         wire:navigate
                         class="font-medium text-indigo-400 underline decoration-indigo-400/40 underline-offset-2 transition hover:text-indigo-300 hover:decoration-indigo-300"
                     >
-                        Learn more
+                        Learn more about our privacy practices
                     </a>
                 </p>
             </div>
