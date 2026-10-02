@@ -16,7 +16,7 @@ return [
 
         'default_robots' => 'index, follow',
 
-        'default_og_image' => 'images/aabitech-og.svg',
+        'default_og_image' => 'images/aabitech-og.png',
 
         'default_logo' => 'images/aabitech-logo.svg',
     ],
