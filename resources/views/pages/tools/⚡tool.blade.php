@@ -351,7 +351,7 @@ new #[Layout('layouts.app')] class extends Component
 
                     @if ($this->implementationComponent)
 
-                        <div class="w-full p-3 sm:p-4 lg:p-5">
+                        <div class="w-full p-3 sm:p-4 lg:p-5 min-h-[1000px]">
 
                             <livewire:dynamic-component
                                 :is="$this->implementationComponent"
@@ -420,7 +420,7 @@ new #[Layout('layouts.app')] class extends Component
             TRUST / TOOL CHARACTERISTICS
         ============================================================= --}}
 
-        {{-- <section class="border-y border-slate-200 bg-white">
+        <section class="border-y border-slate-200 bg-white">
 
             <div class="mx-auto w-full max-w-7xl px-4 py-7 sm:px-6 lg:px-8">
 
@@ -507,7 +507,7 @@ new #[Layout('layouts.app')] class extends Component
 
             </div>
 
-        </section> --}}
+        </section>
 
 
         {{-- ============================================================
