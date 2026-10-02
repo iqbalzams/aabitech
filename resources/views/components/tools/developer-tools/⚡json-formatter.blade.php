@@ -97,9 +97,9 @@ new class extends Component
                         class="absolute inset-0 z-10 h-full w-full resize-none border-0 bg-transparent p-4 font-mono text-[13px] leading-6 text-slate-900 caret-slate-900 outline-none focus:ring-0"
                         placeholder='{"name":"AabiTech","tools":["JSON","Base64"]}'
                     ></textarea>
-                    <pre x-show="showHighlight" aria-hidden="true"
+                    {{-- <pre x-show="showHighlight" aria-hidden="true"
                         class="pointer-events-none absolute inset-0 overflow-hidden whitespace-pre-wrap break-words p-4 font-mono text-[13px] leading-6 text-slate-700"
-                        x-html="highlightedInput"></pre>
+                        x-html="highlightedInput"></pre> --}}
                 </div>
 
                 <div class="flex min-h-11 flex-wrap items-center justify-between gap-2 border-t border-slate-200 bg-slate-50 px-3.5 py-2.5 sm:px-4">
