@@ -129,7 +129,7 @@ new class extends Component
 
                     <div class="flex items-center gap-2">
                         <span
-                            class="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-400"
+                            class="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-500"
                         >
                             <span x-text="formatNumber(inputLineCount)"></span>
                             lines
@@ -149,7 +149,7 @@ new class extends Component
                     spellcheck="false"
                     autocomplete="off"
                     autocapitalize="off"
-                    class="h-[620px] min-h-[420px] w-full resize-y rounded-xl border border-slate-200 bg-slate-50 p-4 font-mono text-sm leading-6 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:focus:border-indigo-500 dark:focus:ring-indigo-950"
+                    class="h-[620px] min-h-[420px] w-full resize-y rounded-xl border border-slate-200 bg-slate-50 p-4 font-mono text-sm leading-6 text-slate-900 outline-none transition placeholder:text-slate-500 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:focus:border-indigo-500 dark:focus:ring-indigo-950"
                     placeholder="Paste or type one item per line..."
                 ></textarea>
 
@@ -289,7 +289,7 @@ new class extends Component
                 </div>
 
                 <span
-                    class="rounded-full bg-slate-100 px-2.5 py-1 text-[10px] font-medium text-slate-500 dark:bg-slate-800 dark:text-slate-400"
+                    class="rounded-full bg-slate-100 px-2.5 py-1 text-[10px] font-medium text-slate-500 dark:bg-slate-800 dark:text-slate-500"
                 >
                     Live processing
                 </span>
@@ -430,7 +430,7 @@ new class extends Component
             <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {{-- KEEP --}}
                 <div>
-                    <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400">
+                    <label class="block text-xs font-semibold text-slate-600 dark:text-slate-500">
                         Occurrence to keep
                     </label>
 
@@ -446,7 +446,7 @@ new class extends Component
 
                 {{-- SORT --}}
                 <div>
-                    <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400">
+                    <label class="block text-xs font-semibold text-slate-600 dark:text-slate-500">
                         Sort result
                     </label>
 
@@ -467,7 +467,7 @@ new class extends Component
 
                 {{-- BLANKS --}}
                 <div>
-                    <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400">
+                    <label class="block text-xs font-semibold text-slate-600 dark:text-slate-500">
                         Blank lines
                     </label>
 
@@ -510,37 +510,37 @@ new class extends Component
             <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
                 <p class="text-[11px] text-slate-500">Input</p>
                 <p class="mt-1.5 text-xl font-bold text-slate-950 dark:text-white" x-text="formatNumber(inputLineCount)"></p>
-                <p class="mt-0.5 text-[10px] text-slate-400">lines</p>
+                <p class="mt-0.5 text-[10px] text-slate-500">lines</p>
             </div>
 
             <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
                 <p class="text-[11px] text-slate-500">Unique</p>
                 <p class="mt-1.5 text-xl font-bold text-slate-950 dark:text-white" x-text="formatNumber(uniqueLineCount)"></p>
-                <p class="mt-0.5 text-[10px] text-slate-400">groups</p>
+                <p class="mt-0.5 text-[10px] text-slate-500">groups</p>
             </div>
 
             <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
                 <p class="text-[11px] text-slate-500">Removed</p>
                 <p class="mt-1.5 text-xl font-bold text-slate-950 dark:text-white" x-text="formatNumber(removedCount)"></p>
-                <p class="mt-0.5 text-[10px] text-slate-400">duplicates</p>
+                <p class="mt-0.5 text-[10px] text-slate-500">duplicates</p>
             </div>
 
             <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
                 <p class="text-[11px] text-slate-500">Duplicate rate</p>
                 <p class="mt-1.5 text-xl font-bold text-slate-950 dark:text-white" x-text="duplicatePercentage + '%'"></p>
-                <p class="mt-0.5 text-[10px] text-slate-400">of input</p>
+                <p class="mt-0.5 text-[10px] text-slate-500">of input</p>
             </div>
 
             <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
                 <p class="text-[11px] text-slate-500">Characters</p>
                 <p class="mt-1.5 text-xl font-bold text-slate-950 dark:text-white" x-text="formatNumber(outputCharacters)"></p>
-                <p class="mt-0.5 text-[10px] text-slate-400">output</p>
+                <p class="mt-0.5 text-[10px] text-slate-500">output</p>
             </div>
 
             <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
                 <p class="text-[11px] text-slate-500">UTF-8</p>
                 <p class="mt-1.5 text-xl font-bold text-slate-950 dark:text-white" x-text="formatBytes(outputBytes)"></p>
-                <p class="mt-0.5 text-[10px] text-slate-400">output size</p>
+                <p class="mt-0.5 text-[10px] text-slate-500">output size</p>
             </div>
         </div>
     </section>
@@ -564,7 +564,7 @@ new class extends Component
                     </p>
                 </div>
 
-                <span class="text-xs text-slate-400">
+                <span class="text-xs text-slate-500">
                     Expand
                 </span>
             </summary>
@@ -656,7 +656,7 @@ new class extends Component
                     </p>
                 </div>
 
-                <span class="text-xs text-slate-400">
+                <span class="text-xs text-slate-500">
                     Expand
                 </span>
             </summary>

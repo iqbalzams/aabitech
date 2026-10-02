@@ -28,13 +28,13 @@ new class extends Component {
                     <p class="text-xs font-semibold text-slate-700 dark:text-slate-200">
                         100% browser-based
                     </p>
-                    <p class="truncate text-[11px] text-slate-500 dark:text-slate-400">
+                    <p class="truncate text-[11px] text-slate-500 dark:text-slate-500">
                         Your text stays on your device.
                     </p>
                 </div>
             </div>
 
-            <div class="hidden shrink-0 text-[11px] text-slate-400 sm:block">
+            <div class="hidden shrink-0 text-[11px] text-slate-500 sm:block">
                 Live calculation
             </div>
         </div>
@@ -135,7 +135,7 @@ new class extends Component {
                             @keydown.meta.shift.c.prevent="copyResult()"
                             spellcheck="true"
                             autocomplete="off"
-                            class="min-h-[340px] w-full resize-y rounded-lg border border-slate-200 bg-slate-50/60 p-3 text-sm leading-6 text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-indigo-400 focus:bg-white focus:ring-2 focus:ring-indigo-100 dark:border-slate-700 dark:bg-slate-950/50 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-indigo-500 dark:focus:bg-slate-950 dark:focus:ring-indigo-950"
+                            class="min-h-[340px] w-full resize-y rounded-lg border border-slate-200 bg-slate-50/60 p-3 text-sm leading-6 text-slate-800 outline-none transition placeholder:text-slate-500 focus:border-indigo-400 focus:bg-white focus:ring-2 focus:ring-indigo-100 dark:border-slate-700 dark:bg-slate-950/50 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-indigo-500 dark:focus:bg-slate-950 dark:focus:ring-indigo-950"
                             placeholder="Paste or type your article, blog post, speech, script, study material, or any text here..."
                         ></textarea>
 
@@ -159,13 +159,13 @@ new class extends Component {
                     </div>
 
                     <div class="flex flex-wrap items-center justify-between gap-2 border-t border-slate-200 px-3 py-2 dark:border-slate-700">
-                        <p class="text-[10px] text-slate-400">
+                        <p class="text-[10px] text-slate-500">
                             Ctrl/Cmd + Enter to refresh · Ctrl/Cmd + Shift + C to copy result
                         </p>
 
                         <button
                             type="button"
-                            class="text-[11px] font-medium text-slate-500 hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400"
+                            class="text-[11px] font-medium text-slate-500 hover:text-indigo-600 dark:text-slate-500 dark:hover:text-indigo-400"
                             @click="pasteFromClipboard()"
                         >
                             Paste from clipboard
@@ -195,12 +195,12 @@ new class extends Component {
                             placeholder="1000"
                         >
 
-                        <span class="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-medium text-slate-400">
+                        <span class="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-medium text-slate-500">
                             words
                         </span>
                     </div>
 
-                    <p class="mt-3 text-xs leading-5 text-slate-500 dark:text-slate-400">
+                    <p class="mt-3 text-xs leading-5 text-slate-500 dark:text-slate-500">
                         Direct word-count mode is useful when you already know the number of words.
                         Text-specific statistics such as characters and sentences are unavailable in this mode.
                     </p>
@@ -217,7 +217,7 @@ new class extends Component {
                         <h2 class="text-sm font-semibold text-slate-800 dark:text-slate-100">
                             Basic Statistics
                         </h2>
-                        <p class="mt-0.5 text-[11px] text-slate-400">
+                        <p class="mt-0.5 text-[11px] text-slate-500">
                             Live content analysis
                         </p>
                     </div>
@@ -233,99 +233,99 @@ new class extends Component {
 
                     {{-- Reading time --}}
                     <div class="bg-white p-4 dark:bg-slate-900">
-                        <p class="text-[11px] font-medium text-slate-400">Reading Time</p>
+                        <p class="text-[11px] font-medium text-slate-500">Reading Time</p>
                         <p
                             class="mt-1 text-xl font-bold tracking-tight text-indigo-600 dark:text-indigo-400"
                             x-text="formatDuration(readingSeconds())"
                         ></p>
                         <p
-                            class="mt-1 text-[10px] text-slate-400"
+                            class="mt-1 text-[10px] text-slate-500"
                             x-text="readingWpm + ' WPM'"
                         ></p>
                     </div>
 
                     {{-- Characters --}}
                     <div class="bg-white p-4 dark:bg-slate-900">
-                        <p class="text-[11px] font-medium text-slate-400">Characters</p>
+                        <p class="text-[11px] font-medium text-slate-500">Characters</p>
                         <p
                             class="mt-1 text-xl font-bold tracking-tight text-slate-800 dark:text-slate-100"
                             x-text="formatNumber(characterCount())"
                         ></p>
-                        <p class="mt-1 text-[10px] text-slate-400">
+                        <p class="mt-1 text-[10px] text-slate-500">
                             including spaces
                         </p>
                     </div>
 
                     {{-- Characters without spaces --}}
                     <div class="bg-white p-4 dark:bg-slate-900">
-                        <p class="text-[11px] font-medium text-slate-400">No Spaces</p>
+                        <p class="text-[11px] font-medium text-slate-500">No Spaces</p>
                         <p
                             class="mt-1 text-xl font-bold tracking-tight text-slate-800 dark:text-slate-100"
                             x-text="formatNumber(characterCountNoSpaces())"
                         ></p>
-                        <p class="mt-1 text-[10px] text-slate-400">
+                        <p class="mt-1 text-[10px] text-slate-500">
                             characters
                         </p>
                     </div>
 
                     {{-- Sentences --}}
                     <div class="bg-white p-4 dark:bg-slate-900">
-                        <p class="text-[11px] font-medium text-slate-400">Sentences</p>
+                        <p class="text-[11px] font-medium text-slate-500">Sentences</p>
                         <p
                             class="mt-1 text-xl font-bold tracking-tight text-slate-800 dark:text-slate-100"
                             x-text="formatNumber(sentenceCount())"
                         ></p>
-                        <p class="mt-1 text-[10px] text-slate-400">
+                        <p class="mt-1 text-[10px] text-slate-500">
                             detected sentences
                         </p>
                     </div>
 
                     {{-- Paragraphs --}}
                     <div class="bg-white p-4 dark:bg-slate-900">
-                        <p class="text-[11px] font-medium text-slate-400">Paragraphs</p>
+                        <p class="text-[11px] font-medium text-slate-500">Paragraphs</p>
                         <p
                             class="mt-1 text-xl font-bold tracking-tight text-slate-800 dark:text-slate-100"
                             x-text="formatNumber(paragraphCount())"
                         ></p>
-                        <p class="mt-1 text-[10px] text-slate-400">
+                        <p class="mt-1 text-[10px] text-slate-500">
                             content blocks
                         </p>
                     </div>
 
                     {{-- Average sentence --}}
                     <div class="bg-white p-4 dark:bg-slate-900">
-                        <p class="text-[11px] font-medium text-slate-400">Avg. Sentence</p>
+                        <p class="text-[11px] font-medium text-slate-500">Avg. Sentence</p>
                         <p
                             class="mt-1 text-xl font-bold tracking-tight text-slate-800 dark:text-slate-100"
                             x-text="averageWordsPerSentence().toFixed(1)"
                         ></p>
-                        <p class="mt-1 text-[10px] text-slate-400">
+                        <p class="mt-1 text-[10px] text-slate-500">
                             words / sentence
                         </p>
                     </div>
 
                     {{-- Pages --}}
                     <div class="bg-white p-4 dark:bg-slate-900">
-                        <p class="text-[11px] font-medium text-slate-400">Pages</p>
+                        <p class="text-[11px] font-medium text-slate-500">Pages</p>
                         <p
                             class="mt-1 text-xl font-bold tracking-tight text-slate-800 dark:text-slate-100"
                             x-text="pageEstimate()"
                         ></p>
                         <p
-                            class="mt-1 text-[10px] text-slate-400"
+                            class="mt-1 text-[10px] text-slate-500"
                             x-text="pageWords + ' words/page'"
                         ></p>
                     </div>
 
                     {{-- Readability --}}
                     <div class="bg-white p-4 dark:bg-slate-900">
-                        <p class="text-[11px] font-medium text-slate-400">Readability</p>
+                        <p class="text-[11px] font-medium text-slate-500">Readability</p>
                         <p
                             class="mt-1 text-xl font-bold tracking-tight text-slate-800 dark:text-slate-100"
                             x-text="readabilityLabel()"
                         ></p>
                         <p
-                            class="mt-1 truncate text-[10px] text-slate-400"
+                            class="mt-1 truncate text-[10px] text-slate-500"
                             x-text="readabilityDescription()"
                         ></p>
                     </div>
@@ -389,7 +389,7 @@ new class extends Component {
                     <h2 class="text-xs font-semibold text-slate-800 dark:text-slate-100">
                         Reading Speed
                     </h2>
-                    <p class="text-[10px] text-slate-400">
+                    <p class="text-[10px] text-slate-500">
                         Choose a preset or adjust your own speed.
                     </p>
                 </div>
@@ -430,7 +430,7 @@ new class extends Component {
             <div class="grid grid-cols-2 gap-2 sm:grid-cols-4">
 
                 <div class="rounded-lg border border-slate-200 p-2.5 dark:border-slate-700">
-                    <label class="mb-1 block text-[10px] font-medium text-slate-400">
+                    <label class="mb-1 block text-[10px] font-medium text-slate-500">
                         Reading WPM
                     </label>
                     <input
@@ -444,7 +444,7 @@ new class extends Component {
                 </div>
 
                 <div class="rounded-lg border border-slate-200 p-2.5 dark:border-slate-700">
-                    <label class="mb-1 block text-[10px] font-medium text-slate-400">
+                    <label class="mb-1 block text-[10px] font-medium text-slate-500">
                         Slow WPM
                     </label>
                     <input
@@ -458,7 +458,7 @@ new class extends Component {
                 </div>
 
                 <div class="rounded-lg border border-slate-200 p-2.5 dark:border-slate-700">
-                    <label class="mb-1 block text-[10px] font-medium text-slate-400">
+                    <label class="mb-1 block text-[10px] font-medium text-slate-500">
                         Fast WPM
                     </label>
                     <input
@@ -472,7 +472,7 @@ new class extends Component {
                 </div>
 
                 <div class="rounded-lg border border-slate-200 p-2.5 dark:border-slate-700">
-                    <label class="mb-1 block text-[10px] font-medium text-slate-400">
+                    <label class="mb-1 block text-[10px] font-medium text-slate-500">
                         Skimming WPM
                     </label>
                     <input
@@ -498,7 +498,7 @@ new class extends Component {
                 <h2 class="text-sm font-semibold text-slate-800 dark:text-slate-100">
                     Reading Time Estimates
                 </h2>
-                <p class="mt-0.5 text-[11px] text-slate-400">
+                <p class="mt-0.5 text-[11px] text-slate-500">
                     Compare how long the same content takes at different speeds.
                 </p>
             </div>
@@ -506,34 +506,34 @@ new class extends Component {
             <div class="grid grid-cols-2 gap-px bg-slate-200 sm:grid-cols-3 lg:grid-cols-6 dark:bg-slate-700">
 
                 <div class="bg-white p-3 dark:bg-slate-900">
-                    <p class="text-[10px] font-medium text-slate-400">Slow</p>
+                    <p class="text-[10px] font-medium text-slate-500">Slow</p>
                     <p class="mt-1 text-sm font-bold text-slate-800 dark:text-slate-100"
                        x-text="formatDuration(readingSecondsAt(slowWpm))"></p>
-                    <p class="mt-1 text-[10px] text-slate-400"
+                    <p class="mt-1 text-[10px] text-slate-500"
                        x-text="slowWpm + ' WPM'"></p>
                 </div>
 
                 <div class="bg-white p-3 dark:bg-slate-900">
-                    <p class="text-[10px] font-medium text-slate-400">Average</p>
+                    <p class="text-[10px] font-medium text-slate-500">Average</p>
                     <p class="mt-1 text-sm font-bold text-indigo-600 dark:text-indigo-400"
                        x-text="formatDuration(readingSecondsAt(readingWpm))"></p>
-                    <p class="mt-1 text-[10px] text-slate-400"
+                    <p class="mt-1 text-[10px] text-slate-500"
                        x-text="readingWpm + ' WPM'"></p>
                 </div>
 
                 <div class="bg-white p-3 dark:bg-slate-900">
-                    <p class="text-[10px] font-medium text-slate-400">Fast</p>
+                    <p class="text-[10px] font-medium text-slate-500">Fast</p>
                     <p class="mt-1 text-sm font-bold text-slate-800 dark:text-slate-100"
                        x-text="formatDuration(readingSecondsAt(fastWpm))"></p>
-                    <p class="mt-1 text-[10px] text-slate-400"
+                    <p class="mt-1 text-[10px] text-slate-500"
                        x-text="fastWpm + ' WPM'"></p>
                 </div>
 
                 <div class="bg-white p-3 dark:bg-slate-900">
-                    <p class="text-[10px] font-medium text-slate-400">Skimming</p>
+                    <p class="text-[10px] font-medium text-slate-500">Skimming</p>
                     <p class="mt-1 text-sm font-bold text-slate-800 dark:text-slate-100"
                        x-text="formatDuration(readingSecondsAt(skimWpm, false))"></p>
-                    <p class="mt-1 text-[10px] text-slate-400"
+                    <p class="mt-1 text-[10px] text-slate-500"
                        x-text="skimWpm + ' WPM'"></p>
                 </div>
 
@@ -541,7 +541,7 @@ new class extends Component {
                     <p class="text-[10px] font-medium text-slate-800 dark:text-slate-100">Speaking</p>
                     <p class="mt-1 text-sm font-bold text-slate-800 dark:text-slate-100"
                        x-text="formatDuration(speakingSeconds())"></p>
-                    <p class="mt-1 text-[10px] text-slate-400"
+                    <p class="mt-1 text-[10px] text-slate-500"
                        x-text="speakingWpm + ' WPM'"></p>
                 </div>
 
@@ -549,7 +549,7 @@ new class extends Component {
                     <p class="text-[10px] font-medium text-slate-800 dark:text-slate-100">Presentation</p>
                     <p class="mt-1 text-sm font-bold text-slate-800 dark:text-slate-100"
                        x-text="formatDuration(presentationSeconds())"></p>
-                    <p class="mt-1 text-[10px] text-slate-400"
+                    <p class="mt-1 text-[10px] text-slate-500"
                        x-text="presentationWpm + ' WPM'"></p>
                 </div>
 
@@ -569,7 +569,7 @@ new class extends Component {
                     <h2 class="text-sm font-semibold text-slate-800 dark:text-slate-100">
                         Content Type
                     </h2>
-                    <p class="mt-0.5 text-[11px] text-slate-400">
+                    <p class="mt-0.5 text-[11px] text-slate-500">
                         Apply a practical speed profile for your content.
                     </p>
                 </div>
@@ -597,7 +597,7 @@ new class extends Component {
                     <h2 class="text-sm font-semibold text-slate-800 dark:text-slate-100">
                         Speaking & Presentation
                     </h2>
-                    <p class="mt-0.5 text-[11px] text-slate-400">
+                    <p class="mt-0.5 text-[11px] text-slate-500">
                         Useful for speeches, lectures, presentations and scripts.
                     </p>
                 </div>
@@ -605,7 +605,7 @@ new class extends Component {
                 <div class="grid grid-cols-2 gap-2">
 
                     <div>
-                        <label class="mb-1 block text-[10px] font-medium text-slate-400">
+                        <label class="mb-1 block text-[10px] font-medium text-slate-500">
                             Speaking WPM
                         </label>
                         <input
@@ -619,7 +619,7 @@ new class extends Component {
                     </div>
 
                     <div>
-                        <label class="mb-1 block text-[10px] font-medium text-slate-400">
+                        <label class="mb-1 block text-[10px] font-medium text-slate-500">
                             Presentation WPM
                         </label>
                         <input
@@ -652,7 +652,7 @@ new class extends Component {
                         <h2 class="text-sm font-semibold text-slate-800 dark:text-slate-100">
                             Target Reading Calculator
                         </h2>
-                        <p class="mt-0.5 text-[11px] text-slate-400">
+                        <p class="mt-0.5 text-[11px] text-slate-500">
                             Plan your content around a desired reading duration.
                         </p>
                     </div>
@@ -682,7 +682,7 @@ new class extends Component {
 
 
                 <div x-show="targetMode === 'duration'">
-                    <label class="mb-1 block text-[10px] font-medium text-slate-400">
+                    <label class="mb-1 block text-[10px] font-medium text-slate-500">
                         Desired reading time
                     </label>
 
@@ -695,7 +695,7 @@ new class extends Component {
                             class="h-9 w-full rounded-md border border-slate-200 bg-slate-50 px-2.5 text-xs font-semibold text-slate-700 outline-none focus:border-indigo-400 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-200"
                         >
 
-                        <div class="flex h-9 shrink-0 items-center rounded-md bg-slate-100 px-3 text-[11px] font-medium text-slate-500 dark:bg-slate-800 dark:text-slate-400">
+                        <div class="flex h-9 shrink-0 items-center rounded-md bg-slate-100 px-3 text-[11px] font-medium text-slate-500 dark:bg-slate-800 dark:text-slate-500">
                             minutes
                         </div>
                     </div>
@@ -711,7 +711,7 @@ new class extends Component {
 
 
                 <div x-show="targetMode === 'words'">
-                    <label class="mb-1 block text-[10px] font-medium text-slate-400">
+                    <label class="mb-1 block text-[10px] font-medium text-slate-500">
                         Target word count
                     </label>
 
@@ -724,7 +724,7 @@ new class extends Component {
                             class="h-9 w-full rounded-md border border-slate-200 bg-slate-50 px-2.5 text-xs font-semibold text-slate-700 outline-none focus:border-indigo-400 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-200"
                         >
 
-                        <div class="flex h-9 shrink-0 items-center rounded-md bg-slate-100 px-3 text-[11px] font-medium text-slate-500 dark:bg-slate-800 dark:text-slate-400">
+                        <div class="flex h-9 shrink-0 items-center rounded-md bg-slate-100 px-3 text-[11px] font-medium text-slate-500 dark:bg-slate-800 dark:text-slate-500">
                             words
                         </div>
                     </div>
@@ -748,12 +748,12 @@ new class extends Component {
                     <h2 class="text-sm font-semibold text-slate-800 dark:text-slate-100">
                         Time Budget
                     </h2>
-                    <p class="mt-0.5 text-[11px] text-slate-400">
+                    <p class="mt-0.5 text-[11px] text-slate-500">
                         Check whether your content fits within available time.
                     </p>
                 </div>
 
-                <label class="mb-1 block text-[10px] font-medium text-slate-400">
+                <label class="mb-1 block text-[10px] font-medium text-slate-500">
                     Available reading time
                 </label>
 
@@ -766,7 +766,7 @@ new class extends Component {
                         class="h-9 w-full rounded-md border border-slate-200 bg-slate-50 px-2.5 text-xs font-semibold text-slate-700 outline-none focus:border-indigo-400 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-200"
                     >
 
-                    <div class="flex h-9 shrink-0 items-center rounded-md bg-slate-100 px-3 text-[11px] font-medium text-slate-500 dark:bg-slate-800 dark:text-slate-400">
+                    <div class="flex h-9 shrink-0 items-center rounded-md bg-slate-100 px-3 text-[11px] font-medium text-slate-500 dark:bg-slate-800 dark:text-slate-500">
                         minutes
                     </div>
                 </div>
@@ -808,7 +808,7 @@ new class extends Component {
                 <h2 class="text-sm font-semibold text-slate-800 dark:text-slate-100">
                     Calculation Settings
                 </h2>
-                <p class="mt-0.5 text-[11px] text-slate-400">
+                <p class="mt-0.5 text-[11px] text-slate-500">
                     Fine-tune estimates for your document.
                 </p>
             </div>
@@ -816,7 +816,7 @@ new class extends Component {
             <div class="grid grid-cols-2 gap-3 sm:grid-cols-4">
 
                 <div>
-                    <label class="mb-1 block text-[10px] font-medium text-slate-400">
+                    <label class="mb-1 block text-[10px] font-medium text-slate-500">
                         Visual pauses
                     </label>
                     <input
@@ -830,7 +830,7 @@ new class extends Component {
                 </div>
 
                 <div>
-                    <label class="mb-1 block text-[10px] font-medium text-slate-400">
+                    <label class="mb-1 block text-[10px] font-medium text-slate-500">
                         Seconds / visual
                     </label>
                     <input
@@ -844,7 +844,7 @@ new class extends Component {
                 </div>
 
                 <div>
-                    <label class="mb-1 block text-[10px] font-medium text-slate-400">
+                    <label class="mb-1 block text-[10px] font-medium text-slate-500">
                         Words / page
                     </label>
                     <input
@@ -869,7 +869,7 @@ new class extends Component {
 
             </div>
 
-            <p class="mt-2 text-[10px] text-slate-400">
+            <p class="mt-2 text-[10px] text-slate-500">
                 Visual pauses are added to silent reading and skimming estimates. Text itself is never uploaded.
             </p>
 
@@ -889,7 +889,7 @@ new class extends Component {
                 <h2 class="text-sm font-semibold text-slate-800 dark:text-slate-100">
                     Section-by-Section Analysis
                 </h2>
-                <p class="mt-0.5 text-[11px] text-slate-400">
+                <p class="mt-0.5 text-[11px] text-slate-500">
                     Estimated reading time for each content section.
                 </p>
             </div>
@@ -904,7 +904,7 @@ new class extends Component {
                             ></p>
 
                             <p
-                                class="mt-0.5 text-[10px] text-slate-400"
+                                class="mt-0.5 text-[10px] text-slate-500"
                                 x-text="formatNumber(section.words) + ' words'"
                             ></p>
                         </div>

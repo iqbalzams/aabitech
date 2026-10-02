@@ -89,7 +89,7 @@ new class extends Component
                             </p>
                         </div>
 
-                        <div class="text-[11px] text-slate-400">
+                        <div class="text-[11px] text-slate-500">
                             <span x-text="input.length"></span> chars
                         </div>
                     </div>
@@ -178,22 +178,22 @@ new class extends Component
                         {{-- Basic stats --}}
                         <div class="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
                             <div class="rounded-lg border border-slate-200 bg-slate-50 p-2.5">
-                                <div class="text-[10px] uppercase tracking-wide text-slate-400">Characters</div>
+                                <div class="text-[10px] uppercase tracking-wide text-slate-500">Characters</div>
                                 <div class="mt-1 text-sm font-semibold text-slate-800" x-text="output.length"></div>
                             </div>
 
                             <div class="rounded-lg border border-slate-200 bg-slate-50 p-2.5">
-                                <div class="text-[10px] uppercase tracking-wide text-slate-400">Words</div>
+                                <div class="text-[10px] uppercase tracking-wide text-slate-500">Words</div>
                                 <div class="mt-1 text-sm font-semibold text-slate-800" x-text="slugWordCount"></div>
                             </div>
 
                             <div class="rounded-lg border border-slate-200 bg-slate-50 p-2.5">
-                                <div class="text-[10px] uppercase tracking-wide text-slate-400">Separator</div>
+                                <div class="text-[10px] uppercase tracking-wide text-slate-500">Separator</div>
                                 <div class="mt-1 text-sm font-semibold text-slate-800" x-text="settings.separator"></div>
                             </div>
 
                             <div class="rounded-lg border border-slate-200 bg-slate-50 p-2.5">
-                                <div class="text-[10px] uppercase tracking-wide text-slate-400">Score</div>
+                                <div class="text-[10px] uppercase tracking-wide text-slate-500">Score</div>
                                 <div class="mt-1 text-sm font-semibold text-slate-800" x-text="qualityScore"></div>
                             </div>
                         </div>
@@ -253,16 +253,16 @@ new class extends Component
 
                 <div class="grid gap-3 p-4 sm:grid-cols-2 lg:grid-cols-4">
                     <div class="rounded-lg border border-slate-200 p-3">
-                        <div class="text-[10px] uppercase tracking-wide text-slate-400">Length</div>
+                        <div class="text-[10px] uppercase tracking-wide text-slate-500">Length</div>
                         <div class="mt-1 text-sm font-semibold text-slate-800">
                             <span x-text="output.length"></span>
-                            <span class="font-normal text-slate-400">characters</span>
+                            <span class="font-normal text-slate-500">characters</span>
                         </div>
                         <p class="mt-1 text-[11px] text-slate-500" x-text="lengthMessage"></p>
                     </div>
 
                     <div class="rounded-lg border border-slate-200 p-3">
-                        <div class="text-[10px] uppercase tracking-wide text-slate-400">Readability</div>
+                        <div class="text-[10px] uppercase tracking-wide text-slate-500">Readability</div>
                         <div class="mt-1 text-sm font-semibold text-slate-800" x-text="readabilityLabel"></div>
                         <p class="mt-1 text-[11px] text-slate-500">
                             <span x-text="slugWordCount"></span> meaningful words
@@ -270,7 +270,7 @@ new class extends Component
                     </div>
 
                     <div class="rounded-lg border border-slate-200 p-3">
-                        <div class="text-[10px] uppercase tracking-wide text-slate-400">Characters</div>
+                        <div class="text-[10px] uppercase tracking-wide text-slate-500">Characters</div>
                         <div class="mt-1 text-sm font-semibold text-slate-800">
                             <span x-text="settings.transliterationMode === 'unicode' ? 'Unicode' : 'ASCII'"></span>
                         </div>
@@ -278,7 +278,7 @@ new class extends Component
                     </div>
 
                     <div class="rounded-lg border border-slate-200 p-3">
-                        <div class="text-[10px] uppercase tracking-wide text-slate-400">Suggestions</div>
+                        <div class="text-[10px] uppercase tracking-wide text-slate-500">Suggestions</div>
                         <div class="mt-1 text-sm font-semibold text-slate-800" x-text="suggestionCount"></div>
                         <p class="mt-1 text-[11px] text-slate-500">
                             optimization checks
@@ -327,7 +327,7 @@ new class extends Component
                     <template x-for="variant in variants" :key="variant.label">
                         <div class="rounded-lg border border-slate-200 bg-slate-50 p-3">
                             <div class="mb-2 flex items-center justify-between">
-                                <span class="text-[10px] font-semibold uppercase tracking-wide text-slate-400" x-text="variant.label"></span>
+                                <span class="text-[10px] font-semibold uppercase tracking-wide text-slate-500" x-text="variant.label"></span>
 
                                 <button
                                     type="button"
@@ -359,7 +359,7 @@ new class extends Component
                     </div>
 
                     <svg
-                        class="h-4 w-4 text-slate-400 transition group-open:rotate-180"
+                        class="h-4 w-4 text-slate-500 transition group-open:rotate-180"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                     >
@@ -446,7 +446,7 @@ new class extends Component
                                 </button>
                             </div>
 
-                            <p class="mt-1.5 text-[10px] text-slate-400">
+                            <p class="mt-1.5 text-[10px] text-slate-500">
                                 Unicode preserves non-Latin characters. ASCII transliterates supported scripts.
                             </p>
                         </div>
@@ -565,7 +565,7 @@ new class extends Component
                         <div class="mb-3 flex items-center justify-between">
                             <div>
                                 <h3 class="text-xs font-semibold text-slate-800">Custom Replacement Rules</h3>
-                                <p class="mt-0.5 text-[10px] text-slate-400">
+                                <p class="mt-0.5 text-[10px] text-slate-500">
                                     Replace specific characters or phrases before slug generation.
                                 </p>
                             </div>
@@ -610,7 +610,7 @@ new class extends Component
 
                             <div
                                 x-show="settings.customRules.length === 0"
-                                class="rounded-md border border-dashed border-slate-200 px-3 py-3 text-center text-[11px] text-slate-400"
+                                class="rounded-md border border-dashed border-slate-200 px-3 py-3 text-center text-[11px] text-slate-500"
                             >
                                 No custom replacement rules.
                             </div>
@@ -638,7 +638,7 @@ new class extends Component
                             </p>
                         </div>
 
-                        <span class="text-[11px] text-slate-400">
+                        <span class="text-[11px] text-slate-500">
                             <span x-text="bulkCount"></span> items
                         </span>
                     </div>
@@ -691,22 +691,22 @@ new class extends Component
 
                     <div class="grid grid-cols-2 gap-2 p-4 sm:grid-cols-4">
                         <div class="rounded-lg border border-slate-200 bg-slate-50 p-3">
-                            <div class="text-[10px] uppercase tracking-wide text-slate-400">Total</div>
+                            <div class="text-[10px] uppercase tracking-wide text-slate-500">Total</div>
                             <div class="mt-1 text-lg font-semibold text-slate-800" x-text="bulkResults.length"></div>
                         </div>
 
                         <div class="rounded-lg border border-slate-200 bg-slate-50 p-3">
-                            <div class="text-[10px] uppercase tracking-wide text-slate-400">Valid</div>
+                            <div class="text-[10px] uppercase tracking-wide text-slate-500">Valid</div>
                             <div class="mt-1 text-lg font-semibold text-emerald-600" x-text="bulkValid"></div>
                         </div>
 
                         <div class="rounded-lg border border-slate-200 bg-slate-50 p-3">
-                            <div class="text-[10px] uppercase tracking-wide text-slate-400">Warnings</div>
+                            <div class="text-[10px] uppercase tracking-wide text-slate-500">Warnings</div>
                             <div class="mt-1 text-lg font-semibold text-amber-600" x-text="bulkWarnings"></div>
                         </div>
 
                         <div class="rounded-lg border border-slate-200 bg-slate-50 p-3">
-                            <div class="text-[10px] uppercase tracking-wide text-slate-400">Duplicates</div>
+                            <div class="text-[10px] uppercase tracking-wide text-slate-500">Duplicates</div>
                             <div class="mt-1 text-lg font-semibold text-indigo-600" x-text="bulkDuplicates"></div>
                         </div>
                     </div>
@@ -761,7 +761,7 @@ new class extends Component
                     class="overflow-x-auto"
                 >
                     <table class="min-w-full text-left text-xs">
-                        <thead class="border-b border-slate-200 bg-slate-50 text-[10px] uppercase tracking-wide text-slate-400">
+                        <thead class="border-b border-slate-200 bg-slate-50 text-[10px] uppercase tracking-wide text-slate-500">
                             <tr>
                                 <th class="px-4 py-2.5 font-semibold">#</th>
                                 <th class="px-4 py-2.5 font-semibold">Original</th>
@@ -774,7 +774,7 @@ new class extends Component
                         <tbody class="divide-y divide-slate-100">
                             <template x-for="item in bulkResults" :key="item.index">
                                 <tr class="hover:bg-slate-50">
-                                    <td class="px-4 py-3 text-slate-400" x-text="item.index"></td>
+                                    <td class="px-4 py-3 text-slate-500" x-text="item.index"></td>
 
                                     <td class="max-w-[280px] px-4 py-3">
                                         <div class="truncate text-slate-700" x-text="item.original"></div>
@@ -813,7 +813,7 @@ new class extends Component
                     class="px-4 py-12 text-center"
                 >
                     <div class="text-sm font-medium text-slate-500">No bulk results yet</div>
-                    <p class="mt-1 text-xs text-slate-400">
+                    <p class="mt-1 text-xs text-slate-500">
                         Enter titles on the left to generate multiple slugs.
                     </p>
                 </div>

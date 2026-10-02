@@ -34,7 +34,7 @@ new class extends Component
             Character Counter
         </h1>
 
-        <p class="mt-3 max-w-3xl text-base leading-7 text-slate-600 dark:text-slate-400">
+        <p class="mt-3 max-w-3xl text-base leading-7 text-slate-600 dark:text-slate-500">
             Count characters, words, sentences, paragraphs and lines instantly.
             Analyze Unicode characters, emoji, text length, reading time and limits
             with this free online character counter.
@@ -175,7 +175,7 @@ new class extends Component
                     @select="updateSelectionStats()"
                     @keyup="updateSelectionStats()"
                     spellcheck="true"
-                    class="h-[560px] min-h-[420px] w-full resize-y rounded-xl border border-slate-200 bg-slate-50 p-5 text-base leading-7 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-slate-400 focus:ring-2 focus:ring-slate-200 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:focus:border-slate-600 dark:focus:ring-slate-800"
+                    class="h-[560px] min-h-[420px] w-full resize-y rounded-xl border border-slate-200 bg-slate-50 p-5 text-base leading-7 text-slate-900 outline-none transition placeholder:text-slate-500 focus:border-slate-400 focus:ring-2 focus:ring-slate-200 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:focus:border-slate-600 dark:focus:ring-slate-800"
                     placeholder="Type or paste your text here..."
                 ></textarea>
 
@@ -203,7 +203,7 @@ new class extends Component
                 </div>
 
                 {{-- Drop hint --}}
-                <div class="mt-3 text-center text-[11px] text-slate-400">
+                <div class="mt-3 text-center text-[11px] text-slate-500">
                     Drag and drop a <strong>.txt</strong> file anywhere into the editor
                 </div>
             </div>
@@ -218,7 +218,7 @@ new class extends Component
                             Live Statistics
                         </p>
 
-                        <p class="mt-1 text-xs text-slate-400">
+                        <p class="mt-1 text-xs text-slate-500">
                             Updates as you type
                         </p>
                     </div>
@@ -300,13 +300,13 @@ new class extends Component
                                 Unicode details
                             </p>
 
-                            <p class="mt-0.5 text-[11px] text-slate-400">
+                            <p class="mt-0.5 text-[11px] text-slate-500">
                                 Useful for emoji and multilingual text
                             </p>
                         </div>
 
                         <span
-                            class="text-xs text-slate-400"
+                            class="text-xs text-slate-500"
                             x-text="showUnicode ? 'Hide' : 'Show'"
                         ></span>
                     </button>
@@ -833,7 +833,7 @@ new class extends Component
 
                         <p
                             x-show="!characterFrequency.length"
-                            class="rounded-xl border border-dashed border-slate-200 p-5 text-center text-xs text-slate-400 dark:border-slate-800"
+                            class="rounded-xl border border-dashed border-slate-200 p-5 text-center text-xs text-slate-500 dark:border-slate-800"
                         >
                             Start typing to see frequency analysis.
                         </p>

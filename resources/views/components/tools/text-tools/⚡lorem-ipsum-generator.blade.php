@@ -336,7 +336,7 @@ new class extends Component
                 <details class="mt-4 rounded-lg border border-slate-200 bg-slate-50">
                     <summary class="flex cursor-pointer list-none items-center justify-between px-3 py-2.5 text-xs font-semibold text-slate-700">
                         <span>Advanced settings</span>
-                        <span class="text-[10px] font-normal text-slate-400">
+                        <span class="text-[10px] font-normal text-slate-500">
                             Structure, exact lengths & custom vocabulary
                         </span>
                     </summary>
@@ -486,7 +486,7 @@ new class extends Component
                                     <div class="text-[11px] font-semibold text-slate-600">
                                         Custom vocabulary
                                     </div>
-                                    <div class="text-[10px] text-slate-400">
+                                    <div class="text-[10px] text-slate-500">
                                         Add words or phrases separated by spaces, commas, or new lines.
                                     </div>
                                 </div>
@@ -524,7 +524,7 @@ new class extends Component
                                 <div class="text-[11px] font-semibold text-slate-600">
                                     Share settings
                                 </div>
-                                <div class="text-[10px] text-slate-400">
+                                <div class="text-[10px] text-slate-500">
                                     The generated text is not uploaded; only generation settings are encoded.
                                 </div>
                             </div>
@@ -545,22 +545,22 @@ new class extends Component
             {{-- Stats --}}
             <div class="grid grid-cols-2 divide-x divide-y divide-slate-200 border-b border-slate-200 sm:grid-cols-4 sm:divide-y-0">
                 <div class="p-3">
-                    <div class="text-[10px] font-medium uppercase tracking-wide text-slate-400">Words</div>
+                    <div class="text-[10px] font-medium uppercase tracking-wide text-slate-500">Words</div>
                     <div class="stat-number mt-0.5 text-base font-semibold text-slate-800" x-text="stats.words.toLocaleString()"></div>
                 </div>
 
                 <div class="p-3">
-                    <div class="text-[10px] font-medium uppercase tracking-wide text-slate-400">Characters</div>
+                    <div class="text-[10px] font-medium uppercase tracking-wide text-slate-500">Characters</div>
                     <div class="stat-number mt-0.5 text-base font-semibold text-slate-800" x-text="stats.characters.toLocaleString()"></div>
                 </div>
 
                 <div class="p-3">
-                    <div class="text-[10px] font-medium uppercase tracking-wide text-slate-400">Sentences</div>
+                    <div class="text-[10px] font-medium uppercase tracking-wide text-slate-500">Sentences</div>
                     <div class="stat-number mt-0.5 text-base font-semibold text-slate-800" x-text="stats.sentences.toLocaleString()"></div>
                 </div>
 
                 <div class="p-3">
-                    <div class="text-[10px] font-medium uppercase tracking-wide text-slate-400">Reading time</div>
+                    <div class="text-[10px] font-medium uppercase tracking-wide text-slate-500">Reading time</div>
                     <div class="stat-number mt-0.5 text-base font-semibold text-slate-800" x-text="readingTime"></div>
                 </div>
             </div>
@@ -574,7 +574,7 @@ new class extends Component
                             Generated output
                         </div>
 
-                        <div class="mt-0.5 text-[10px] text-slate-400">
+                        <div class="mt-0.5 text-[10px] text-slate-500">
                             <span x-text="outputFormatLabel"></span>
                             <span> · </span>
                             <span x-text="variations.length > 1 ? variations.length + ' variations' : '1 variation'"></span>
@@ -618,7 +618,7 @@ new class extends Component
                     aria-label="Generated Lorem Ipsum output"
                 ></textarea>
 
-                <div class="mt-2 flex flex-col gap-1 text-[10px] text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+                <div class="mt-2 flex flex-col gap-1 text-[10px] text-slate-500 sm:flex-row sm:items-center sm:justify-between">
                     <span>
                         Counts exclude HTML/Markdown formatting markup.
                     </span>
@@ -642,7 +642,7 @@ new class extends Component
                     <div class="text-xs font-semibold text-slate-700">
                         Generated variations
                     </div>
-                    <div class="text-[10px] text-slate-400">
+                    <div class="text-[10px] text-slate-500">
                         Select a variation to use in the main output.
                     </div>
                 </div>

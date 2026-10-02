@@ -84,7 +84,7 @@ new class extends Component {
     <div class="mb-3 rounded-xl border border-slate-200 bg-white shadow-sm">
         <div class="flex flex-col gap-3 p-3 lg:flex-row lg:items-center lg:justify-between">
             <div class="min-w-0">
-                <div class="mb-1 text-[10px] font-semibold uppercase tracking-wider text-slate-400">
+                <div class="mb-1 text-[10px] font-semibold uppercase tracking-wider text-slate-500">
                     Content type
                 </div>
 
@@ -175,7 +175,7 @@ new class extends Component {
                     <div class="text-sm font-semibold text-slate-800">
                         Text editor
                     </div>
-                    <div class="mt-0.5 text-[11px] text-slate-400">
+                    <div class="mt-0.5 text-[11px] text-slate-500">
                         Paste or type your text below
                     </div>
                 </div>
@@ -219,7 +219,7 @@ new class extends Component {
                     autocomplete="off"
                     autocapitalize="sentences"
                     placeholder="Start typing or paste your text here..."
-                    class="aabi-wc-scrollbar block h-[380px] w-full resize-y rounded-lg border border-slate-200 bg-slate-50/50 p-4 text-sm leading-6 text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-indigo-400 focus:bg-white focus:ring-2 focus:ring-indigo-100"
+                    class="aabi-wc-scrollbar block h-[380px] w-full resize-y rounded-lg border border-slate-200 bg-slate-50/50 p-4 text-sm leading-6 text-slate-800 outline-none transition placeholder:text-slate-500 focus:border-indigo-400 focus:bg-white focus:ring-2 focus:ring-indigo-100"
                 ></textarea>
 
                 <div
@@ -274,7 +274,7 @@ new class extends Component {
                     <div class="text-sm font-semibold text-slate-800">
                         Live statistics
                     </div>
-                    <div class="mt-0.5 text-[11px] text-slate-400">
+                    <div class="mt-0.5 text-[11px] text-slate-500">
                         <span x-show="!useSelectionOnly">Entire text</span>
                         <span x-show="useSelectionOnly">
                             <span x-text="selectedText ? 'Selected text' : 'Select text in the editor'"></span>
@@ -293,42 +293,42 @@ new class extends Component {
 
             <div class="grid grid-cols-2 gap-2 p-3 sm:grid-cols-3 xl:grid-cols-4">
                 <div class="aabi-wc-stat rounded-lg border border-slate-100 bg-slate-50 p-3">
-                    <div class="text-[10px] font-medium uppercase tracking-wide text-slate-400">Words</div>
+                    <div class="text-[10px] font-medium uppercase tracking-wide text-slate-500">Words</div>
                     <div class="aabi-wc-stat-value mt-1 text-xl font-bold text-slate-800" x-text="formatNumber(words)"></div>
                 </div>
 
                 <div class="aabi-wc-stat rounded-lg border border-slate-100 bg-slate-50 p-3">
-                    <div class="text-[10px] font-medium uppercase tracking-wide text-slate-400">Characters</div>
+                    <div class="text-[10px] font-medium uppercase tracking-wide text-slate-500">Characters</div>
                     <div class="aabi-wc-stat-value mt-1 text-xl font-bold text-slate-800" x-text="formatNumber(characters)"></div>
                 </div>
 
                 <div class="aabi-wc-stat rounded-lg border border-slate-100 bg-slate-50 p-3">
-                    <div class="text-[10px] font-medium uppercase tracking-wide text-slate-400">No spaces</div>
+                    <div class="text-[10px] font-medium uppercase tracking-wide text-slate-500">No spaces</div>
                     <div class="aabi-wc-stat-value mt-1 text-xl font-bold text-slate-800" x-text="formatNumber(charactersNoSpaces)"></div>
                 </div>
 
                 <div class="aabi-wc-stat rounded-lg border border-slate-100 bg-slate-50 p-3">
-                    <div class="text-[10px] font-medium uppercase tracking-wide text-slate-400">Sentences</div>
+                    <div class="text-[10px] font-medium uppercase tracking-wide text-slate-500">Sentences</div>
                     <div class="aabi-wc-stat-value mt-1 text-xl font-bold text-slate-800" x-text="formatNumber(sentences)"></div>
                 </div>
 
                 <div class="aabi-wc-stat rounded-lg border border-slate-100 bg-slate-50 p-3">
-                    <div class="text-[10px] font-medium uppercase tracking-wide text-slate-400">Paragraphs</div>
+                    <div class="text-[10px] font-medium uppercase tracking-wide text-slate-500">Paragraphs</div>
                     <div class="aabi-wc-stat-value mt-1 text-xl font-bold text-slate-800" x-text="formatNumber(paragraphs)"></div>
                 </div>
 
                 <div class="aabi-wc-stat rounded-lg border border-slate-100 bg-slate-50 p-3">
-                    <div class="text-[10px] font-medium uppercase tracking-wide text-slate-400">Lines</div>
+                    <div class="text-[10px] font-medium uppercase tracking-wide text-slate-500">Lines</div>
                     <div class="aabi-wc-stat-value mt-1 text-xl font-bold text-slate-800" x-text="formatNumber(lines)"></div>
                 </div>
 
                 <div class="aabi-wc-stat rounded-lg border border-slate-100 bg-slate-50 p-3">
-                    <div class="text-[10px] font-medium uppercase tracking-wide text-slate-400">Reading</div>
+                    <div class="text-[10px] font-medium uppercase tracking-wide text-slate-500">Reading</div>
                     <div class="mt-1 text-base font-bold text-indigo-700" x-text="readingTime"></div>
                 </div>
 
                 <div class="aabi-wc-stat rounded-lg border border-slate-100 bg-slate-50 p-3">
-                    <div class="text-[10px] font-medium uppercase tracking-wide text-slate-400">Speaking</div>
+                    <div class="text-[10px] font-medium uppercase tracking-wide text-slate-500">Speaking</div>
                     <div class="mt-1 text-base font-bold text-indigo-700" x-text="speakingTime"></div>
                 </div>
             </div>
@@ -383,7 +383,7 @@ new class extends Component {
                 <div class="flex items-center justify-between gap-2">
                     <div>
                         <div class="text-xs font-semibold text-slate-700" x-text="platformLabel"></div>
-                        <div class="mt-0.5 text-[10px] text-slate-400">
+                        <div class="mt-0.5 text-[10px] text-slate-500">
                             Character limit / guideline
                         </div>
                     </div>
@@ -410,22 +410,22 @@ new class extends Component {
             {{-- Quick composition metrics --}}
             <div class="grid grid-cols-2 gap-2 border-t border-slate-100 p-3 sm:grid-cols-4">
                 <div>
-                    <div class="text-[10px] text-slate-400">Unique words</div>
+                    <div class="text-[10px] text-slate-500">Unique words</div>
                     <div class="mt-0.5 text-sm font-semibold text-slate-700" x-text="formatNumber(uniqueWords)"></div>
                 </div>
 
                 <div>
-                    <div class="text-[10px] text-slate-400">Whitespace</div>
+                    <div class="text-[10px] text-slate-500">Whitespace</div>
                     <div class="mt-0.5 text-sm font-semibold text-slate-700" x-text="formatNumber(whitespace)"></div>
                 </div>
 
                 <div>
-                    <div class="text-[10px] text-slate-400">Letters</div>
+                    <div class="text-[10px] text-slate-500">Letters</div>
                     <div class="mt-0.5 text-sm font-semibold text-slate-700" x-text="formatNumber(letters)"></div>
                 </div>
 
                 <div>
-                    <div class="text-[10px] text-slate-400">Numbers</div>
+                    <div class="text-[10px] text-slate-500">Numbers</div>
                     <div class="mt-0.5 text-sm font-semibold text-slate-700" x-text="formatNumber(numbers)"></div>
                 </div>
             </div>
@@ -442,63 +442,63 @@ new class extends Component {
                     <div class="text-sm font-semibold text-slate-800">
                         Writing metrics & analysis
                     </div>
-                    <div class="mt-0.5 text-[11px] text-slate-400">
+                    <div class="mt-0.5 text-[11px] text-slate-500">
                         Detailed composition and time estimates
                     </div>
                 </div>
 
-                <svg class="h-4 w-4 text-slate-400 transition group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg class="h-4 w-4 text-slate-500 transition group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M6 9l6 6 6-6"/>
                 </svg>
             </summary>
 
             <div class="grid gap-3 border-t border-slate-100 p-4 sm:grid-cols-2 lg:grid-cols-4">
                 <div class="rounded-lg border border-slate-100 bg-slate-50 p-3">
-                    <div class="text-[10px] uppercase tracking-wide text-slate-400">Average word length</div>
+                    <div class="text-[10px] uppercase tracking-wide text-slate-500">Average word length</div>
                     <div class="mt-1 text-lg font-bold text-slate-800" x-text="averageWordLength"></div>
-                    <div class="text-[10px] text-slate-400">Unicode characters</div>
+                    <div class="text-[10px] text-slate-500">Unicode characters</div>
                 </div>
 
                 <div class="rounded-lg border border-slate-100 bg-slate-50 p-3">
-                    <div class="text-[10px] uppercase tracking-wide text-slate-400">Average sentence</div>
+                    <div class="text-[10px] uppercase tracking-wide text-slate-500">Average sentence</div>
                     <div class="mt-1 text-lg font-bold text-slate-800" x-text="averageSentenceLength"></div>
-                    <div class="text-[10px] text-slate-400">words per sentence</div>
+                    <div class="text-[10px] text-slate-500">words per sentence</div>
                 </div>
 
                 <div class="rounded-lg border border-slate-100 bg-slate-50 p-3">
-                    <div class="text-[10px] uppercase tracking-wide text-slate-400">Longest word</div>
+                    <div class="text-[10px] uppercase tracking-wide text-slate-500">Longest word</div>
                     <div class="mt-1 truncate text-lg font-bold text-slate-800" :title="longestWord" x-text="longestWord || '—'"></div>
-                    <div class="text-[10px] text-slate-400" x-text="longestWord ? longestWordLength + ' characters' : ''"></div>
+                    <div class="text-[10px] text-slate-500" x-text="longestWord ? longestWordLength + ' characters' : ''"></div>
                 </div>
 
                 <div class="rounded-lg border border-slate-100 bg-slate-50 p-3">
-                    <div class="text-[10px] uppercase tracking-wide text-slate-400">Shortest word</div>
+                    <div class="text-[10px] uppercase tracking-wide text-slate-500">Shortest word</div>
                     <div class="mt-1 truncate text-lg font-bold text-slate-800" :title="shortestWord" x-text="shortestWord || '—'"></div>
-                    <div class="text-[10px] text-slate-400" x-text="shortestWord ? shortestWordLength + ' characters' : ''"></div>
+                    <div class="text-[10px] text-slate-500" x-text="shortestWord ? shortestWordLength + ' characters' : ''"></div>
                 </div>
 
                 <div class="rounded-lg border border-slate-100 bg-slate-50 p-3">
-                    <div class="text-[10px] uppercase tracking-wide text-slate-400">Writing time</div>
+                    <div class="text-[10px] uppercase tracking-wide text-slate-500">Writing time</div>
                     <div class="mt-1 text-lg font-bold text-slate-800" x-text="typingTime"></div>
-                    <div class="text-[10px] text-slate-400" x-text="typingWpm + ' WPM'"></div>
+                    <div class="text-[10px] text-slate-500" x-text="typingWpm + ' WPM'"></div>
                 </div>
 
                 <div class="rounded-lg border border-slate-100 bg-slate-50 p-3">
-                    <div class="text-[10px] uppercase tracking-wide text-slate-400">Graphemes</div>
+                    <div class="text-[10px] uppercase tracking-wide text-slate-500">Graphemes</div>
                     <div class="mt-1 text-lg font-bold text-slate-800" x-text="formatNumber(graphemes)"></div>
-                    <div class="text-[10px] text-slate-400">emoji-aware characters</div>
+                    <div class="text-[10px] text-slate-500">emoji-aware characters</div>
                 </div>
 
                 <div class="rounded-lg border border-slate-100 bg-slate-50 p-3">
-                    <div class="text-[10px] uppercase tracking-wide text-slate-400">Emoji</div>
+                    <div class="text-[10px] uppercase tracking-wide text-slate-500">Emoji</div>
                     <div class="mt-1 text-lg font-bold text-slate-800" x-text="formatNumber(emojis)"></div>
-                    <div class="text-[10px] text-slate-400">grapheme sequences</div>
+                    <div class="text-[10px] text-slate-500">grapheme sequences</div>
                 </div>
 
                 <div class="rounded-lg border border-slate-100 bg-slate-50 p-3">
-                    <div class="text-[10px] uppercase tracking-wide text-slate-400">Punctuation</div>
+                    <div class="text-[10px] uppercase tracking-wide text-slate-500">Punctuation</div>
                     <div class="mt-1 text-lg font-bold text-slate-800" x-text="formatNumber(punctuation)"></div>
-                    <div class="text-[10px] text-slate-400">Unicode punctuation</div>
+                    <div class="text-[10px] text-slate-500">Unicode punctuation</div>
                 </div>
             </div>
         </details>
@@ -510,12 +510,12 @@ new class extends Component {
                     <div class="text-sm font-semibold text-slate-800">
                         Word frequency analysis
                     </div>
-                    <div class="mt-0.5 text-[11px] text-slate-400">
+                    <div class="mt-0.5 text-[11px] text-slate-500">
                         Most-used words, occurrence percentage and meaningful-word analysis
                     </div>
                 </div>
 
-                <svg class="h-4 w-4 text-slate-400 transition group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg class="h-4 w-4 text-slate-500 transition group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M6 9l6 6 6-6"/>
                 </svg>
             </summary>
@@ -567,14 +567,14 @@ new class extends Component {
                             <div class="text-xs font-semibold text-slate-700">
                                 Most-used words
                             </div>
-                            <div class="text-[10px] text-slate-400">
+                            <div class="text-[10px] text-slate-500">
                                 Top 30
                             </div>
                         </div>
 
                         <div class="aabi-wc-scrollbar max-h-[360px] overflow-auto rounded-lg border border-slate-200">
                             <table class="aabi-wc-table w-full text-left text-xs">
-                                <thead class="sticky top-0 bg-slate-50 text-[10px] uppercase tracking-wide text-slate-400">
+                                <thead class="sticky top-0 bg-slate-50 text-[10px] uppercase tracking-wide text-slate-500">
                                     <tr>
                                         <th>#</th>
                                         <th>Word</th>
@@ -586,7 +586,7 @@ new class extends Component {
                                 <tbody class="divide-y divide-slate-100">
                                     <template x-if="frequencyDisplay.length === 0">
                                         <tr>
-                                            <td colspan="4" class="py-8 text-center text-slate-400">
+                                            <td colspan="4" class="py-8 text-center text-slate-500">
                                                 No word frequency data yet.
                                             </td>
                                         </tr>
@@ -594,7 +594,7 @@ new class extends Component {
 
                                     <template x-for="(item, index) in frequencyDisplay" :key="item.word + '-' + index">
                                         <tr class="hover:bg-slate-50">
-                                            <td class="text-slate-400" x-text="index + 1"></td>
+                                            <td class="text-slate-500" x-text="index + 1"></td>
                                             <td class="max-w-[220px] truncate font-medium text-slate-700" :title="item.word" x-text="item.word"></td>
                                             <td class="aabi-wc-number text-right font-semibold text-slate-700" x-text="item.count"></td>
                                             <td class="aabi-wc-number text-right text-slate-500" x-text="item.percentage + '%'"></td>
@@ -625,12 +625,12 @@ new class extends Component {
 
                         <div class="mt-3 grid grid-cols-2 gap-2">
                             <div class="rounded-lg border border-slate-100 bg-slate-50 p-2.5">
-                                <div class="text-[10px] text-slate-400">Unique words</div>
+                                <div class="text-[10px] text-slate-500">Unique words</div>
                                 <div class="mt-0.5 text-sm font-bold text-slate-700" x-text="formatNumber(uniqueWords)"></div>
                             </div>
 
                             <div class="rounded-lg border border-slate-100 bg-slate-50 p-2.5">
-                                <div class="text-[10px] text-slate-400">Analyzed</div>
+                                <div class="text-[10px] text-slate-500">Analyzed</div>
                                 <div class="mt-0.5 text-sm font-bold text-slate-700" x-text="formatNumber(analyzedFrequencyWords)"></div>
                             </div>
                         </div>
@@ -646,12 +646,12 @@ new class extends Component {
                     <div class="text-sm font-semibold text-slate-800">
                         Character, punctuation & number analysis
                     </div>
-                    <div class="mt-0.5 text-[11px] text-slate-400">
+                    <div class="mt-0.5 text-[11px] text-slate-500">
                         Unicode-aware frequency breakdown
                     </div>
                 </div>
 
-                <svg class="h-4 w-4 text-slate-400 transition group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg class="h-4 w-4 text-slate-500 transition group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M6 9l6 6 6-6"/>
                 </svg>
             </summary>
@@ -661,12 +661,12 @@ new class extends Component {
                 <div>
                     <div class="mb-2 flex items-center justify-between">
                         <div class="text-xs font-semibold text-slate-700">Letters</div>
-                        <div class="text-[10px] text-slate-400" x-text="formatNumber(letters) + ' total'"></div>
+                        <div class="text-[10px] text-slate-500" x-text="formatNumber(letters) + ' total'"></div>
                     </div>
 
                     <div class="aabi-wc-scrollbar max-h-[280px] overflow-auto rounded-lg border border-slate-200">
                         <table class="aabi-wc-table w-full text-left text-xs">
-                            <thead class="sticky top-0 bg-slate-50 text-[10px] uppercase tracking-wide text-slate-400">
+                            <thead class="sticky top-0 bg-slate-50 text-[10px] uppercase tracking-wide text-slate-500">
                                 <tr>
                                     <th>Character</th>
                                     <th class="text-right">Count</th>
@@ -676,7 +676,7 @@ new class extends Component {
                             <tbody class="divide-y divide-slate-100">
                                 <template x-if="letterFrequencyDisplay.length === 0">
                                     <tr>
-                                        <td colspan="2" class="py-8 text-center text-slate-400">No letters.</td>
+                                        <td colspan="2" class="py-8 text-center text-slate-500">No letters.</td>
                                     </tr>
                                 </template>
 
@@ -695,12 +695,12 @@ new class extends Component {
                 <div>
                     <div class="mb-2 flex items-center justify-between">
                         <div class="text-xs font-semibold text-slate-700">Punctuation</div>
-                        <div class="text-[10px] text-slate-400" x-text="formatNumber(punctuation) + ' total'"></div>
+                        <div class="text-[10px] text-slate-500" x-text="formatNumber(punctuation) + ' total'"></div>
                     </div>
 
                     <div class="aabi-wc-scrollbar max-h-[280px] overflow-auto rounded-lg border border-slate-200">
                         <table class="aabi-wc-table w-full text-left text-xs">
-                            <thead class="sticky top-0 bg-slate-50 text-[10px] uppercase tracking-wide text-slate-400">
+                            <thead class="sticky top-0 bg-slate-50 text-[10px] uppercase tracking-wide text-slate-500">
                                 <tr>
                                     <th>Mark</th>
                                     <th class="text-right">Count</th>
@@ -710,7 +710,7 @@ new class extends Component {
                             <tbody class="divide-y divide-slate-100">
                                 <template x-if="punctuationDisplay.length === 0">
                                     <tr>
-                                        <td colspan="2" class="py-8 text-center text-slate-400">No punctuation.</td>
+                                        <td colspan="2" class="py-8 text-center text-slate-500">No punctuation.</td>
                                     </tr>
                                 </template>
 
@@ -729,12 +729,12 @@ new class extends Component {
                 <div>
                     <div class="mb-2 flex items-center justify-between">
                         <div class="text-xs font-semibold text-slate-700">Numbers</div>
-                        <div class="text-[10px] text-slate-400" x-text="formatNumber(numbers) + ' total'"></div>
+                        <div class="text-[10px] text-slate-500" x-text="formatNumber(numbers) + ' total'"></div>
                     </div>
 
                     <div class="aabi-wc-scrollbar max-h-[280px] overflow-auto rounded-lg border border-slate-200">
                         <table class="aabi-wc-table w-full text-left text-xs">
-                            <thead class="sticky top-0 bg-slate-50 text-[10px] uppercase tracking-wide text-slate-400">
+                            <thead class="sticky top-0 bg-slate-50 text-[10px] uppercase tracking-wide text-slate-500">
                                 <tr>
                                     <th>Digit</th>
                                     <th class="text-right">Count</th>
@@ -744,7 +744,7 @@ new class extends Component {
                             <tbody class="divide-y divide-slate-100">
                                 <template x-if="digitFrequencyDisplay.length === 0">
                                     <tr>
-                                        <td colspan="2" class="py-8 text-center text-slate-400">No numbers.</td>
+                                        <td colspan="2" class="py-8 text-center text-slate-500">No numbers.</td>
                                     </tr>
                                 </template>
 
@@ -768,12 +768,12 @@ new class extends Component {
                     <div class="text-sm font-semibold text-slate-800">
                         Targets, speeds & settings
                     </div>
-                    <div class="mt-0.5 text-[11px] text-slate-400">
+                    <div class="mt-0.5 text-[11px] text-slate-500">
                         Customize calculations and save your preferences
                     </div>
                 </div>
 
-                <svg class="h-4 w-4 text-slate-400 transition group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg class="h-4 w-4 text-slate-500 transition group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M6 9l6 6 6-6"/>
                 </svg>
             </summary>
@@ -964,7 +964,7 @@ new class extends Component {
                         </button>
                     </div>
 
-                    <div x-show="savedLimits.length === 0" class="rounded-md bg-slate-50 p-3 text-center text-[11px] text-slate-400">
+                    <div x-show="savedLimits.length === 0" class="rounded-md bg-slate-50 p-3 text-center text-[11px] text-slate-500">
                         No saved limits.
                     </div>
 
@@ -977,13 +977,13 @@ new class extends Component {
                                     class="min-w-0 flex-1 text-left"
                                 >
                                     <div class="truncate text-xs font-medium text-slate-700" x-text="limit.name"></div>
-                                    <div class="text-[10px] text-slate-400" x-text="formatNumber(limit.limit) + ' words'"></div>
+                                    <div class="text-[10px] text-slate-500" x-text="formatNumber(limit.limit) + ' words'"></div>
                                 </button>
 
                                 <button
                                     type="button"
                                     @click="deleteSavedLimit(limit.id)"
-                                    class="px-1.5 text-slate-400 hover:text-red-600"
+                                    class="px-1.5 text-slate-500 hover:text-red-600"
                                     aria-label="Delete saved limit"
                                 >
                                     ×
@@ -1003,7 +1003,7 @@ new class extends Component {
                     <span x-text="shareStatus || 'Copy shareable settings link'"></span>
                 </button>
 
-                <span class="ml-2 text-[10px] text-slate-400">
+                <span class="ml-2 text-[10px] text-slate-500">
                     Settings are shared; your text is never included.
                 </span>
             </div>
@@ -1016,12 +1016,12 @@ new class extends Component {
                     <div class="text-sm font-semibold text-slate-800">
                         Compare two texts
                     </div>
-                    <div class="mt-0.5 text-[11px] text-slate-400">
+                    <div class="mt-0.5 text-[11px] text-slate-500">
                         Compare word, character, sentence and paragraph counts
                     </div>
                 </div>
 
-                <svg class="h-4 w-4 text-slate-400 transition group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg class="h-4 w-4 text-slate-500 transition group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M6 9l6 6 6-6"/>
                 </svg>
             </summary>
@@ -1066,7 +1066,7 @@ new class extends Component {
 
                     <div class="overflow-hidden rounded-lg border border-slate-200">
                         <table class="w-full text-xs">
-                            <thead class="bg-slate-50 text-[10px] uppercase tracking-wide text-slate-400">
+                            <thead class="bg-slate-50 text-[10px] uppercase tracking-wide text-slate-500">
                                 <tr>
                                     <th class="px-3 py-2 text-left">Metric</th>
                                     <th class="px-3 py-2 text-right">A</th>
@@ -1083,7 +1083,7 @@ new class extends Component {
                                         <td class="aabi-wc-number px-3 py-2 text-right text-slate-600" x-text="formatNumber(comparisonB[metric.key])"></td>
                                         <td
                                             class="aabi-wc-number px-3 py-2 text-right font-semibold"
-                                            :class="comparisonDelta(metric.key) > 0 ? 'text-emerald-600' : (comparisonDelta(metric.key) < 0 ? 'text-red-600' : 'text-slate-400')"
+                                            :class="comparisonDelta(metric.key) > 0 ? 'text-emerald-600' : (comparisonDelta(metric.key) < 0 ? 'text-red-600' : 'text-slate-500')"
                                             x-text="formatDelta(comparisonDelta(metric.key))"
                                         ></td>
                                     </tr>
