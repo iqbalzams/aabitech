@@ -54,11 +54,12 @@ new class extends Component
         </div>
 
         <div class="flex items-center gap-2">
-            <label class="text-xs font-medium text-slate-500">
+            <label for="select-preset" class="text-xs font-medium text-slate-500">
                 Preset
             </label>
 
             <select
+                id="select-preset"
                 x-model="preset"
                 @change="applyPreset()"
                 class="h-8 rounded-md border border-slate-200 bg-white px-2 text-xs text-slate-700 outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100"

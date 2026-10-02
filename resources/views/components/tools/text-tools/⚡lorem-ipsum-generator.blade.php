@@ -186,11 +186,12 @@ new class extends Component
                     </div>
 
                     <div>
-                        <label class="mb-2 block text-[11px] font-semibold uppercase tracking-wide text-slate-500">
+                        <label for="select-quantity" class="mb-2 block text-[11px] font-semibold uppercase tracking-wide text-slate-500">
                             Quantity
                         </label>
 
                         <input
+                            id="select-quantity"
                             type="number"
                             x-model.number="quantity"
                             @input="scheduleLiveGeneration()"
@@ -215,11 +216,12 @@ new class extends Component
                 <div class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
 
                     <div>
-                        <label class="mb-1.5 block text-[11px] font-medium text-slate-600">
+                        <label for="select-flavor" class="mb-1.5 block text-[11px] font-medium text-slate-600">
                             Text flavor
                         </label>
 
                         <select
+                            id="select-flavor"
                             x-model="flavor"
                             @change="generateIfLive()"
                             class="h-9 w-full rounded-lg border border-slate-200 bg-white px-2.5 text-xs text-slate-700"
@@ -278,11 +280,12 @@ new class extends Component
                     </div>
 
                     <div>
-                        <label class="mb-1.5 block text-[11px] font-medium text-slate-600">
+                        <label for="select-quick-preset" class="mb-1.5 block text-[11px] font-medium text-slate-600">
                             Quick preset
                         </label>
 
                         <select
+                            id="select-quick-preset"
                             x-model="preset"
                             @change="applyPreset()"
                             class="h-9 w-full rounded-lg border border-slate-200 bg-white px-2.5 text-xs text-slate-700"

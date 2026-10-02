@@ -146,11 +146,12 @@ new class extends Component
                     x-show="operation === 'decode'"
                     class="flex h-8 items-center gap-2"
                 >
-                    <label class="text-[11px] font-medium text-slate-500">
+                    <label for="select-decode-passes" class="text-[11px] font-medium text-slate-500">
                         Decode passes
                     </label>
 
                     <select
+                        id="select-decode-passes"
                         x-model.number="decodePasses"
                         @change="processIfAuto()"
                         class="h-8 rounded-md border border-slate-200 bg-white px-2 text-xs text-slate-700 outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100"

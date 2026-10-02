@@ -289,7 +289,7 @@ new class extends Component
                 </div>
 
                 <span
-                    class="rounded-full bg-slate-100 px-2.5 py-1 text-[10px] font-medium text-slate-500 dark:bg-slate-800 dark:text-slate-500"
+                    class="rounded-full bg-slate-100 px-2.5 py-1 text-[10px] font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-500"
                 >
                     Live processing
                 </span>
@@ -311,7 +311,7 @@ new class extends Component
                     ></span>
 
                     <span
-                        class="mt-1 block text-xs leading-5 text-slate-500"
+                        class="mt-1 block text-xs leading-5 text-slate-600"
                         x-text="mode.description"
                     ></span>
                 </button>
