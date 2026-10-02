@@ -1090,7 +1090,7 @@ new class extends Component
                         Your data stays in your browser
                     </h2>
 
-                    <p class="mt-1 text-[11px] leading-5 text-emerald-700/80">
+                    <p class="mt-1 text-[11px] leading-5 text-emerald-700">
                         URL and text processing is performed locally in your browser.
                         AabiTech does not need to receive, fetch, execute or store the URL content.
                         Imported files are processed locally as well.
