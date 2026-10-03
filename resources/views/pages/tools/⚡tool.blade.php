@@ -42,6 +42,7 @@ new #[Layout('layouts.app')] class extends Component
         'percentage-calculator' => 'tools.calculators.percentage-calculator',
         'age-calculator' => 'tools.calculators.age-calculator',
         'random-number-generator' => 'tools.calculators.random-number-generator',
+        'cgpa-to-percentage-converter' => 'tools.calculators.cgpa-to-percentage-converter',
 
         // Date & Time Tools
         'unix-timestamp-converter' => 'tools.date-time-tools.unix-timestamp-converter',

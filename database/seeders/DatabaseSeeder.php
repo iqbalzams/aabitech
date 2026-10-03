@@ -44,6 +44,7 @@ class DatabaseSeeder extends Seeder
             RandomNumberGeneratorSeoSeeder::class,
             UnixTimestampConverterSeoSeeder::class,
             TimestampConverterSeoSeeder::class,
+            CgpaPercentageConverterSeoSeeder::class,
 
 
         ]);
