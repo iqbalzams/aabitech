@@ -45,6 +45,7 @@ class DatabaseSeeder extends Seeder
             UnixTimestampConverterSeoSeeder::class,
             TimestampConverterSeoSeeder::class,
             CgpaPercentageConverterSeoSeeder::class,
+            TailwindCssEmailConverterSeeder::class,
 
 
         ]);

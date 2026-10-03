@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background Card Gradient -->
+    <linearGradient id="twBg" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#141829"/>
+      <stop offset="100%" stop-color="#0B0D17"/>
+    </linearGradient>
+
+    <!-- Card Border Stroke Gradient (Tailwind Cyan to Sky & Purple) -->
+    <linearGradient id="twBorder" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <!-- Tailwind Wavemark Gradients -->
+    <linearGradient id="twWave1" x1="28" y1="28" x2="60" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+
+    <linearGradient id="twWave2" x1="42" y1="36" x2="68" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+
+    <!-- Email Envelope Envelope Shading -->
+    <linearGradient id="mailBodyGrad" x1="56" y1="46" x2="104" y2="92" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+
+    <linearGradient id="mailFlapGrad" x1="56" y1="46" x2="104" y2="70" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+
+    <!-- Inline Style Pill Gradient -->
+    <linearGradient id="inlinePillGrad" x1="24" y1="74" x2="80" y2="98" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+
+    <!-- Ambient Glow Filter -->
+    <filter id="twGlow" x="-20%" y="-20%" width="140%" height="140%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="twSoftGlow" x="-30%" y="-30%" width="160%" height="160%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow Behind Container -->
+  <rect x="24" y="20" width="80" height="88" rx="24" fill="#06B6D4" opacity="0.16" filter="url(#twGlow)"/>
+
+  <!-- Base App Card -->
+  <rect x="16" y="16" width="96" height="96" rx="22" fill="url(#twBg)" stroke="url(#twBorder)" stroke-width="1.5"/>
+
+  <!-- Tailwind CSS Dual Waves Motif (Top-Left Origin) -->
+  <g filter="url(#twSoftGlow)">
+    <!-- Primary Wave -->
+    <path d="M 37 32 
+             C 32 32, 28 35, 27 38.5 
+             C 29.5 37, 32 37.5, 33.5 39 
+             C 35 40.5, 36.5 42, 39 42 
+             C 43.5 42, 46.5 38.5, 47.5 35 
+             C 45 36.5, 42.5 36, 41 34.5 
+             C 39.8 33.2, 38.5 32, 37 32 Z" 
+          fill="url(#twWave1)"/>
+
+    <!-- Secondary Wave -->
+    <path d="M 49 39 
+             C 45 39, 42 41.5, 41 44.5 
+             C 43 43.2, 45 43.8, 46.2 45 
+             C 47.5 46.2, 48.8 47.5, 51 47.5 
+             C 55 47.5, 57.5 44.5, 58.5 41.5 
+             C 56.5 42.8, 54.5 42.2, 53.2 41 
+             C 52 39.8, 50.5 39, 49 39 Z" 
+          fill="url(#twWave2)"/>
+  </g>
+
+  <!-- Conversion Transformation Connector -->
+  <g filter="url(#twSoftGlow)">
+    <path d="M 52 50 L 58 55 L 52 60" 
+          stroke="#38BDF8" 
+          stroke-width="1.8" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+  </g>
+
+  <!-- High-Deliverability Email Envelope (Top-Right Focus) -->
+  <g filter="url(#twSoftGlow)">
+    <!-- Envelope Shadow Base Plate -->
+    <rect x="62" y="44" width="42" height="28" rx="5" 
+          fill="url(#mailBodyGrad)" 
+          stroke="#334155" 
+          stroke-width="1.3"/>
+
+    <!-- Bottom Fold Vector Lines -->
+    <path d="M 63 70 L 78 57 M 103 70 L 88 57" 
+          stroke="#1E293B" 
+          stroke-width="1.3" 
+          stroke-linecap="round"/>
+
+    <!-- Flap Open & Downward Pointing Vector -->
+    <path d="M 63 46 L 83 61 L 103 46" 
+          stroke="url(#mailFlapGrad)" 
+          stroke-width="1.8" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          fill="none"/>
+
+    <!-- Email-Safe Verification Badge (Green Check Node) -->
+    <circle cx="100" cy="42" r="5" fill="#0B0D17" stroke="#10B981" stroke-width="1.4"/>
+    <path d="M 98 42 L 99.5 43.5 L 102.5 40.5" 
+          stroke="#34D399" 
+          stroke-width="1.2" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+  </g>
+
+  <!-- HTML / Inline Style Attribute HUD Badge (Bottom Banner) -->
+  <g filter="url(#twSoftGlow)">
+    <rect x="25" y="74" width="78" height="24" rx="7" 
+          fill="#0B0D17" 
+          stroke="url(#inlinePillGrad)" 
+          stroke-width="1.4"/>
+
+    <!-- Tag Left Delimiter: '<' -->
+    <path d="M 33 86 L 29.5 83.5 L 33 81" 
+          stroke="#38BDF8" 
+          stroke-width="1.3" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+
+    <!-- Syntactic 'style="' Vector Text Pattern -->
+    <g opacity="0.95">
+      <!-- 's' -->
+      <path d="M 37.5 82.5 C 37 81.8 35.5 81.8 35.5 83 C 35.5 84.5 38 84 38 85.5 C 38 86.8 36.8 86.8 36 86.2" 
+            stroke="#22D3EE" stroke-width="1.2" stroke-linecap="round"/>
+      <!-- 't' -->
+      <path d="M 40.5 81 V 86 M 39.5 82.5 H 42" 
+            stroke="#22D3EE" stroke-width="1.1" stroke-linecap="round"/>
+      <!-- 'y' -->
+      <path d="M 43.5 82.5 L 45 85.5 L 46.5 82.5 M 45 85.5 V 87.5" 
+            stroke="#22D3EE" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- 'l' -->
+      <line x1="48.5" y1="80.5" x2="48.5" y2="86" stroke="#22D3EE" stroke-width="1.1" stroke-linecap="round"/>
+      <!-- 'e' -->
+      <path d="M 53 84.5 H 50.5 C 50.5 83 52.8 82.5 53 83.5 M 50.5 85 C 51 86.5 53 86 53 85.5" 
+            stroke="#22D3EE" stroke-width="1.1" stroke-linecap="round"/>
+      <!-- '=' -->
+      <line x1="55" y1="83" x2="57.5" y2="83" stroke="#94A3B8" stroke-width="1.1" stroke-linecap="round"/>
+      <line x1="55" y1="85" x2="57.5" y2="85" stroke="#94A3B8" stroke-width="1.1" stroke-linecap="round"/>
+      <!-- '"' -->
+      <line x1="59.5" y1="81.5" x2="59.5" y2="83.5" stroke="#FDE047" stroke-width="1.1" stroke-linecap="round"/>
+      <line x1="61.5" y1="81.5" x2="61.5" y2="83.5" stroke="#FDE047" stroke-width="1.1" stroke-linecap="round"/>
+    </g>
+
+    <!-- Inlined CSS Representation Rows inside Quotes -->
+    <rect x="65" y="82" width="16" height="3" rx="1.5" fill="#34D399"/>
+    <rect x="83" y="82" width="8" height="3" rx="1.5" fill="#38BDF8"/>
+    
+    <!-- Closing Quote & Tag: '">' -->
+    <line x1="93" y1="81.5" x2="93" y2="83.5" stroke="#FDE047" stroke-width="1.1" stroke-linecap="round"/>
+    <path d="M 97 81 L 100.5 83.5 L 97 86" 
+          stroke="#38BDF8" 
+          stroke-width="1.3" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+  </g>
+
+  <!-- Sparkle Accent (HTML Optimization Magic) -->
+  <path d="M 98 22 
+           Q 98 26, 102 26 
+           Q 98 26, 98 30 
+           Q 98 26, 94 26 
+           Q 98 26, 98 22 Z" 
+        fill="#38BDF8" 
+        filter="url(#twSoftGlow)"/>
+</svg>
