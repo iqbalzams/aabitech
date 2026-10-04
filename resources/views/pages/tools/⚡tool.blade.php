@@ -22,7 +22,9 @@ new #[Layout('layouts.app')] class extends Component
         'html-beautifier' => 'tools.developer-tools.html-beautifier',
         'regex-tester' => 'tools.developer-tools.regex-tester',
         'jwt-decoder' => 'tools.developer-tools.jwt-decoder',
-        'tailwind-css-to-email-safe-inline-style-converter'=> 'tools.developer-tools.tailwind-css-email-converter',
+        'tailwind-css-to-email-safe-inline-style-converter' => 'tools.developer-tools.tailwind-css-email-converter',
+        'sql-to-laravel-migration-converter' => 'tools.developer-tools.sql-to-laravel-migration-converter',
+        'laravel-env-validator-diff-checker' => 'tools.developer-tools.laravel-env-validator-diff-checker',
 
         // Text Tools
         'character-counter' => 'tools.text-tools.character-counter',
