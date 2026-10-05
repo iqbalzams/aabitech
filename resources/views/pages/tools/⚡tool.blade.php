@@ -46,6 +46,7 @@ new #[Layout('layouts.app')] class extends Component
         'age-calculator' => 'tools.calculators.age-calculator',
         'random-number-generator' => 'tools.calculators.random-number-generator',
         'cgpa-to-percentage-converter' => 'tools.calculators.cgpa-to-percentage-converter',
+        'twitch-bits-to-usd-calculator' => 'tools.calculators.twitch-bits-to-usd-calculator',
 
         // Date & Time Tools
         'unix-timestamp-converter' => 'tools.date-time-tools.unix-timestamp-converter',
@@ -280,7 +281,7 @@ new #[Layout('layouts.app')] class extends Component
         <div class="flex items-start gap-4 sm:gap-6">
 
             {{-- Tool Icon --}}
-            <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-indigo-50 sm:h-20 sm:w-20">
+            <div class="flex shrink-0 items-center justify-center rounded-xl bg-indigo-50 sm:h-20 sm:w-20">
                 @if ($this->tool->icon)
                     <img
                         src="{{ asset($this->tool->icon) }}"
@@ -288,7 +289,7 @@ new #[Layout('layouts.app')] class extends Component
                         width="100"
                         height="100"
                         alt="{{ $this->tool->name }}"
-                        class="h-10 w-10 object-contain sm:h-12 sm:w-12"
+                        class=" object-contain"
                     >
                 @else
                     <span class="text-xl sm:text-2xl" aria-hidden="true">⚡</span>
