@@ -48,6 +48,7 @@ new #[Layout('layouts.app')] class extends Component
         'cgpa-to-percentage-converter' => 'tools.calculators.cgpa-to-percentage-converter',
         'twitch-bits-to-usd-calculator' => 'tools.calculators.twitch-bits-to-usd-calculator',
         'tattoo-price-calculator' => 'tools.calculators.tattoo-price-calculator',
+        'construction-estimate-calculator' => 'tools.calculators.construction-estimate-calculator',
 
         // Date & Time Tools
         'unix-timestamp-converter' => 'tools.date-time-tools.unix-timestamp-converter',
