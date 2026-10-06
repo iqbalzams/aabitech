@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background Card Gradient -->
+    <linearGradient id="tatBg" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#141829"/>
+      <stop offset="100%" stop-color="#0B0D17"/>
+    </linearGradient>
+
+    <!-- Card Border Stroke Gradient (Rose Crimson to Violet & Emerald) -->
+    <linearGradient id="tatBorder" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F43F5E" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#8B5CF6" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.55"/>
+    </linearGradient>
+
+    <!-- Tattoo Rotary Machine Body Gradient -->
+    <linearGradient id="penBodyGrad" x1="32" y1="28" x2="62" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F43F5E"/>
+      <stop offset="50%" stop-color="#BE123C"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+
+    <!-- Rotary Motor & Grip Gradient -->
+    <linearGradient id="gripGrad" x1="42" y1="48" x2="68" y2="74" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+
+    <!-- Dimension / Caliper Measurement Grid Gradient -->
+    <linearGradient id="gridGrad" x1="68" y1="32" x2="102" y2="66" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+
+    <!-- Price Calculation Result HUD Gradient -->
+    <linearGradient id="tatPillGrad" x1="24" y1="76" x2="104" y2="98" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F43F5E"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="tatGlow" x="-20%" y="-20%" width="140%" height="140%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="tatSoftGlow" x="-30%" y="-30%" width="160%" height="160%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow Behind Container -->
+  <rect x="24" y="20" width="80" height="88" rx="24" fill="#F43F5E" opacity="0.15" filter="url(#tatGlow)"/>
+
+  <!-- Base Glassmorphic Card -->
+  <rect x="16" y="16" width="96" height="96" rx="22" fill="url(#tatBg)" stroke="url(#tatBorder)" stroke-width="1.5"/>
+
+  <!-- ================= Left: Tattoo Rotary Pen / Gun ================= -->
+  <g filter="url(#tatSoftGlow)">
+    <!-- Top Motor Housing Cylinder -->
+    <rect x="27" y="32" width="15" height="11" rx="3.5" transform="rotate(-45 27 32)" fill="url(#penBodyGrad)" stroke="#FB7185" stroke-width="1.2"/>
+    
+    <!-- Rotary Core Wheel Accent -->
+    <circle cx="36" cy="31" r="3.2" fill="#0B0D17" stroke="#38BDF8" stroke-width="1"/>
+    <circle cx="36" cy="31" r="1.2" fill="#38BDF8"/>
+
+    <!-- Ergonomic Fluted Grip Shaft -->
+    <rect x="36" y="41" width="10" height="21" rx="2.5" transform="rotate(-45 36 41)" fill="url(#gripGrad)" stroke="#334155" stroke-width="1"/>
+    <!-- Grip Rib Rings -->
+    <line x1="43.5" y1="41.5" x2="49.5" y2="47.5" stroke="#38BDF8" stroke-width="1" stroke-linecap="round"/>
+    <line x1="47.5" y1="45.5" x2="53.5" y2="51.5" stroke="#38BDF8" stroke-width="1" stroke-linecap="round"/>
+
+    <!-- Cartridge Needle Tip Assembly -->
+    <polygon points="53,59 58,64 56,69 51,64" fill="#0F172A" stroke="#94A3B8" stroke-width="1"/>
+    <line x1="56" y1="67" x2="62" y2="73" stroke="#F43F5E" stroke-width="1.8" stroke-linecap="round"/>
+    
+    <!-- Fresh Ink Micro-Drop (Rose/Crimson pigment) -->
+    <circle cx="63.5" cy="74.5" r="1.3" fill="#F43F5E" filter="url(#tatSoftGlow)"/>
+  </g>
+
+  <!-- ================= Right: Tattoo Dimension & Hourly Rate Caliper Grid ================= -->
+  <g filter="url(#tatSoftGlow)">
+    <!-- Skin Area / Canvas Dimension Bounding Box (e.g. 4"x4" Size Grid) -->
+    <rect x="71" y="28" width="31" height="31" rx="5" fill="#0B0D17" stroke="url(#gridGrad)" stroke-width="1.3" stroke-dasharray="3 2.5"/>
+
+    <!-- Subtle Diagonal Ink Shading / Art Hatching inside Area -->
+    <line x1="77" y1="33" x2="83" y2="39" stroke="#64748B" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+    <line x1="82" y1="33" x2="94" y2="45" stroke="#64748B" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+    <line x1="89" y1="35" x2="97" y2="43" stroke="#64748B" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+
+    <!-- Corner Dimension Caliper Brackets (Top-Left & Bottom-Right) -->
+    <path d="M 68 33 V 28 H 73" stroke="#38BDF8" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M 105 54 V 59 H 100" stroke="#38BDF8" stroke-width="1.2" stroke-linecap="round"/>
+
+    <!-- Hourly Duration Dial / Clock Motif (Estimator) -->
+    <circle cx="86.5" cy="43.5" r="7.5" fill="#1E293B" stroke="#A855F7" stroke-width="1.2"/>
+    <line x1="86.5" y1="43.5" x2="86.5" y2="39" stroke="#E2E8F0" stroke-width="1.1" stroke-linecap="round"/>
+    <line x1="86.5" y1="43.5" x2="90" y2="43.5" stroke="#F43F5E" stroke-width="1.1" stroke-linecap="round"/>
+  </g>
+
+  <!-- ================= Bottom: Cost & Pricing Readout HUD ($250 ESTIMATE) ================= -->
+  <g filter="url(#tatSoftGlow)">
+    <rect x="24" y="76" width="80" height="24" rx="7" fill="#0B0D17" stroke="url(#tatPillGrad)" stroke-width="1.4"/>
+
+    <!-- Currency Estimate Tag Motif: '$' Symbol -->
+    <path d="M 34.5 84 C 34 83, 33 82.5, 31.8 82.5 C 30.5 82.5, 29.8 83.2, 29.8 84.2 C 29.8 85.5, 31 85.8, 32.5 86.4 C 34 87, 34.8 87.8, 34.8 89.2 C 34.8 90.5, 33.5 91.5, 32 91.5 C 30.5 91.5, 29.8 90.8, 29.2 90" 
+          stroke="#10B981" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="32.2" y1="81.5" x2="32.2" y2="92.5" stroke="#10B981" stroke-width="1.1" stroke-linecap="round"/>
+
+    <!-- Handcrafted Result Digits: "250" -->
+    <!-- '2' -->
+    <path d="M 39 85.2 C 39 84, 40.2 83.5, 41.5 83.5 C 42.8 83.5, 43.5 84.2, 43.5 85.2 C 43.5 86.8, 41.5 87.8, 39 89.5 H 44" 
+          stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- '5' -->
+    <path d="M 49.5 83.5 H 46.2 V 86.2 C 46.2 86.2, 47.2 85.8, 48.2 85.8 C 49.4 85.8, 50.2 86.5, 50.2 87.8 C 50.2 89.2, 49.2 90, 47.8 90 C 46.8 90, 46.2 89.5, 46 89" 
+          stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- '0' -->
+    <ellipse cx="54.5" cy="87" rx="2.2" ry="3.5" stroke="#FFFFFF" stroke-width="1.2"/>
+
+    <!-- Sub-badge: "EST" (Estimated Quote) -->
+    <rect x="61" y="82.5" width="37" height="11" rx="3" fill="#1E293B" stroke="#334155" stroke-width="0.8"/>
+    <!-- 'E' -->
+    <path d="M 68 85 H 65 V 90 H 68 M 65 87.5 H 67.5" stroke="#38BDF8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- 'S' -->
+    <path d="M 72.5 85.5 C 72 85, 71 85, 71 85.8 C 71 86.8, 73 86.8, 73 87.8 C 73 88.8, 72 88.8, 71.2 88.5" stroke="#38BDF8" stroke-width="0.9" stroke-linecap="round"/>
+    <!-- 'T' -->
+    <path d="M 75.5 85 H 79.5 M 77.5 85 V 90" stroke="#38BDF8" stroke-width="1" stroke-linecap="round"/>
+    <!-- Verified calculation pulse dot -->
+    <circle cx="85" cy="87.5" r="1.2" fill="#10B981"/>
+    <circle cx="91" cy="87.5" r="1.2" fill="#10B981"/>
+  </g>
+
+  <!-- Neo-Traditional Crimson Glint Sparkle (Top-Right) -->
+  <path d="M 102 21 
+           Q 102 25, 106 25 
+           Q 102 25, 102 29 
+           Q 102 25, 98 25 
+           Q 102 25, 102 21 Z" 
+        fill="#F43F5E" 
+        filter="url(#tatSoftGlow)"/>
+
+  <!-- Grip Cyan Status Dot (Top-Left) -->
+  <circle cx="28" cy="27" r="1.8" fill="#38BDF8" opacity="0.8"/>
+</svg>
