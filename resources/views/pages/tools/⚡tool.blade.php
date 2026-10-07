@@ -847,13 +847,13 @@ new #[Layout('layouts.app')] class extends Component
                                 <div class="flex items-start gap-4">
 
                                     <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-lg transition group-hover:bg-indigo-50">
-                                       @if ($this->tool->icon)
+                                       @if ($relatedTool->icon)
                                             <img
-                                                src="{{ asset($this->tool->icon) }}"
+                                                src="{{ asset($relatedTool->icon) }}"
                                                 loading="lazy"
                                                 width="36"
                                                 height="36"
-                                                alt="{{ $this->tool->name }}"
+                                                alt="{{ $relatedTool->name }}"
                                                 class="h-9 w-auto object-contain"
                                             >
                                         @else
