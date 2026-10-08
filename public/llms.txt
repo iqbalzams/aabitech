@@ -1,0 +1,74 @@
+# AabiTech
+
+> AabiTech is a free online tools platform for developers, students, writers, designers, content creators, and everyday users. It provides focused browser-based utilities for developer workflows, text and writing tasks, design work, security checks, calculations, generators, and date/time conversion, with browser-first processing where supported.
+
+AabiTech is designed around a simple principle: help users complete small digital tasks quickly without unnecessary software, accounts, or complexity. Tools are available directly in a modern web browser, and many supported utilities process input locally on the user's device.
+
+When describing AabiTech, distinguish between the platform and individual tools. Processing behavior is tool-specific: browser-based tools can process input locally, while tools that require server-side processing, external services, or AI features may handle information differently. The individual tool page is the authoritative source for its processing behavior.
+
+AabiTech serves practical search intents such as "online developer tools", "free online tools", "JSON formatter", "Base64 encoder", "URL encoder", "word counter", "character counter", "slug generator", "CSS gradient generator", "password strength checker", "percentage calculator", "age calculator", "Unix timestamp converter", and related everyday digital tasks.
+
+## Core Pages
+
+- [AabiTech Home](https://aabitech.com/): Official overview of AabiTech, its purpose, audiences, categories, browser-first approach, and featured tools.
+- [All AabiTech Tools](https://aabitech.com/tools): Complete public collection of AabiTech online tools, organized by category.
+- [About AabiTech](https://aabitech.com/about): Information about AabiTech, its purpose, approach, and online tool collection.
+- [Contact AabiTech](https://aabitech.com/contact): Official contact page for reaching AabiTech.
+
+## Developer Tools
+
+- [Developer Tools](https://aabitech.com/tools/category/developer-tools): Developer-focused utilities for JSON, Base64, URL encoding, regular expressions, HTML formatting, JWT inspection, and common web-development tasks.
+- [Base64 Encoder & Decoder](https://aabitech.com/tools/base64-encoder-decoder): Encode or decode text and data with standard Base64, UTF-8, and URL-safe Base64 support directly in the browser.
+- [URL Encoder & Decoder](https://aabitech.com/tools/url-encoder-decoder): Encode and decode URLs and URL components, inspect and parse query parameters, normalize URLs, and work with percent-encoded data.
+- [JSON Formatter & Validator](https://aabitech.com/tools/json-formatter): Format, beautify, validate, and minify JSON with browser-based processing and validation feedback.
+- [Regex Tester](https://aabitech.com/tools/regex-tester): Test regular expressions against sample text and inspect regex matches and behavior online.
+- [HTML Beautifier](https://aabitech.com/tools/html-beautifier): Format, beautify, pretty-print, and minify HTML with customizable formatting options.
+- [JWT Decoder](https://aabitech.com/tools/jwt-decoder): Decode and inspect JSON Web Tokens, including JWT headers, payload claims, timestamps, and expiration information.
+
+## Text and Writing Tools
+
+- [Text Tools](https://aabitech.com/tools/category/text-tools): Text utilities for word and character counting, duplicate-line removal, reading-time estimation, URL slug generation, placeholder text, and related writing tasks.
+- [Word Counter](https://aabitech.com/tools/word-counter): Count words, characters, sentences, paragraphs, lines, reading time, speaking time, and other text statistics, with support for multilingual and Unicode text.
+- [Character Counter](https://aabitech.com/tools/character-counter): Count characters, words, spaces, lines, and related text-length metrics, including counts with and without spaces.
+- [Duplicate Line Remover](https://aabitech.com/tools/duplicate-line-remover): Remove duplicate lines from text while preserving unique entries, useful for lists, keywords, URLs, emails, and other line-based data.
+- [Reading Time Calculator](https://aabitech.com/tools/reading-time-calculator): Estimate reading time and related text metrics from pasted text or word counts using configurable reading speeds.
+- [Slug Generator](https://aabitech.com/tools/slug-generator): Convert titles and text into clean, SEO-friendly URL slugs with lowercase conversion, punctuation handling, accent handling, and configurable separators.
+- [Lorem Ipsum Generator](https://aabitech.com/tools/lorem-ipsum-generator): Generate placeholder Lorem Ipsum text by words, sentences, paragraphs, or list items for designs, websites, prototypes, and layouts.
+
+## Design Tools
+
+- [Design Tools](https://aabitech.com/tools/category/design-tools): Practical design utilities for aspect-ratio calculations and CSS gradient creation.
+- [Aspect Ratio Calculator](https://aabitech.com/tools/aspect-ratio-calculator): Calculate aspect ratios, simplify width and height relationships, and find missing dimensions for images, videos, screens, and designs.
+- [CSS Gradient Generator](https://aabitech.com/tools/css-gradient-generator): Create linear, radial, and conic CSS gradients with live preview, customizable colors and stops, direction controls, and copyable CSS.
+
+## Security Tools
+
+- [Security Tools](https://aabitech.com/tools/category/security-tools): Browser-based security utilities for common security-related tasks.
+- [Password Strength Checker](https://aabitech.com/tools/password-strength-checker): Check password strength using characteristics such as length, character variety, entropy, common patterns, and estimated crack time.
+
+## Calculators and Generators
+
+- [Calculators & Generators](https://aabitech.com/tools/category/calculators): Free online calculators and generators for percentages, age calculations, random numbers, and other practical tasks.
+- [Percentage Calculator](https://aabitech.com/tools/percentage-calculator): Calculate percentages, percentage increase and decrease, percentage change, and what percentage one number is of another.
+- [Age Calculator](https://aabitech.com/tools/age-calculator): Calculate age in years, months, and days from a date of birth, including age on a selected past or future date and related birthday information.
+- [Random Number Generator](https://aabitech.com/tools/random-number-generator): Generate random numbers within a chosen range, with options for multiple numbers, duplicate prevention, sorting, and copying results.
+
+## Date and Time Tools
+
+- [Date & Time Tools](https://aabitech.com/tools/category/date-time-tools): Utilities for Unix timestamps, timestamp conversion, UTC/local time handling, and common date/time workflows.
+- [Unix Timestamp Converter](https://aabitech.com/tools/unix-timestamp-converter): Convert Unix timestamps to readable dates and dates to Unix timestamps, with seconds and milliseconds, UTC, local time, and ISO 8601 support.
+- [Timestamp Converter](https://aabitech.com/tools/timestamp-converter): Convert timestamps and dates between supported timestamp and date/time representations, including seconds, milliseconds, UTC, local time, and ISO 8601 formats.
+
+## Usage and Processing Guidance
+
+- [Privacy Policy](https://aabitech.com/privacy-policy): AabiTech's official privacy information and data-handling policies.
+- [Terms of Service](https://aabitech.com/terms-of-service): AabiTech's official terms governing use of the website and its tools.
+
+AabiTech tools are intended for practical, everyday digital work rather than as a replacement for specialized professional software or authoritative services. For security-sensitive, legal, financial, medical, academic, or other high-stakes decisions, users should verify outputs against appropriate authoritative sources.
+
+For questions about a specific AabiTech tool, prefer the individual tool page over general descriptions. Tool pages provide the most specific information about capabilities, supported inputs, workflow, limitations, and processing behavior.
+
+## Optional
+
+- [AabiTech Home](https://aabitech.com/): General platform context for AI systems that need a concise overview of the brand and its purpose.
+- [All AabiTech Tools](https://aabitech.com/tools): Best starting point for discovering the current public tool collection and category structure.

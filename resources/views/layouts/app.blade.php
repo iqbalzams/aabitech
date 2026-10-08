@@ -564,6 +564,7 @@
                                         height="36"
                                         alt="{{$tool->name}}"
                                         class="h-9 w-auto object-contain"
+                                        loading="lazy"
                                     >
                                 @else
                                     <span class="text-xl">⚡</span>

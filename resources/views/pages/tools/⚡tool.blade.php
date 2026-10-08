@@ -108,6 +108,16 @@ new #[Layout('layouts.app')] class extends Component
             return collect();
         }
 
+        $relatedTools = $this->tool
+            ->relatedTools()
+            ->where('tools.status', true)
+            ->limit(5)
+            ->get();
+
+        if ($relatedTools->isNotEmpty()) {
+            return $relatedTools;
+        }
+
         return Tool::query()
             ->where('status', true)
             ->where('category_id', $this->tool->category_id)
@@ -116,7 +126,7 @@ new #[Layout('layouts.app')] class extends Component
             ->orderByDesc('is_featured')
             ->orderBy('sort_order')
             ->orderBy('name')
-            ->limit(6)
+            ->limit(5)
             ->get();
     }
 
@@ -184,6 +194,10 @@ new #[Layout('layouts.app')] class extends Component
 
 ?>
 
+@php
+    $internalLinker = app(\App\Services\ToolInternalLinker::class);
+    $internalLinker->reset();
+@endphp
 <div class="min-h-screen bg-slate-50">
 
     {{-- ============================================================
@@ -537,7 +551,10 @@ new #[Layout('layouts.app')] class extends Component
                         </h2>
 
                         <div class="prose prose-slate mt-5 max-w-none text-base leading-8">
-                            {!! $section->content !!}
+                            {!! $internalLinker->link(
+                                $section->content,
+                                $this->tool
+                            ) !!}
                         </div>
 
                     </article>
@@ -568,7 +585,10 @@ new #[Layout('layouts.app')] class extends Component
                         </h2>
 
                         <div class="prose prose-slate mt-5 max-w-none text-base leading-8">
-                            {!! $section->content !!}
+                            {!! $internalLinker->link(
+                                $section->content,
+                                $this->tool
+                            ) !!}
                         </div>
 
                     </article>
@@ -599,7 +619,10 @@ new #[Layout('layouts.app')] class extends Component
                         </h2>
 
                         <div class="prose prose-slate mt-6 max-w-none text-base leading-8">
-                            {!! $section->content !!}
+                            {!! $internalLinker->link(
+                                $section->content,
+                                $this->tool
+                            ) !!}
                         </div>
 
                     </article>
@@ -630,7 +653,10 @@ new #[Layout('layouts.app')] class extends Component
                         </h2>
 
                         <div class="prose prose-slate mt-5 max-w-none text-base leading-8">
-                            {!! $section->content !!}
+                            {!! $internalLinker->link(
+                                $section->content,
+                                $this->tool
+                            ) !!}
                         </div>
 
                     </article>
@@ -665,7 +691,10 @@ new #[Layout('layouts.app')] class extends Component
                         </h2>
 
                         <div class="prose prose-invert mt-5 max-w-none text-base leading-8">
-                            {!! $section->content !!}
+                            {!! $internalLinker->link(
+                                $section->content,
+                                $this->tool
+                            ) !!}
                         </div>
 
                     </article>
@@ -701,7 +730,10 @@ new #[Layout('layouts.app')] class extends Component
                                 </h2>
 
                                 <div class="prose prose-slate mt-5 max-w-none text-base leading-8">
-                                    {!! $section->content !!}
+                                    {!! $internalLinker->link(
+                                        $section->content,
+                                        $this->tool
+                                    ) !!}
                                 </div>
 
                             </article>
